@@ -1,1 +1,23 @@
+# Environment configuration
 .env
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# PyCharm project settings
+.idea/
+
+# Compiled Python files
+__pycache__/
+*.cpython-*.pyc
+
+# Sphinx documentation build outputs
+docs/build/
+
+# WebDriver for browsers
+drivers/chromedriver.exe
+drivers/LICENSE.chromedriver
+
+# Temporary or generated data files
+data/downloads/
