@@ -238,4 +238,4 @@ def process_data():
         flexshares_df
     ])
 
-    return combined_df
+    return combined_df.dropna()

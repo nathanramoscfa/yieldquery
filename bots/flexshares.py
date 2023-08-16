@@ -5,7 +5,7 @@ import pandas as pd
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, ElementClickInterceptedException
 from utils.drivers import setup_driver
 from tqdm import tqdm
 
@@ -23,7 +23,7 @@ def reject_cookies(driver):
         cookie_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, '#onetrust-reject-all-handler')))
         cookie_button.click()
-    except TimeoutException:
+    except (TimeoutException, ElementClickInterceptedException):
         pass
 
 

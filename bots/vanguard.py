@@ -65,6 +65,7 @@ def get_yield_data(driver, links):
     :return: The yield data
     :rtype: dict
     """
+    wait_time = 10
     data = {}
     for link in tqdm(links):
         driver.get(link)
@@ -81,11 +82,12 @@ def get_yield_data(driver, links):
         )
         name = name_element.text
 
-        yield_element = driver.find_element(
+        yield_element = (
             By.CSS_SELECTOR,
             '#characteristics-tabset > characteristics-contianer > div > div > div > fixed-income-characteristic > '
             'div > div > table > tr:nth-child(3) > td:nth-child(2)'
         )
+        yield_element = WebDriverWait(driver, wait_time).until(EC.presence_of_element_located(yield_element))
         yield_to_maturity = yield_element.get_attribute("innerText")
 
         as_of_element = driver.find_element(
