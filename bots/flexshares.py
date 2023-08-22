@@ -152,7 +152,7 @@ def flexshares_bot(return_df=False, headless=True):
     os.chdir(project_dir)
 
     # Construct the path to your CSV file relative to the project's root directory
-    csv_path = os.path.join('data', 'flexshares.csv')
+    csv_path = os.path.join(project_dir, 'data', 'flexshares.csv')
 
     print('Saving FlexShares ETF yield data to CSV file...')
     df.to_csv(csv_path)

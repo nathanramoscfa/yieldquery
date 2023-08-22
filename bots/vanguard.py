@@ -150,7 +150,7 @@ def vanguard_bot(return_df=False, headless=True):
     os.chdir(project_dir)
 
     # Construct the paths to your CSV files relative to the project's root directory
-    csv_path = os.path.join('data', 'vanguard.csv')
+    csv_path = os.path.join(project_dir, 'data', 'vanguard.csv')
 
     print('Saving Vanguard ETF yield data to CSV file...')
     df = create_and_save_dataframe(data, csv_path)

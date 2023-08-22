@@ -127,7 +127,7 @@ def first_trust_bot(return_df=False):
     os.chdir(project_dir)
 
     # Construct the paths to your CSV files relative to the project's root directory
-    csv_path = os.path.join('data', 'first_trust.csv')
+    csv_path = os.path.join(project_dir, 'data', 'first_trust.csv')
 
     print('Saving First Trust ETF yield data to CSV file...')
     df.to_csv(csv_path)

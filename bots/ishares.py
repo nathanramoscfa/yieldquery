@@ -6,17 +6,15 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 from tqdm import tqdm
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from utils.drivers import webdriver_path
+from utils.drivers import setup_driver
 
 base_url = 'https://www.ishares.com'
-filepath = '../data/downloads/ishares.xml'
+filepath = './data/downloads/ishares.xml'
 
 
 def get_soup(url):
@@ -122,7 +120,7 @@ def download_xls():
     webdriver_options.add_experimental_option('prefs', prefs)
 
     # Create a new instance of the Chrome driver
-    driver = webdriver.Chrome(service=Service(webdriver_path()), options=webdriver_options)
+    driver = setup_driver()
 
     # Go to the webpage
     etf_list_url = 'https://www.ishares.com/us/products/etf-investments#/?productView=etf&fac=43549%7C43563%7C435' \
@@ -172,7 +170,7 @@ def move_xls():
 
     # Define old and new location
     old_file_location = os.path.join(os.path.expanduser('~/Downloads'), xls_file)
-    new_dir = '../data/downloads'
+    new_dir = './data/downloads'
     new_file_location = os.path.join(new_dir, 'ishares.xml')  # changed the extension to .xml
 
     # Create the new directory if it does not exist
@@ -194,7 +192,7 @@ def load_xls():
     :rtype: pd.DataFrame
     """
     # Define file location
-    file_location = '../data/downloads/ishares.xml'
+    file_location = './data/downloads/ishares.xml'
 
     # Load the data into a pandas DataFrame, skipping the first row
     try:
@@ -310,7 +308,7 @@ def ishares_bot(method='xls', return_df=False):
     os.chdir(project_dir)
 
     # Construct the paths to your CSV files relative to the project's root directory
-    csv_path = os.path.join('data', 'ishares.csv')
+    csv_path = os.path.join(project_dir, 'data', 'ishares.csv')
 
     # Save DataFrame to csv
     df.to_csv(csv_path)

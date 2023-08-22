@@ -111,7 +111,7 @@ def invesco_bot():
     os.chdir(project_dir)
 
     # Construct the paths to your CSV files relative to the project's root directory
-    csv_path = os.path.join('data', 'invesco.csv')
+    csv_path = os.path.join(project_dir, 'data', 'invesco.csv')
 
     # Save to CSV file
     print('Saving Invesco ETF yield data to CSV file...')

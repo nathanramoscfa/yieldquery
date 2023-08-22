@@ -1,8 +1,7 @@
-import os
-from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def webdriver_path():
@@ -12,10 +11,7 @@ def webdriver_path():
     :return: The path to the webdriver
     :rtype: str
     """
-    load_dotenv()
-    path = os.getenv('CHROME_DRIVER_PATH')
-    abs_path = os.path.join(os.getcwd(), path)
-    return abs_path
+    return ChromeDriverManager().install()
 
 
 def setup_driver(headless=True):

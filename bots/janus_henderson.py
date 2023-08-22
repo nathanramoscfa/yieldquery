@@ -131,8 +131,8 @@ def janus_henderson_bot(return_df=False, headless=True):
     # Change the working directory to the project's root directory
     os.chdir(project_dir)
 
-    # Construct the path to your CSV file relative to the project's root directory
-    csv_path = os.path.join('data', 'janus_henderson.csv')
+    # Construct the paths to your CSV files relative to the project's root directory
+    csv_path = os.path.join(project_dir, 'data', 'janus_henderson.csv')
 
     print('Saving Janus Henderson ETF yield data to CSV file...')
     df.to_csv(csv_path)

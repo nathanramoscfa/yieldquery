@@ -200,7 +200,7 @@ def jpmorgan_bot(return_df=False, headless=True):
     os.chdir(project_dir)
 
     # Construct the paths to your CSV files relative to the project's root directory
-    csv_path = os.path.join('data', 'jpmorgan.csv')
+    csv_path = os.path.join(project_dir, 'data', 'jpmorgan.csv')
 
     print('Saving JPMorgan ETF yield data to CSV file...')
     df.to_csv(csv_path)

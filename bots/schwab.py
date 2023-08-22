@@ -189,7 +189,7 @@ def schwab_bot(return_df=False):
     os.chdir(project_dir)
 
     # Construct the paths to your CSV files relative to the project's root directory
-    csv_path = os.path.join('data', 'schwab.csv')
+    csv_path = os.path.join(project_dir, 'data', 'schwab.csv')
 
     print('Saving Schwab ETF yield data to CSV file...')
     df.to_csv(csv_path)

@@ -197,7 +197,7 @@ def dimensional_bot(return_df=False, headless=True):
     os.chdir(project_dir)
 
     # Construct the path to your CSV file relative to the project's root directory
-    csv_path = os.path.join('data', 'dimensional.csv')
+    csv_path = os.path.join(project_dir, 'data', 'dimensional.csv')
 
     print('Saving Dimensional ETF yield data to CSV file...')
     df.to_csv(csv_path)

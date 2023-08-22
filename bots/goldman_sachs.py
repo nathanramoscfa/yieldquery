@@ -250,7 +250,7 @@ def goldman_sachs_bot(return_df=False, headless=True):
     os.chdir(project_dir)
 
     # Construct the path to your CSV file relative to the project's root directory
-    csv_path = os.path.join('data', 'goldman_sachs.csv')
+    csv_path = os.path.join(project_dir, 'data', 'goldman_sachs.csv')
 
     print('Saving Goldman Sachs ETF yield data to CSV file...')
     df.to_csv(csv_path)
