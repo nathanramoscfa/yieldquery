@@ -1,38 +1,37 @@
 Ticker,Name,Yield to Maturity,As of Date
-HYBL,SPDR® Blackstone High Income ETF,0.0723,08-18-2023
-SRLN,SPDR® Blackstone Senior Loan ETF,0.08789999999999999,08-17-2023
-TIPX,SPDR® Bloomberg 1-10 Year TIPS ETF,0.047599999999999996,08-18-2023
-BIL,SPDR® Bloomberg 1-3 Month T-Bill ETF,0.0538,08-18-2023
-BILS,SPDR® Bloomberg 3-12 Month T-Bill ETF,0.0542,08-18-2023
-CWB,SPDR® Bloomberg Convertible Securities ETF,0.0184,08-18-2023
-EBND,SPDR® Bloomberg Emerging Markets Local Bond ETF,0.06269999999999999,08-18-2023
-EMHC,SPDR® Bloomberg Emerging Markets USD Bond ETF,0.0708,08-18-2023
-JNK,SPDR® Bloomberg High Yield Bond ETF,0.0897,08-18-2023
-IBND,SPDR® Bloomberg International Corporate Bond ETF,0.0429,08-18-2023
-BWX,SPDR® Bloomberg International Treasury Bond ETF,0.0316,08-18-2023
-FLRN,SPDR® Bloomberg Investment Grade Floating Rate ETF,0.061200000000000004,08-18-2023
-SJNK,SPDR® Bloomberg Short Term High Yield Bond ETF,0.0885,08-18-2023
-BWZ,SPDR® Bloomberg Short Term International Treasury Bond ETF,0.031200000000000002,08-18-2023
-EMTL,SPDR® DoubleLine® Emerging Markets Fixed Income ETF,0.0805,08-18-2023
-STOT,SPDR® DoubleLine® Short Duration Total Return Tactical ETF,0.0635,08-18-2023
-TOTL,SPDR® DoubleLine® Total Return Tactical ETF,0.0629,08-18-2023
-WIP,SPDR® FTSE International Government Inflation-Protected Bond ETF,0.0611,08-18-2023
-OBND,SPDR® Loomis Sayles Opportunistic Bond ETF,0.0692,08-18-2023
-LQIG,SPDR® MarketAxess Investment Grade 400 Corporate Bond ETF,0.0581,08-18-2023
-HYMB,SPDR® Nuveen Bloomberg High Yield Municipal Bond ETF,0.0567,08-18-2023
-TFI,SPDR® Nuveen Bloomberg Municipal Bond ETF,0.0369,08-18-2023
-SHM,SPDR® Nuveen Bloomberg Short Term Municipal Bond ETF,0.031200000000000002,08-18-2023
-MBNE,SPDR® Nuveen Municipal Bond ESG ETF,0.044500000000000005,08-18-2023
-MBND,SPDR® Nuveen Municipal Bond ETF,0.0473,08-18-2023
-SPAB,SPDR® Portfolio Aggregate Bond ETF,0.051100000000000007,08-18-2023
-SPBO,SPDR® Portfolio Corporate Bond ETF,0.0584,08-18-2023
-SPHY,SPDR® Portfolio High Yield Bond ETF,0.08929999999999999,08-18-2023
-SPIB,SPDR® Portfolio Intermediate Term Corporate Bond ETF,0.057800000000000004,08-18-2023
-SPTI,SPDR® Portfolio Intermediate Term Treasury ETF,0.0441,08-18-2023
-SPLB,SPDR® Portfolio Long Term Corporate Bond ETF,0.0592,08-18-2023
-SPTL,SPDR® Portfolio Long Term Treasury ETF,0.0451,08-18-2023
-SPMB,SPDR® Portfolio Mortgage Backed Bond ETF,0.0512,08-18-2023
-SPSB,SPDR® Portfolio Short Term Corporate Bond ETF,0.0584,08-18-2023
-SPTS,SPDR® Portfolio Short Term Treasury ETF,0.05,08-18-2023
-SPIP,SPDR® Portfolio TIPS ETF,0.047400000000000005,08-18-2023
-ULST,SPDR® SSGA Ultra Short Term Bond ETF,0.0558,08-18-2023
+SRLN,SPDR® Blackstone Senior Loan ETF,0.08789999999999999,08-18-2023
+TIPX,SPDR® Bloomberg 1-10 Year TIPS ETF,0.0482,08-21-2023
+BIL,SPDR® Bloomberg 1-3 Month T-Bill ETF,0.0538,08-21-2023
+BILS,SPDR® Bloomberg 3-12 Month T-Bill ETF,0.0542,08-21-2023
+CWB,SPDR® Bloomberg Convertible Securities ETF,0.0183,08-21-2023
+EBND,SPDR® Bloomberg Emerging Markets Local Bond ETF,0.06309999999999999,08-21-2023
+EMHC,SPDR® Bloomberg Emerging Markets USD Bond ETF,0.0716,08-21-2023
+JNK,SPDR® Bloomberg High Yield Bond ETF,0.08839999999999999,08-21-2023
+IBND,SPDR® Bloomberg International Corporate Bond ETF,0.0436,08-21-2023
+BWX,SPDR® Bloomberg International Treasury Bond ETF,0.0321,08-21-2023
+FLRN,SPDR® Bloomberg Investment Grade Floating Rate ETF,0.0613,08-21-2023
+SJNK,SPDR® Bloomberg Short Term High Yield Bond ETF,0.08900000000000001,08-21-2023
+BWZ,SPDR® Bloomberg Short Term International Treasury Bond ETF,0.0316,08-21-2023
+EMTL,SPDR® DoubleLine® Emerging Markets Fixed Income ETF,0.08130000000000001,08-21-2023
+STOT,SPDR® DoubleLine® Short Duration Total Return Tactical ETF,0.064,08-21-2023
+TOTL,SPDR® DoubleLine® Total Return Tactical ETF,0.0634,08-21-2023
+WIP,SPDR® FTSE International Government Inflation-Protected Bond ETF,0.061500000000000006,08-21-2023
+OBND,SPDR® Loomis Sayles Opportunistic Bond ETF,0.0698,08-21-2023
+LQIG,SPDR® MarketAxess Investment Grade 400 Corporate Bond ETF,0.0588,08-21-2023
+HYMB,SPDR® Nuveen Bloomberg High Yield Municipal Bond ETF,0.057,08-21-2023
+TFI,SPDR® Nuveen Bloomberg Municipal Bond ETF,0.0371,08-21-2023
+SHM,SPDR® Nuveen Bloomberg Short Term Municipal Bond ETF,0.031400000000000004,08-21-2023
+MBNE,SPDR® Nuveen Municipal Bond ESG ETF,0.0449,08-21-2023
+MBND,SPDR® Nuveen Municipal Bond ETF,0.04769999999999999,08-21-2023
+SPAB,SPDR® Portfolio Aggregate Bond ETF,0.0519,08-21-2023
+SPBO,SPDR® Portfolio Corporate Bond ETF,0.0592,08-21-2023
+SPHY,SPDR® Portfolio High Yield Bond ETF,0.0898,08-21-2023
+SPIB,SPDR® Portfolio Intermediate Term Corporate Bond ETF,0.058499999999999996,08-21-2023
+SPTI,SPDR® Portfolio Intermediate Term Treasury ETF,0.045,08-21-2023
+SPLB,SPDR® Portfolio Long Term Corporate Bond ETF,0.06,08-21-2023
+SPTL,SPDR® Portfolio Long Term Treasury ETF,0.045899999999999996,08-21-2023
+SPMB,SPDR® Portfolio Mortgage Backed Bond ETF,0.052000000000000005,08-21-2023
+SPSB,SPDR® Portfolio Short Term Corporate Bond ETF,0.0591,08-21-2023
+SPTS,SPDR® Portfolio Short Term Treasury ETF,0.0506,08-21-2023
+SPIP,SPDR® Portfolio TIPS ETF,0.048,08-21-2023
+ULST,SPDR® SSGA Ultra Short Term Bond ETF,0.056600000000000004,08-21-2023

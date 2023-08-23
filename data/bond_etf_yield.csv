@@ -1,321 +1,319 @@
-Ticker,Name,Yield to Maturity,Date
-AGG,iShares Core U.S. Aggregate Bond ETF,0.0511,08-18-2023
-TLT,iShares 20+ Year Treasury Bond ETF,0.045,08-18-2023
-LQD,iShares iBoxx $ Investment Grade Corporate Bond ETF,0.0575,08-18-2023
-MUB,iShares National Muni Bond ETF,0.0362,08-18-2023
-IEF,iShares 7-10 Year Treasury Bond ETF,0.0428,08-18-2023
-MBB,iShares MBS ETF,0.0515,08-18-2023
-SHY,iShares 1-3 Year Treasury Bond ETF,0.05,08-18-2023
-GOVT,iShares U.S. Treasury Bond ETF,0.0464,08-18-2023
-IGSB,iShares 1-5 Year Investment Grade Corporate Bond ETF,0.0575,08-18-2023
-TIP,iShares TIPS Bond ETF,0.0243,08-18-2023
-IUSB,iShares Core Total USD Bond Market ETF,0.0542999999999999,08-18-2023
-SHV,iShares Short Treasury Bond ETF,0.0533999999999999,08-18-2023
-EMB,iShares J.P. Morgan USD Emerging Markets Bond ETF,0.076,08-18-2023
-HYG,iShares iBoxx $ High Yield Corporate Bond ETF,0.0856,08-18-2023
-SGOV,iShares 0-3 Month Treasury Bond ETF,0.0537,08-18-2023
-IEI,iShares 3-7 Year Treasury Bond ETF,0.0446,08-18-2023
-IGIB,iShares 5-10 Year Investment Grade Corporate Bond ETF,0.0574,08-18-2023
-STIP,iShares 0-5 Year TIPS Bond ETF,0.0293,08-18-2023
-TFLO,iShares Treasury Floating Rate Bond ETF,0.0555,08-18-2023
-SUB,iShares Short-Term National Muni Bond ETF,0.0324,08-18-2023
-USIG,iShares Broad USD Investment Grade Corporate Bond ETF,0.0579999999999999,08-18-2023
-USHY,iShares Broad USD High Yield Corporate Bond ETF,0.0873,08-18-2023
-FLOT,iShares Floating Rate Bond ETF,0.0624,08-18-2023
-TLH,iShares 10-20 Year Treasury Bond ETF,0.0455,08-18-2023
-ICSH,BlackRock Ultra Short-Term Bond ETF,0.0574,08-18-2023
-SHYG,iShares 0-5 Year High Yield Corporate Bond ETF,0.0843,08-18-2023
-IAGG,iShares Core International Aggregate Bond ETF,0.0331,08-18-2023
-ISTB,iShares Core 1-5 Year USD Bond ETF,0.055,08-18-2023
-NEAR,BlackRock Short Maturity Bond ETF,0.0629,08-18-2023
-EAGG,iShares ESG Aware U.S. Aggregate Bond ETF,0.0509,08-18-2023
-IBTD,iShares® iBonds® Dec 2023 Term Treasury ETF,0.051,08-18-2023
-GVI,iShares Intermediate Government/Credit Bond ETF,0.0501999999999999,08-18-2023
-IBDP,iShares® iBonds® Dec 2024 Term Corporate ETF,0.0592,08-18-2023
-IBTE,iShares® iBonds® Dec 2024 Term Treasury ETF,0.0533,08-18-2023
-SLQD,iShares 0-5 Year Investment Grade Corporate Bond ETF,0.0572,08-18-2023
-CMF,iShares California Muni Bond ETF,0.0345,08-18-2023
-IBDQ,iShares® iBonds® Dec 2025 Term Corporate ETF,0.0576,08-18-2023
-IBDO,iShares® iBonds® Dec 2023 Term Corporate ETF,0.0554,08-18-2023
-IGLB,iShares 10+ Year Investment Grade Corporate Bond ETF,0.0594,08-18-2023
-IBDR,iShares® iBonds® Dec 2026 Term Corporate ETF,0.0561,08-18-2023
-ICVT,iShares Convertible Bond ETF,0.0482,08-18-2023
-IBTF,iShares® iBonds® Dec 2025 Term Treasury ETF,0.0501999999999999,08-18-2023
-IBDS,iShares® iBonds® Dec 2027 Term Corporate ETF,0.0553,08-18-2023
-FALN,iShares Fallen Angels USD Bond ETF,0.0801,08-18-2023
-IGOV,iShares International Treasury Bond ETF,0.0317,08-18-2023
-SUSC,iShares ESG Aware USD Corporate Bond ETF,0.0575,08-18-2023
-IBDT,iShares® iBonds® Dec 2028 Term Corporate ETF,0.0558,08-18-2023
-QLTA,iShares Aaa - A Rated Corporate Bond ETF,0.0552,08-18-2023
-SUSB,iShares ESG Aware 1-5 Year USD Corporate Bond ETF,0.0572,08-18-2023
-IBDU,iShares® iBonds® Dec 2029 Term Corporate ETF,0.0559,08-18-2023
-TLTW,iShares 20+ Year Treasury Bond BuyWrite Strategy ETF,0.0451,08-18-2023
-LEMB,iShares J.P. Morgan EM Local Currency Bond ETF,0.0748,08-18-2023
-EUSB,iShares ESG Advanced Total USD Bond Market ETF,0.0532,08-18-2023
-AGZ,iShares Agency Bond ETF,0.051,08-18-2023
-NYF,iShares New York Muni Bond ETF,0.0366,08-18-2023
-MEAR,BlackRock Short Maturity Municipal Bond ETF,0.0438999999999999,08-18-2023
-ILTB,iShares Core 10+ Year USD Bond ETF,0.0554,08-18-2023
-IBMM,iShares® iBonds® Dec 2024 Term Muni Bond ETF,0.0332,08-18-2023
-IBMN,iShares® iBonds® Dec 2025 Term Muni Bond ETF,0.0325,08-18-2023
-IBML,iShares® iBonds® Dec 2023 Term Muni Bond ETF,0.0327,08-18-2023
-CMBS,iShares CMBS ETF,0.0617999999999999,08-18-2023
-CEMB,iShares J.P. Morgan EM Corporate Bond ETF,0.0748,08-18-2023
-IBDW,iShares® iBonds® Dec 2031 Term Corporate ETF,0.0572,08-18-2023
-IBDV,iShares® iBonds® Dec 2030 Term Corporate ETF,0.0562,08-18-2023
-IBHD,iShares® iBonds® 2024 Term High Yield and Income ETF,0.0797,08-18-2023
-IBTG,iShares® iBonds® Dec 2026 Term Treasury ETF,0.0467999999999999,08-18-2023
-EMHY,iShares J.P. Morgan EM High Yield Bond ETF,0.0984,08-18-2023
-BGRN,iShares USD Green Bond ETF,0.0554,08-18-2023
-IBMO,iShares® iBonds® Dec 2026 Term Muni Bond ETF,0.0318,08-18-2023
-GNMA,iShares GNMA Bond ETF,0.0512,08-18-2023
-IBMP,iShares® iBonds® Dec 2027 Term Muni Bond ETF,0.0308,08-18-2023
-LQDH,iShares Interest Rate Hedged Corporate Bond ETF,0.0681,08-18-2023
-IGEB,iShares Investment Grade Bond Factor ETF,0.0619,08-18-2023
-IBTH,iShares® iBonds® Dec 2027 Term Treasury ETF,0.0451,08-18-2023
-HYBB,iShares BB Rated Corporate Bond ETF,0.0742999999999999,08-18-2023
-IBHE,iShares® iBonds® 2025 Term High Yield and Income ETF,0.0802,08-18-2023
-IBDX,iShares® iBonds® Dec 2032 Term Corporate ETF,0.0569,08-18-2023
-HYDB,iShares High Yield Bond Factor ETF,0.0892999999999999,08-18-2023
-IMTB,iShares Core 5-10 Year USD Bond ETF,0.0535,08-18-2023
-IBMQ,iShares® iBonds® Dec 2028 Term Muni Bond ETF,0.0302999999999999,08-18-2023
-IBHC,iShares® iBonds® 2023 Term High Yield and Income ETF,0.0617999999999999,08-18-2023
-GBF,iShares Government/Credit Bond ETF,0.0508,08-18-2023
-HYGH,iShares Interest Rate Hedged High Yield Bond ETF,0.0932,08-18-2023
-GHYG,iShares US & Intl High Yield Corp Bond ETF,0.0828,08-18-2023
-IBTI,iShares® iBonds® Dec 2028 Term Treasury ETF,0.0443,08-18-2023
-GOVZ,iShares 25+ Year Treasury STRIPS Bond ETF,0.0437,08-18-2023
-HYXF,iShares ESG Advanced High Yield Corporate Bond ETF,0.0867,08-18-2023
-IBHF,iShares® iBonds® 2026 Term High Yield and Income ETF,0.0862,08-18-2023
-LQDW,iShares Investment Grade Corporate Bond BuyWrite Strategy ETF,0.0575,08-18-2023
-IBTM,iShares® iBonds® Dec 2032 Term Treasury ETF,0.0429,08-18-2023
-IBTK,iShares® iBonds® Dec 2030 Term Treasury ETF,0.0433,08-18-2023
-BYLD,iShares Yield Optimized Bond ETF,0.0645,08-18-2023
-IBTL,iShares® iBonds® Dec 2031 Term Treasury ETF,0.0425,08-18-2023
-IBTJ,iShares® iBonds® Dec 2029 Term Treasury ETF,0.0438,08-18-2023
-ISHG,iShares 1-3 Year International Treasury Bond ETF,0.0324,08-18-2023
-IGBH,iShares Interest Rate Hedged Long-Term Corporate Bond ETF,0.0721,08-18-2023
-HYMU,BlackRock High Yield Muni Income Bond ETF,0.0523,08-18-2023
-FIBR,iShares U.S. Fixed Income Balanced Risk Factor ETF,0.0587,08-18-2023
-LQDI,iShares Inflation Hedged Corporate Bond ETF,0.0556,08-18-2023
-HYXU,iShares International High Yield Bond ETF,0.0716,08-18-2023
-CLOA,BlackRock AAA CLO ETF,0.0715,08-18-2023
-BEMB,iShares J.P. Morgan Broad USD Emerging Markets Bond ETF,0.0748,08-18-2023
-HYGW,iShares High Yield Corporate Bond BuyWrite Strategy ETF,0.0852999999999999,08-18-2023
-IBHG,iShares® iBonds® 2027 Term High Yield and Income ETF,0.0849,08-18-2023
-INMU,BlackRock Intermediate Muni Income Bond ETF,0.0424,08-18-2023
-LQDB,iShares BBB Rated Corporate Bond ETF,0.0592,08-18-2023
-BRLN,BlackRock Floating Rate Loan ETF,0.0956,08-18-2023
-IBDY,iShares® iBonds® Dec 2033 Term Corporate ETF,0.0569,08-18-2023
-IBTO,iShares® iBonds® Dec 2033 Term Treasury ETF,0.0426999999999999,08-18-2023
-CALY,BlackRock Short-Term California Muni Bond ETF,0.0339,08-18-2023
-IBHH,iShares® iBonds® 2028 Term High Yield and Income ETF,0.084,08-18-2023
-USBF,iShares USD Bond Factor ETF,0.0565,08-18-2023
-ELQD,iShares ESG Advanced Investment Grade Corporate Bond ETF,0.0573,08-18-2023
-IBHJ,iShares® iBonds® 2030 Term High Yield and Income ETF,0.0795,08-18-2023
-IBHI,iShares® iBonds® 2029 Term High Yield and Income ETF,0.0849,08-18-2023
-AGRH,iShares Interest Rate Hedged U.S. Aggregate Bond ETF,0.0617,08-18-2023
-IBMR,iShares® iBonds® Dec 2029 Term Muni Bond ETF,0.0298,08-18-2023
-HYGI,iShares Inflation Hedged High Yield Bond ETF,0.0842,08-18-2023
-AGIH,iShares Inflation Hedged U.S. Aggregate Bond ETF,0.051,08-18-2023
-VWOB,Vanguard Emerging Markets Government Bond ETF,0.071,07-31-2023
-VCEB,Vanguard ESG U.S. Corporate Bond ETF,0.055,07-31-2023
-EDV,Vanguard Extended Duration Treasury ETF,0.042,07-31-2023
-BIV,Vanguard Intermediate-Term Bond ETF,0.046,07-31-2023
-VCIT,Vanguard Intermediate-Term Corporate Bond ETF,0.054,07-31-2023
-VGIT,Vanguard Intermediate-Term Treasury ETF,0.042,07-31-2023
-BLV,Vanguard Long-Term Bond ETF,0.049,07-31-2023
-VCLT,Vanguard Long-Term Corporate Bond ETF,0.055,07-31-2023
-VGLT,Vanguard Long-Term Treasury ETF,0.0409999999999999,07-31-2023
-VMBS,Vanguard Mortgage-Backed Securities ETF,0.047,07-31-2023
-BSV,Vanguard Short-Term Bond ETF,0.049,07-31-2023
-VCSH,Vanguard Short-Term Corporate Bond ETF,0.055,07-31-2023
-VTIP,Vanguard Short-Term Inflation-Protected Securities ETF,0.046,07-31-2023
-VTES,Vanguard Short-Term Tax-Exempt Bond ETF,0.031,07-31-2023
-VGSH,Vanguard Short-Term Treasury ETF,0.05,07-31-2023
-VTEB,Vanguard Tax-Exempt Bond ETF,0.035,07-31-2023
-BND,Vanguard Total Bond Market ETF,0.048,07-31-2023
-VTC,Vanguard Total Corporate Bond ETF,0.055,07-31-2023
-BNDX,Vanguard Total International Bond ETF,0.053,07-31-2023
-BNDW,Vanguard Total World Bond ETF,0.051,07-31-2023
-VUSB,Vanguard Ultra-Short Bond ETF,0.0579999999999999,07-31-2023
-HYBL,SPDR® Blackstone High Income ETF,0.0723,08-18-2023
-SRLN,SPDR® Blackstone Senior Loan ETF,0.0878999999999999,08-17-2023
-TIPX,SPDR® Bloomberg 1-10 Year TIPS ETF,0.0475999999999999,08-18-2023
-BIL,SPDR® Bloomberg 1-3 Month T-Bill ETF,0.0538,08-18-2023
-BILS,SPDR® Bloomberg 3-12 Month T-Bill ETF,0.0542,08-18-2023
-CWB,SPDR® Bloomberg Convertible Securities ETF,0.0184,08-18-2023
-EBND,SPDR® Bloomberg Emerging Markets Local Bond ETF,0.0626999999999999,08-18-2023
-EMHC,SPDR® Bloomberg Emerging Markets USD Bond ETF,0.0708,08-18-2023
-JNK,SPDR® Bloomberg High Yield Bond ETF,0.0897,08-18-2023
-IBND,SPDR® Bloomberg International Corporate Bond ETF,0.0429,08-18-2023
-BWX,SPDR® Bloomberg International Treasury Bond ETF,0.0316,08-18-2023
-FLRN,SPDR® Bloomberg Investment Grade Floating Rate ETF,0.0612,08-18-2023
-SJNK,SPDR® Bloomberg Short Term High Yield Bond ETF,0.0885,08-18-2023
-BWZ,SPDR® Bloomberg Short Term International Treasury Bond ETF,0.0312,08-18-2023
-EMTL,SPDR® DoubleLine® Emerging Markets Fixed Income ETF,0.0805,08-18-2023
-STOT,SPDR® DoubleLine® Short Duration Total Return Tactical ETF,0.0635,08-18-2023
-TOTL,SPDR® DoubleLine® Total Return Tactical ETF,0.0629,08-18-2023
-WIP,SPDR® FTSE International Government Inflation-Protected Bond ETF,0.0611,08-18-2023
-OBND,SPDR® Loomis Sayles Opportunistic Bond ETF,0.0692,08-18-2023
-LQIG,SPDR® MarketAxess Investment Grade 400 Corporate Bond ETF,0.0581,08-18-2023
-HYMB,SPDR® Nuveen Bloomberg High Yield Municipal Bond ETF,0.0567,08-18-2023
-TFI,SPDR® Nuveen Bloomberg Municipal Bond ETF,0.0369,08-18-2023
-SHM,SPDR® Nuveen Bloomberg Short Term Municipal Bond ETF,0.0312,08-18-2023
-MBNE,SPDR® Nuveen Municipal Bond ESG ETF,0.0445,08-18-2023
-MBND,SPDR® Nuveen Municipal Bond ETF,0.0473,08-18-2023
-SPAB,SPDR® Portfolio Aggregate Bond ETF,0.0511,08-18-2023
-SPBO,SPDR® Portfolio Corporate Bond ETF,0.0584,08-18-2023
-SPHY,SPDR® Portfolio High Yield Bond ETF,0.0892999999999999,08-18-2023
-SPIB,SPDR® Portfolio Intermediate Term Corporate Bond ETF,0.0578,08-18-2023
-SPTI,SPDR® Portfolio Intermediate Term Treasury ETF,0.0441,08-18-2023
-SPLB,SPDR® Portfolio Long Term Corporate Bond ETF,0.0592,08-18-2023
-SPTL,SPDR® Portfolio Long Term Treasury ETF,0.0451,08-18-2023
-SPMB,SPDR® Portfolio Mortgage Backed Bond ETF,0.0512,08-18-2023
-SPSB,SPDR® Portfolio Short Term Corporate Bond ETF,0.0584,08-18-2023
-SPTS,SPDR® Portfolio Short Term Treasury ETF,0.05,08-18-2023
-SPIP,SPDR® Portfolio TIPS ETF,0.0474,08-18-2023
-ULST,SPDR® SSGA Ultra Short Term Bond ETF,0.0558,08-18-2023
-SCHI,Schwab 5-10 Year Corporate Bond ETF,0.0538999999999999,06-30-2023
-SCHJ,Schwab 1-5 Year Corporate Bond ETF,0.0561,06-30-2023
-SCHO,Schwab Short-Term U.S. Treasury ETF,0.0495,06-30-2023
-SCHP,Schwab U.S. TIPS ETF,0.0424,06-30-2023
-SCHQ,Schwab Long-Term U.S. Treasury ETF,0.0397,06-30-2023
-SCHR,Schwab Intermediate-Term U.S. Treasury ETF,0.0412,06-30-2023
-SCHZ,Schwab U.S. Aggregate Bond ETF,0.0481,06-30-2023
-SCMB,Schwab Municipal Bond ETF,0.0383,06-30-2023
-PGF,Invesco Financial Preferred ETF,0.0731,08-17-2023
-PGX,Invesco Preferred ETF,0.0713999999999999,08-17-2023
-VRP,Invesco Variable Rate Preferred ETF,0.0878999999999999,08-17-2023
-PCY,Invesco Emerging Markets Sovereign Debt ETF,0.0851,08-17-2023
-PGHY,Invesco Global Short Term High Yield Bond ETF,0.1042,08-17-2023
-PICB,Invesco International Corporate Bond ETF,0.0508,08-17-2023
-PLW,Invesco 1-30 Laddered Treasury ETF,0.0453,08-17-2023
-BSCN,Invesco BulletShares 2023 Corporate Bond ETF,0.0557,08-17-2023
-BSJN,Invesco BulletShares 2023 High Yield Corporate Bond ETF,0.0745,08-17-2023
-BSMN,Invesco BulletShares 2023 Municipal Bond ETF,0.0336,08-17-2023
-BSCO,Invesco BulletShares 2024 Corporate Bond ETF,0.0584,08-17-2023
-BSJO,Invesco BulletShares 2024 High Yield Corporate Bond ETF,0.0793,08-17-2023
-BSMO,Invesco BulletShares 2024 Municipal Bond ETF,0.0389,08-17-2023
-BSCP,Invesco BulletShares 2025 Corporate Bond ETF,0.0571,08-17-2023
-BSJP,Invesco BulletShares 2025 High Yield Corporate Bond ETF,0.0827,08-17-2023
-BSMP,Invesco BulletShares 2025 Municipal Bond ETF,0.0401,08-17-2023
-BSCQ,Invesco BulletShares 2026 Corporate Bond ETF,0.0562,08-17-2023
-BSJQ,Invesco BulletShares 2026 High Yield Corporate Bond ETF,0.0837,08-17-2023
-BSMQ,Invesco BulletShares 2026 Municipal Bond ETF,0.0392,08-17-2023
-BSCR,Invesco BulletShares 2027 Corporate Bond ETF,0.055,08-17-2023
-BSJR,Invesco BulletShares 2027 High Yield Corporate Bond ETF,0.0851,08-17-2023
-BSMR,Invesco BulletShares 2027 Municipal Bond ETF,0.0398,08-17-2023
-BSCS,Invesco BulletShares 2028 Corporate Bond ETF,0.0555,08-17-2023
-BSJS,Invesco BulletShares 2028 High Yield Corporate Bond ETF,0.0872,08-17-2023
-BSMS,Invesco BulletShares 2028 Municipal Bond ETF,0.0387,08-17-2023
-BSCT,Invesco BulletShares 2029 Corporate Bond ETF,0.0558,08-17-2023
-BSJT,Invesco BulletShares 2029 High Yield Corporate Bond ETF,0.0856,08-17-2023
-BSMT,Invesco BulletShares 2029 Municipal Bond ETF,0.0381,08-17-2023
-BSCU,Invesco BulletShares 2030 Corporate Bond ETF,0.0561,08-17-2023
-BSJU,Invesco BulletShares 2030 High Yield Corporate Bond ETF,0.0814,08-17-2023
-BSMU,Invesco BulletShares 2030 Municipal Bond ETF,0.0374,08-17-2023
-BSCV,Invesco BulletShares 2031 Corporate Bond ETF,0.057,08-17-2023
-BSMV,Invesco BulletShares 2031 Municipal Bond ETF,0.0375999999999999,08-17-2023
-BSCW,Invesco BulletShares 2032 Corporate Bond ETF,0.0569,08-17-2023
-BSMW,Invesco BulletShares 2032 Municipal Bond ETF,0.0407,08-17-2023
-PWZ,Invesco California AMT-Free Municipal Bond ETF,0.0443,08-17-2023
-PHB,Invesco Fundamental High Yield® Corporate Bond ETF,0.0735,08-17-2023
-PFIG,Invesco Fundamental Investment Grade Corporate Bond ETF,0.0556,08-17-2023
-IHYF,Invesco High Yield Bond Factor ETF,0.0909,08-17-2023
-HIYS,Invesco High Yield Select ETF,0.0803999999999999,08-17-2023
-IIGD,Invesco Investment Grade Defensive ETF,0.0545,08-17-2023
-IMSI,Invesco Municipal Strategic Income ETF,0.0467999999999999,08-17-2023
-PZA,Invesco National AMT-Free Municipal Bond ETF,0.0464,08-17-2023
-PZT,Invesco New York AMT-Free Municipal Bond ETF,0.0462,08-17-2023
-PBTP,Invesco PureBeta℠ 0-5 Yr US TIPS ETF,0.0229,08-17-2023
-ISDB,Invesco Short Duration Bond ETF,0.0693,08-17-2023
-BAB,Invesco Taxable Municipal Bond ETF,0.0548,08-17-2023
-GTO,Invesco Total Return Bond ETF,0.0657,08-17-2023
-CLTL,Invesco Treasury Collateral ETF,0.0541,08-17-2023
-GSY,Invesco Ultra Short Duration ETF,0.0622,08-17-2023
-PVI,Invesco VRDO Tax-Free ETF,0.0302,08-17-2023
-VRIG,Invesco Variable Rate Investment Grade ETF,0.0727,08-17-2023
-FTSM,First Trust Enhanced Short Maturity ETF,0.0532,08-18-2023
-FSIG,First Trust Limited Duration Investment Grade Corporate ETF,0.0571,08-18-2023
-LGOV,First Trust Long Duration Opportunities ETF,0.0469,07-31-2023
-LMBS,First Trust Low Duration Opportunities ETF,0.0541,07-31-2023
-FTSL,First Trust Senior Loan Fund,0.0875,08-18-2023
-HYLS,First Trust Tactical High Yield ETF,0.0874,08-18-2023
-FIXD,First Trust TCW Opportunistic Fixed Income ETF,0.0552,07-31-2023
-DEED,First Trust TCW Securitized Plus ETF,0.066,07-31-2023
-UCON,First Trust TCW Unconstrained Plus Bond ETF,0.0669,07-31-2023
-FCAL,First Trust California Municipal High Income ETF,0.038,07-31-2023
-FMB,First Trust Managed Municipal ETF,0.0405,07-31-2023
-FMHI,First Trust Municipal High Income ETF,0.0499,07-31-2023
-FMNY,First Trust New York Municipal High Income ETF,0.0364,07-31-2023
-FSMB,First Trust Short Duration Managed Municipal ETF,0.0375999999999999,07-31-2023
-FUMB,First Trust Ultra Short Duration Municipal ETF,0.0363,07-31-2023
-BBLB,JPMorgan BetaBuilders U.S. Treasury Bond 20+ Year ETF,0.0411,07-31-2023
-JCPB,JPMorgan Core Plus Bond ETF,0.0605999999999999,07-31-2023
-JPST,JPMorgan Ultra-Short Income ETF,0.06,08-18-2023
-BBHY,JPMorgan BetaBuilders USD High Yield Corporate Bond ETF,0.0842,07-31-2023
-JPIE,JPMorgan Income ETF,0.0719,07-31-2023
-JPIB,JPMorgan International Bond Opportunities ETF,0.0646,07-31-2023
-JPLD,JPMorgan Limited Duration Bond ETF,0.0647,07-31-2023
-BBSB,JPMorgan BetaBuilders U.S. Treasury Bond 1-3 Year ETF,0.0495,07-31-2023
-JCPI,JPMorgan Inflation Managed Bond ETF,0.0555,07-31-2023
-BBIB,JPMorgan BetaBuilders U.S. Treasury Bond 3-10 Year ETF,0.0418,07-31-2023
-BBCB,JPMorgan BetaBuilders USD Investment Grade Corporate Bond ETF,0.055,07-31-2023
-JSCP,JPMorgan Short Duration Core Plus ETF,0.0655,07-31-2023
-JPMB,JPMorgan USD Emerging Markets Sovereign Bond ETF,0.0661,07-31-2023
-BBIP,JPMorgan BetaBuilders U.S. TIPS 0-5 Year ETF,0.0254,07-31-2023
-BBAG,JPMorgan BetaBuilders U.S. Aggregate Bond ETF,0.0481,07-31-2023
-BBSA,JPMorgan BetaBuilders 1-5 Year U.S. Aggregate Bond ETF,0.0501999999999999,07-31-2023
-MINO,Municipal Income Opportunities Active Exchange-Traded Fund,0.0474,08-18-2023
-TIPZ,Broad U.S. TIPS Index Exchange-Traded Fund,0.0487,08-18-2023
-MUNI,Intermediate Municipal Bond Active Exchange-Traded Fund,0.0397,08-18-2023
-SMMU,Short Term Municipal Bond Active Exchange-Traded Fund,0.0401,08-18-2023
-STPZ,1-5 Year U.S. TIPS Index Exchange-Traded Fund,0.0498,08-18-2023
-ZROZ,25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund,0.0438,08-18-2023
-BOND,Active Bond Exchange-Traded Fund,0.0579,08-18-2023
-LTPZ,15+ Year U.S. TIPS Index Exchange-Traded Fund,0.0469,08-18-2023
-LDUR,Enhanced Low Duration Active Exchange-Traded Fund,0.0579999999999999,08-18-2023
-CORP,Investment Grade Corporate Bond Index Exchange-Traded Fund,0.0584,08-18-2023
-HYS,0-5 Year High Yield Corporate Bond Index Exchange-Traded Fund,0.0877,08-18-2023
-USFR,WisdomTree Floating Rate Treasury Fund,0.0549,08-18-2023
-UNIY,WisdomTree Voya Yield Enhanced USD Universal Bond Fund,0.0546,08-18-2023
-AGGY,WisdomTree Yield Enhanced U.S. Aggregate Bond Fund,0.0538999999999999,08-18-2023
-WFHY,WisdomTree U.S. High Yield Corporate Bond Fund,0.087,08-18-2023
-AGZD,WisdomTree Interest Rate Hedged U.S. Aggregate Bond Fund,0.0511,08-18-2023
-HYZD,WisdomTree Interest Rate Hedged High Yield Bond Fund,0.0876,08-18-2023
-ELD,WisdomTree Emerging Markets Local Debt Fund,0.0731,08-18-2023
-SHAG,WisdomTree Yield Enhanced U.S. Short-Term Aggregate Bond Fund,0.0528,08-18-2023
-EMCB,WisdomTree Emerging Markets Corporate Bond Fund,0.0747,08-18-2023
-SFIG,WisdomTree U.S. Short-Term Corporate Bond Fund,0.0569,08-18-2023
-MTGP,WisdomTree Mortgage Plus Bond Fund,0.0544,08-18-2023
-WFIG,WisdomTree U.S. Corporate Bond Fund,0.0579999999999999,08-18-2023
-GIGB,Goldman Sachs Access Investment Grade Corporate Bond ETF,0.0579,08-18-2023
-GSST,Goldman Sachs Access Ultra Short Bond ETF,0.0584999999999999,08-18-2023
-GBIL,Goldman Sachs Access Treasury 0-1 Year ETF,0.0521999999999999,08-18-2023
-GSIG,Goldman Sachs Access Investment Grade Corporate 1-5 Year Bond ETF,0.0576,08-18-2023
-GEMD,Goldman Sachs Access Emerging Markets USD Bond ETF,0.0733999999999999,08-18-2023
-GCOR,Goldman Sachs Access U.S. Aggregate Bond ETF,0.0515,08-18-2023
-GHYB,Goldman Sachs Access High Yield Corporate Bond ETF,0.0814,08-18-2023
-JAAA,AAA CLO ETF,0.074,08-18-2023
-VNLA,Short Duration Income ETF,0.0616,08-18-2023
-JBBB,B-BBB CLO ETF,0.1,08-18-2023
-JMBS,Mortgage-Backed Securities ETF,0.0670999999999999,08-18-2023
-JIB,Sustainable & Impact Core Bond ETF,0.0508,08-18-2023
-SCRD,Sustainable Corporate Bond ETF,0.059,08-18-2023
-DFCA,California Municipal Bond ETF,0.0306,07-31-2023
-DFCF,Core Fixed Income ETF,0.0507,07-31-2023
-DFSB,Global Sustainability Fixed Income ETF,0.0559999999999999,07-31-2023
-DFIP,Inflation Protected Securities ETF,0.0177,07-31-2023
-DFNM,National Municipal Bond ETF,0.0297,07-31-2023
-DFSD,Short Duration Fixed Income ETF,0.057,07-31-2023
-BNDC,FLEXSHARES CORE SELECT BOND FUND,0.0475999999999999,08-18-2023
-FEHY,FLEXSHARES ESG & CLIMATE HIGH YIELD CORPORATE CORE INDEX FUND,0.0511,07-11-2023
-FEIG,FLEXSHARES ESG & CLIMATE INVESTMENT GRADE CORPORATE CORE INDEX FUND,0.0578,08-18-2023
-HYGV,FLEXSHARES HIGH YIELD VALUE-SCORED BOND INDEX FUND,0.0992,08-18-2023
-LKOR,FLEXSHARES CREDIT-SCORED US LONG CORPORATE BOND INDEX FUND,0.0604,08-18-2023
-MBSD,FLEXSHARES DISCIPLINED DURATION MBS INDEX FUND,0.0553,08-18-2023
-RAVI,FLEXSHARES ULTRA-SHORT INCOME FUND,0.0584999999999999,08-18-2023
-SKOR,FLEXSHARES CREDIT-SCORED US CORPORATE BOND INDEX FUND,0.0584999999999999,08-18-2023
-TDTF,FLEXSHARES IBOXX 5-YEAR TARGET DURATION TIPS INDEX FUND,0.044,08-18-2023
-TDTT,FLEXSHARES IBOXX 3-YEAR TARGET DURATION TIPS INDEX FUND,0.0458999999999999,08-18-2023
+Ticker,Name,Yield to Maturity,Expected Annualized Std Dev,P/E Ratio,Yield to Volatility,Yield ZScore,Date
+AGG,iShares Core U.S. Aggregate Bond ETF,0.0511,0.0681,19.57,0.75,0.34,08-18-2023
+TLT,iShares 20+ Year Treasury Bond ETF,0.045,0.1646,22.22,0.27,0.71,08-18-2023
+LQD,iShares iBoxx $ Investment Grade Corporate Bond ETF,0.0575,0.0909,17.39,0.63,0.05,08-18-2023
+MUB,iShares National Muni Bond ETF,0.0362,0.04,27.62,0.9,1.24,08-18-2023
+IEF,iShares 7-10 Year Treasury Bond ETF,0.0428,0.0858,23.36,0.5,0.84,08-18-2023
+MBB,iShares MBS ETF,0.0515,0.074,19.42,0.7,0.32,08-18-2023
+SHY,iShares 1-3 Year Treasury Bond ETF,0.05,0.0152,20.0,3.29,0.41,08-18-2023
+GOVT,iShares U.S. Treasury Bond ETF,0.0464,0.0607,21.55,0.76,0.63,08-18-2023
+IGSB,iShares 1-5 Year Investment Grade Corporate Bond ETF,0.0575,0.0317,17.39,1.81,0.05,08-18-2023
+TIP,iShares TIPS Bond ETF,0.0243,0.0617,41.15,0.39,1.97,08-18-2023
+IUSB,iShares Core Total USD Bond Market ETF,0.0542999999999999,0.0645,18.42,0.84,0.15,08-18-2023
+SHV,iShares Short Treasury Bond ETF,0.0533999999999999,0.0114,18.73,4.68,0.2,08-18-2023
+EMB,iShares J.P. Morgan USD Emerging Markets Bond ETF,0.076,0.0868,13.16,0.88,1.17,08-18-2023
+HYG,iShares iBoxx $ High Yield Corporate Bond ETF,0.0856,0.0556,11.68,1.54,1.75,08-18-2023
+SGOV,iShares 0-3 Month Treasury Bond ETF,0.0537,0.0108,18.62,4.97,0.18,08-18-2023
+IEI,iShares 3-7 Year Treasury Bond ETF,0.0446,0.0488,22.42,0.91,0.73,08-18-2023
+IGIB,iShares 5-10 Year Investment Grade Corporate Bond ETF,0.0574,0.0731,17.42,0.79,0.04,08-18-2023
+STIP,iShares 0-5 Year TIPS Bond ETF,0.0293,0.0299,34.13,0.98,1.66,08-18-2023
+TFLO,iShares Treasury Floating Rate Bond ETF,0.0555,0.0101,18.02,5.5,0.07,08-18-2023
+SUB,iShares Short-Term National Muni Bond ETF,0.0324,0.0116,30.86,2.79,1.48,08-18-2023
+USIG,iShares Broad USD Investment Grade Corporate Bond ETF,0.0579999999999999,0.0722,17.24,0.8,0.08,08-18-2023
+USHY,iShares Broad USD High Yield Corporate Bond ETF,0.0873,0.056,11.45,1.56,1.86,08-18-2023
+FLOT,iShares Floating Rate Bond ETF,0.0624,0.0122,16.03,5.11,0.35,08-18-2023
+TLH,iShares 10-20 Year Treasury Bond ETF,0.0455,0.1377,21.98,0.33,0.68,08-18-2023
+ICSH,BlackRock Ultra Short-Term Bond ETF,0.0574,0.0125,17.42,4.59,0.04,08-18-2023
+SHYG,iShares 0-5 Year High Yield Corporate Bond ETF,0.0843,0.0455,11.86,1.85,1.68,08-18-2023
+IAGG,iShares Core International Aggregate Bond ETF,0.0331,0.042,30.21,0.79,1.43,08-18-2023
+ISTB,iShares Core 1-5 Year USD Bond ETF,0.055,0.0292,18.18,1.88,0.1,08-18-2023
+NEAR,BlackRock Short Maturity Bond ETF,0.0629,0.0113,15.9,5.57,0.38,08-18-2023
+EAGG,iShares ESG Aware U.S. Aggregate Bond ETF,0.0509,0.0675,19.65,0.75,0.35,08-18-2023
+IBTD,iShares® iBonds® Dec 2023 Term Treasury ETF,0.051,0.0143,19.61,3.57,0.35,08-18-2023
+GVI,iShares Intermediate Government/Credit Bond ETF,0.0501999999999999,0.0436,19.92,1.15,0.39,08-18-2023
+IBDP,iShares® iBonds® Dec 2024 Term Corporate ETF,0.0592,0.0143,16.89,4.14,0.15,08-18-2023
+IBTE,iShares® iBonds® Dec 2024 Term Treasury ETF,0.0533,0.0138,18.76,3.86,0.21,08-18-2023
+SLQD,iShares 0-5 Year Investment Grade Corporate Bond ETF,0.0572,0.0244,17.48,2.34,0.03,08-18-2023
+CMF,iShares California Muni Bond ETF,0.0345,0.0388,28.99,0.89,1.35,08-18-2023
+IBDQ,iShares® iBonds® Dec 2025 Term Corporate ETF,0.0576,0.0256,17.36,2.25,0.05,08-18-2023
+IBDO,iShares® iBonds® Dec 2023 Term Corporate ETF,0.0554,0.0122,18.05,4.54,0.08,08-18-2023
+IGLB,iShares 10+ Year Investment Grade Corporate Bond ETF,0.0594,0.1302,16.84,0.46,0.16,08-18-2023
+IBDR,iShares® iBonds® Dec 2026 Term Corporate ETF,0.0561,0.0336,17.83,1.67,0.04,08-18-2023
+ICVT,iShares Convertible Bond ETF,0.0482,0.0925,20.75,0.52,0.52,08-18-2023
+IBTF,iShares® iBonds® Dec 2025 Term Treasury ETF,0.0501999999999999,0.0213,19.92,2.36,0.39,08-18-2023
+IBDS,iShares® iBonds® Dec 2027 Term Corporate ETF,0.0553,0.0439,18.08,1.26,0.08,08-18-2023
+FALN,iShares Fallen Angels USD Bond ETF,0.0801,0.055,12.48,1.46,1.42,08-18-2023
+IGOV,iShares International Treasury Bond ETF,0.0317,0.0902,31.55,0.35,1.52,08-18-2023
+SUSC,iShares ESG Aware USD Corporate Bond ETF,0.0575,0.0747,17.39,0.77,0.05,08-18-2023
+IBDT,iShares® iBonds® Dec 2028 Term Corporate ETF,0.0558,0.0559,17.92,1.0,0.05,08-18-2023
+QLTA,iShares Aaa - A Rated Corporate Bond ETF,0.0552,0.076,18.12,0.73,0.09,08-18-2023
+SUSB,iShares ESG Aware 1-5 Year USD Corporate Bond ETF,0.0572,0.0302,17.48,1.89,0.03,08-18-2023
+IBDU,iShares® iBonds® Dec 2029 Term Corporate ETF,0.0559,0.0627,17.89,0.89,0.05,08-18-2023
+TLTW,iShares 20+ Year Treasury Bond BuyWrite Strategy ETF,0.0451,0.1373,22.17,0.33,0.7,08-18-2023
+LEMB,iShares J.P. Morgan EM Local Currency Bond ETF,0.0748,0.0689,13.37,1.09,1.1,08-18-2023
+EUSB,iShares ESG Advanced Total USD Bond Market ETF,0.0532,0.061,18.8,0.87,0.21,08-18-2023
+AGZ,iShares Agency Bond ETF,0.051,0.0285,19.61,1.79,0.35,08-18-2023
+NYF,iShares New York Muni Bond ETF,0.0366,0.0406,27.32,0.9,1.22,08-18-2023
+MEAR,BlackRock Short Maturity Municipal Bond ETF,0.0438999999999999,0.0129,22.78,3.4,0.78,08-18-2023
+ILTB,iShares Core 10+ Year USD Bond ETF,0.0554,0.1331,18.05,0.42,0.08,08-18-2023
+IBMM,iShares® iBonds® Dec 2024 Term Muni Bond ETF,0.0332,0.0127,30.12,2.61,1.43,08-18-2023
+IBMN,iShares® iBonds® Dec 2025 Term Muni Bond ETF,0.0325,0.0151,30.77,2.15,1.47,08-18-2023
+IBML,iShares® iBonds® Dec 2023 Term Muni Bond ETF,0.0327,0.0093,30.58,3.52,1.46,08-18-2023
+CMBS,iShares CMBS ETF,0.0617999999999999,0.0447,16.18,1.38,0.31,08-18-2023
+CEMB,iShares J.P. Morgan EM Corporate Bond ETF,0.0748,0.0494,13.37,1.51,1.1,08-18-2023
+IBDW,iShares® iBonds® Dec 2031 Term Corporate ETF,0.0572,0.0803,17.48,0.71,0.03,08-18-2023
+IBDV,iShares® iBonds® Dec 2030 Term Corporate ETF,0.0562,0.0722,17.79,0.78,0.03,08-18-2023
+IBHD,iShares® iBonds® 2024 Term High Yield and Income ETF,0.0797,0.0365,12.55,2.18,1.4,08-18-2023
+IBTG,iShares® iBonds® Dec 2026 Term Treasury ETF,0.0467999999999999,0.0306,21.37,1.53,0.6,08-18-2023
+EMHY,iShares J.P. Morgan EM High Yield Bond ETF,0.0984,0.0782,10.16,1.26,2.53,08-18-2023
+BGRN,iShares USD Green Bond ETF,0.0554,0.0618,18.05,0.9,0.08,08-18-2023
+IBMO,iShares® iBonds® Dec 2026 Term Muni Bond ETF,0.0318,0.0186,31.45,1.71,1.51,08-18-2023
+GNMA,iShares GNMA Bond ETF,0.0512,0.0726,19.53,0.71,0.33,08-18-2023
+IBMP,iShares® iBonds® Dec 2027 Term Muni Bond ETF,0.0308,0.0237,32.47,1.3,1.57,08-18-2023
+LQDH,iShares Interest Rate Hedged Corporate Bond ETF,0.0681,0.0462,14.68,1.47,0.69,08-18-2023
+IGEB,iShares Investment Grade Bond Factor ETF,0.0619,0.0756,16.16,0.82,0.32,08-18-2023
+IBTH,iShares® iBonds® Dec 2027 Term Treasury ETF,0.0451,0.0398,22.17,1.13,0.7,08-18-2023
+HYBB,iShares BB Rated Corporate Bond ETF,0.0742999999999999,0.0562,13.46,1.32,1.07,08-18-2023
+IBHE,iShares® iBonds® 2025 Term High Yield and Income ETF,0.0802,0.0396,12.47,2.03,1.43,08-18-2023
+IBDX,iShares® iBonds® Dec 2032 Term Corporate ETF,0.0569,0.0813,17.57,0.7,0.01,08-18-2023
+HYDB,iShares High Yield Bond Factor ETF,0.0892999999999999,0.0632,11.2,1.41,1.98,08-18-2023
+IMTB,iShares Core 5-10 Year USD Bond ETF,0.0535,0.0711,18.69,0.75,0.19,08-18-2023
+IBMQ,iShares® iBonds® Dec 2028 Term Muni Bond ETF,0.0302999999999999,0.0288,33.0,1.05,1.6,08-18-2023
+IBHC,iShares® iBonds® 2023 Term High Yield and Income ETF,0.0617999999999999,0.0282,16.18,2.19,0.31,08-18-2023
+GBF,iShares Government/Credit Bond ETF,0.0508,0.0653,19.69,0.78,0.36,08-18-2023
+HYGH,iShares Interest Rate Hedged High Yield Bond ETF,0.0932,0.0494,10.73,1.89,2.22,08-18-2023
+GHYG,iShares US & Intl High Yield Corp Bond ETF,0.0828,0.0571,12.08,1.45,1.58,08-18-2023
+IBTI,iShares® iBonds® Dec 2028 Term Treasury ETF,0.0443,0.0537,22.57,0.82,0.75,08-18-2023
+GOVZ,iShares 25+ Year Treasury STRIPS Bond ETF,0.0437,0.2342,22.88,0.19,0.79,08-18-2023
+HYXF,iShares ESG Advanced High Yield Corporate Bond ETF,0.0867,0.0622,11.53,1.39,1.82,08-18-2023
+IBHF,iShares® iBonds® 2026 Term High Yield and Income ETF,0.0862,0.0549,11.6,1.57,1.79,08-18-2023
+LQDW,iShares Investment Grade Corporate Bond BuyWrite Strategy ETF,0.0575,0.0711,17.39,0.81,0.05,08-18-2023
+IBTM,iShares® iBonds® Dec 2032 Term Treasury ETF,0.0429,0.0972,23.31,0.44,0.84,08-18-2023
+IBTK,iShares® iBonds® Dec 2030 Term Treasury ETF,0.0433,0.0814,23.09,0.53,0.81,08-18-2023
+BYLD,iShares Yield Optimized Bond ETF,0.0645,0.0535,15.5,1.21,0.47,08-18-2023
+IBTL,iShares® iBonds® Dec 2031 Term Treasury ETF,0.0425,0.0993,23.53,0.43,0.86,08-18-2023
+IBTJ,iShares® iBonds® Dec 2029 Term Treasury ETF,0.0438,0.0627,22.83,0.7,0.78,08-18-2023
+ISHG,iShares 1-3 Year International Treasury Bond ETF,0.0324,0.0615,30.86,0.53,1.48,08-18-2023
+IGBH,iShares Interest Rate Hedged Long-Term Corporate Bond ETF,0.0721,0.0581,13.87,1.24,0.94,08-18-2023
+HYMU,BlackRock High Yield Muni Income Bond ETF,0.0523,0.0516,19.12,1.01,0.27,08-18-2023
+FIBR,iShares U.S. Fixed Income Balanced Risk Factor ETF,0.0587,0.0718,17.04,0.82,0.12,08-18-2023
+LQDI,iShares Inflation Hedged Corporate Bond ETF,0.0556,0.0821,17.99,0.68,0.07,08-18-2023
+HYXU,iShares International High Yield Bond ETF,0.0716,0.0818,13.97,0.88,0.9,08-18-2023
+CLOA,BlackRock AAA CLO ETF,0.0715,0.0216,13.99,3.31,0.9,08-18-2023
+BEMB,iShares J.P. Morgan Broad USD Emerging Markets Bond ETF,0.0748,0.0703,13.37,1.06,1.1,08-18-2023
+HYGW,iShares High Yield Corporate Bond BuyWrite Strategy ETF,0.0852999999999999,0.0585,11.72,1.46,1.74,08-18-2023
+IBHG,iShares® iBonds® 2027 Term High Yield and Income ETF,0.0849,0.0574,11.78,1.48,1.71,08-18-2023
+INMU,BlackRock Intermediate Muni Income Bond ETF,0.0424,0.0299,23.58,1.42,0.87,08-18-2023
+LQDB,iShares BBB Rated Corporate Bond ETF,0.0592,0.0747,16.89,0.79,0.15,08-18-2023
+BRLN,BlackRock Floating Rate Loan ETF,0.0956,0.048,10.46,1.99,2.36,08-18-2023
+IBDY,iShares® iBonds® Dec 2033 Term Corporate ETF,0.0569,0.0754,17.57,0.75,0.01,08-18-2023
+IBTO,iShares® iBonds® Dec 2033 Term Treasury ETF,0.0426999999999999,0.0851,23.42,0.5,0.85,08-18-2023
+CALY,BlackRock Short-Term California Muni Bond ETF,0.0339,0.0066,29.5,5.14,1.38,08-18-2023
+IBHH,iShares® iBonds® 2028 Term High Yield and Income ETF,0.084,0.0697,11.9,1.21,1.66,08-18-2023
+USBF,iShares USD Bond Factor ETF,0.0565,0.0846,17.7,0.67,0.01,08-18-2023
+ELQD,iShares ESG Advanced Investment Grade Corporate Bond ETF,0.0573,0.097,17.45,0.59,0.04,08-18-2023
+IBHJ,iShares® iBonds® 2030 Term High Yield and Income ETF,0.0795,0.0665,12.58,1.2,1.38,08-18-2023
+IBHI,iShares® iBonds® 2029 Term High Yield and Income ETF,0.0849,0.0698,11.78,1.22,1.71,08-18-2023
+AGRH,iShares Interest Rate Hedged U.S. Aggregate Bond ETF,0.0617,0.0213,16.21,2.9,0.3,08-18-2023
+IBMR,iShares® iBonds® Dec 2029 Term Muni Bond ETF,0.0298,0.0251,33.56,1.19,1.63,08-18-2023
+HYGI,iShares Inflation Hedged High Yield Bond ETF,0.0842,0.0691,11.88,1.22,1.67,08-18-2023
+AGIH,iShares Inflation Hedged U.S. Aggregate Bond ETF,0.051,0.0656,19.61,0.78,0.35,08-18-2023
+VWOB,Vanguard Emerging Markets Government Bond ETF,0.071,0.0835,14.08,0.85,0.87,07-31-2023
+VCEB,Vanguard ESG U.S. Corporate Bond ETF,0.055,0.0702,18.18,0.78,0.1,07-31-2023
+EDV,Vanguard Extended Duration Treasury ETF,0.042,0.2148,23.81,0.2,0.89,07-31-2023
+BIV,Vanguard Intermediate-Term Bond ETF,0.046,0.0739,21.74,0.62,0.65,07-31-2023
+VCIT,Vanguard Intermediate-Term Corporate Bond ETF,0.054,0.0722,18.52,0.75,0.16,07-31-2023
+VGIT,Vanguard Intermediate-Term Treasury ETF,0.042,0.0618,23.81,0.68,0.89,07-31-2023
+BLV,Vanguard Long-Term Bond ETF,0.049,0.1392,20.41,0.35,0.47,07-31-2023
+VCLT,Vanguard Long-Term Corporate Bond ETF,0.055,0.133,18.18,0.41,0.1,07-31-2023
+VGLT,Vanguard Long-Term Treasury ETF,0.0409999999999999,0.152,24.39,0.27,0.95,07-31-2023
+VMBS,Vanguard Mortgage-Backed Securities ETF,0.047,0.0725,21.28,0.65,0.59,07-31-2023
+BSV,Vanguard Short-Term Bond ETF,0.049,0.0238,20.41,2.06,0.47,07-31-2023
+VCSH,Vanguard Short-Term Corporate Bond ETF,0.055,0.0305,18.18,1.8,0.1,07-31-2023
+VTIP,Vanguard Short-Term Inflation-Protected Securities ETF,0.046,0.0438,21.74,1.05,0.65,07-31-2023
+VTES,Vanguard Short-Term Tax-Exempt Bond ETF,0.031,0.0159,32.26,1.95,1.56,07-31-2023
+VGSH,Vanguard Short-Term Treasury ETF,0.05,0.0185,20.0,2.7,0.41,07-31-2023
+VTEB,Vanguard Tax-Exempt Bond ETF,0.035,0.0377,28.57,0.93,1.32,07-31-2023
+BND,Vanguard Total Bond Market ETF,0.048,0.0673,20.83,0.71,0.53,07-31-2023
+VTC,Vanguard Total Corporate Bond ETF,0.055,0.0753,18.18,0.73,0.1,07-31-2023
+BNDX,Vanguard Total International Bond ETF,0.053,0.0561,18.87,0.94,0.22,07-31-2023
+BNDW,Vanguard Total World Bond ETF,0.051,0.056,19.61,0.91,0.35,07-31-2023
+VUSB,Vanguard Ultra-Short Bond ETF,0.0579999999999999,0.0129,17.24,4.5,0.08,07-31-2023
+SRLN,SPDR® Blackstone Senior Loan ETF,0.0878999999999999,0.034,11.38,2.59,1.89,08-18-2023
+TIPX,SPDR® Bloomberg 1-10 Year TIPS ETF,0.0482,0.0505,20.75,0.95,0.52,08-21-2023
+BIL,SPDR® Bloomberg 1-3 Month T-Bill ETF,0.0538,0.0107,18.59,5.03,0.18,08-21-2023
+BILS,SPDR® Bloomberg 3-12 Month T-Bill ETF,0.0542,0.0109,18.45,4.97,0.15,08-21-2023
+CWB,SPDR® Bloomberg Convertible Securities ETF,0.0183,0.0861,54.64,0.21,2.33,08-21-2023
+EBND,SPDR® Bloomberg Emerging Markets Local Bond ETF,0.0630999999999999,0.0873,15.85,0.72,0.39,08-21-2023
+EMHC,SPDR® Bloomberg Emerging Markets USD Bond ETF,0.0716,0.0877,13.97,0.82,0.9,08-21-2023
+JNK,SPDR® Bloomberg High Yield Bond ETF,0.0883999999999999,0.058,11.31,1.52,1.92,08-21-2023
+IBND,SPDR® Bloomberg International Corporate Bond ETF,0.0436,0.0835,22.94,0.52,0.8,08-21-2023
+BWX,SPDR® Bloomberg International Treasury Bond ETF,0.0321,0.0879,31.15,0.37,1.49,08-21-2023
+FLRN,SPDR® Bloomberg Investment Grade Floating Rate ETF,0.0613,0.0162,16.31,3.78,0.28,08-21-2023
+SJNK,SPDR® Bloomberg Short Term High Yield Bond ETF,0.089,0.0478,11.24,1.86,1.96,08-21-2023
+BWZ,SPDR® Bloomberg Short Term International Treasury Bond ETF,0.0316,0.0651,31.65,0.49,1.52,08-21-2023
+EMTL,SPDR® DoubleLine® Emerging Markets Fixed Income ETF,0.0813,0.0451,12.3,1.8,1.49,08-21-2023
+STOT,SPDR® DoubleLine® Short Duration Total Return Tactical ETF,0.064,0.0187,15.62,3.42,0.44,08-21-2023
+TOTL,SPDR® DoubleLine® Total Return Tactical ETF,0.0634,0.0599,15.77,1.06,0.41,08-21-2023
+WIP,SPDR® FTSE International Government Inflation-Protected Bond ETF,0.0615,0.1045,16.26,0.59,0.29,08-21-2023
+OBND,SPDR® Loomis Sayles Opportunistic Bond ETF,0.0698,0.0479,14.33,1.46,0.8,08-21-2023
+LQIG,SPDR® MarketAxess Investment Grade 400 Corporate Bond ETF,0.0588,0.0859,17.01,0.68,0.13,08-21-2023
+HYMB,SPDR® Nuveen Bloomberg High Yield Municipal Bond ETF,0.057,0.0616,17.54,0.93,0.02,08-21-2023
+TFI,SPDR® Nuveen Bloomberg Municipal Bond ETF,0.0371,0.0463,26.95,0.8,1.19,08-21-2023
+SHM,SPDR® Nuveen Bloomberg Short Term Municipal Bond ETF,0.0314,0.0193,31.85,1.63,1.54,08-21-2023
+MBNE,SPDR® Nuveen Municipal Bond ESG ETF,0.0449,0.0366,22.27,1.23,0.72,08-21-2023
+MBND,SPDR® Nuveen Municipal Bond ETF,0.0476999999999999,0.0322,20.96,1.48,0.55,08-21-2023
+SPAB,SPDR® Portfolio Aggregate Bond ETF,0.0519,0.0636,19.27,0.82,0.29,08-21-2023
+SPBO,SPDR® Portfolio Corporate Bond ETF,0.0592,0.0759,16.89,0.78,0.15,08-21-2023
+SPHY,SPDR® Portfolio High Yield Bond ETF,0.0898,0.0592,11.14,1.52,2.01,08-21-2023
+SPIB,SPDR® Portfolio Intermediate Term Corporate Bond ETF,0.0584999999999999,0.048,17.09,1.22,0.11,08-21-2023
+SPTI,SPDR® Portfolio Intermediate Term Treasury ETF,0.045,0.0595,22.22,0.76,0.71,08-21-2023
+SPLB,SPDR® Portfolio Long Term Corporate Bond ETF,0.06,0.1312,16.67,0.46,0.2,08-21-2023
+SPTL,SPDR® Portfolio Long Term Treasury ETF,0.0458999999999999,0.152,21.79,0.3,0.66,08-21-2023
+SPMB,SPDR® Portfolio Mortgage Backed Bond ETF,0.052,0.0761,19.23,0.68,0.29,08-21-2023
+SPSB,SPDR® Portfolio Short Term Corporate Bond ETF,0.0591,0.0168,16.92,3.52,0.15,08-21-2023
+SPTS,SPDR® Portfolio Short Term Treasury ETF,0.0506,0.0156,19.76,3.24,0.37,08-21-2023
+SPIP,SPDR® Portfolio TIPS ETF,0.048,0.0655,20.83,0.73,0.53,08-21-2023
+ULST,SPDR® SSGA Ultra Short Term Bond ETF,0.0566,0.0132,17.67,4.29,0.01,08-21-2023
+SCHI,Schwab 5-10 Year Corporate Bond ETF,0.0538999999999999,0.075,18.55,0.72,0.17,06-30-2023
+SCHJ,Schwab 1-5 Year Corporate Bond ETF,0.0561,0.0237,17.83,2.37,0.04,06-30-2023
+SCHO,Schwab Short-Term U.S. Treasury ETF,0.0495,0.0132,20.2,3.75,0.44,06-30-2023
+SCHP,Schwab U.S. TIPS ETF,0.0424,0.0596,23.58,0.71,0.87,06-30-2023
+SCHQ,Schwab Long-Term U.S. Treasury ETF,0.0397,0.1501,25.19,0.26,1.03,06-30-2023
+SCHR,Schwab Intermediate-Term U.S. Treasury ETF,0.0412,0.0619,24.27,0.67,0.94,06-30-2023
+SCHZ,Schwab U.S. Aggregate Bond ETF,0.0481,0.0692,20.79,0.7,0.52,06-30-2023
+SCMB,Schwab Municipal Bond ETF,0.0383,0.0368,26.11,1.04,1.12,06-30-2023
+BKLN,Invesco Senior Loan ETF,0.0963,0.0402,10.38,2.4,2.4,08-18-2023
+PGF,Invesco Financial Preferred ETF,0.0732,0.083,13.66,0.88,1.0,08-18-2023
+PGX,Invesco Preferred ETF,0.0713999999999999,0.0963,14.01,0.74,0.89,08-18-2023
+VRP,Invesco Variable Rate Preferred ETF,0.0877999999999999,0.0623,11.39,1.41,1.89,08-18-2023
+PCY,Invesco Emerging Markets Sovereign Debt ETF,0.0852,0.1143,11.74,0.75,1.73,08-18-2023
+PGHY,Invesco Global Short Term High Yield Bond ETF,0.1021,0.0716,9.79,1.43,2.76,08-18-2023
+PICB,Invesco International Corporate Bond ETF,0.0504,0.0944,19.84,0.53,0.38,08-18-2023
+PLW,Invesco 1-30 Laddered Treasury ETF,0.045,0.109,22.22,0.41,0.71,08-18-2023
+BSCN,Invesco BulletShares 2023 Corporate Bond ETF,0.0547,0.0115,18.28,4.76,0.12,08-18-2023
+BSJN,Invesco BulletShares 2023 High Yield Corporate Bond ETF,0.0576999999999999,0.0191,17.33,3.02,0.06,08-18-2023
+BSMN,Invesco BulletShares 2023 Municipal Bond ETF,0.0345,0.0193,28.99,1.79,1.35,08-18-2023
+BSCO,Invesco BulletShares 2024 Corporate Bond ETF,0.0584,0.0165,17.12,3.54,0.1,08-18-2023
+BSJO,Invesco BulletShares 2024 High Yield Corporate Bond ETF,0.0791,0.0394,12.64,2.01,1.36,08-18-2023
+BSMO,Invesco BulletShares 2024 Municipal Bond ETF,0.039,0.0247,25.64,1.58,1.07,08-18-2023
+BSCP,Invesco BulletShares 2025 Corporate Bond ETF,0.0572,0.0261,17.48,2.19,0.03,08-18-2023
+BSJP,Invesco BulletShares 2025 High Yield Corporate Bond ETF,0.0831,0.0423,12.03,1.96,1.6,08-18-2023
+BSMP,Invesco BulletShares 2025 Municipal Bond ETF,0.0403,0.0211,24.81,1.91,1.0,08-18-2023
+BSCQ,Invesco BulletShares 2026 Corporate Bond ETF,0.0561,0.0368,17.83,1.52,0.04,08-18-2023
+BSJQ,Invesco BulletShares 2026 High Yield Corporate Bond ETF,0.0838,0.0459,11.93,1.83,1.65,08-18-2023
+BSMQ,Invesco BulletShares 2026 Municipal Bond ETF,0.0394,0.0291,25.38,1.35,1.05,08-18-2023
+BSCR,Invesco BulletShares 2027 Corporate Bond ETF,0.0547,0.0484,18.28,1.13,0.12,08-18-2023
+BSJR,Invesco BulletShares 2027 High Yield Corporate Bond ETF,0.0853999999999999,0.059,11.71,1.45,1.74,08-18-2023
+BSMR,Invesco BulletShares 2027 Municipal Bond ETF,0.0399,0.0352,25.06,1.13,1.02,08-18-2023
+BSCS,Invesco BulletShares 2028 Corporate Bond ETF,0.0552,0.053,18.12,1.04,0.09,08-18-2023
+BSJS,Invesco BulletShares 2028 High Yield Corporate Bond ETF,0.0875,0.0612,11.43,1.43,1.87,08-18-2023
+BSMS,Invesco BulletShares 2028 Municipal Bond ETF,0.0388,0.0348,25.77,1.11,1.09,08-18-2023
+BSCT,Invesco BulletShares 2029 Corporate Bond ETF,0.0555,0.0637,18.02,0.87,0.07,08-18-2023
+BSJT,Invesco BulletShares 2029 High Yield Corporate Bond ETF,0.0862,0.073,11.6,1.18,1.79,08-18-2023
+BSMT,Invesco BulletShares 2029 Municipal Bond ETF,0.0383,0.0468,26.11,0.82,1.12,08-18-2023
+BSCU,Invesco BulletShares 2030 Corporate Bond ETF,0.0557,0.0707,17.95,0.79,0.06,08-18-2023
+BSJU,Invesco BulletShares 2030 High Yield Corporate Bond ETF,0.0817,0.0703,12.24,1.16,1.52,08-18-2023
+BSMU,Invesco BulletShares 2030 Municipal Bond ETF,0.0375999999999999,0.0679,26.6,0.55,1.16,08-18-2023
+BSCV,Invesco BulletShares 2031 Corporate Bond ETF,0.0567,0.0857,17.64,0.66,0.0,08-18-2023
+BSCW,Invesco BulletShares 2032 Corporate Bond ETF,0.0566,0.0785,17.67,0.72,0.01,08-18-2023
+BSMW,Invesco BulletShares 2032 Municipal Bond ETF,0.0408,0.0437,24.51,0.93,0.97,08-18-2023
+PWZ,Invesco California AMT-Free Municipal Bond ETF,0.0443,0.0605,22.57,0.73,0.75,08-18-2023
+PHB,Invesco Fundamental High Yield® Corporate Bond ETF,0.0736,0.059,13.59,1.25,1.03,08-18-2023
+PFIG,Invesco Fundamental Investment Grade Corporate Bond ETF,0.0550999999999999,0.0543,18.15,1.01,0.1,08-18-2023
+IHYF,Invesco High Yield Bond Factor ETF,0.0904,0.0479,11.06,1.89,2.05,08-18-2023
+HIYS,Invesco High Yield Select ETF,0.0808,0.0458,12.38,1.76,1.46,08-18-2023
+IIGD,Invesco Investment Grade Defensive ETF,0.054,0.0418,18.52,1.29,0.16,08-18-2023
+IMSI,Invesco Municipal Strategic Income ETF,0.0469,0.0377,21.32,1.24,0.59,08-18-2023
+PZA,Invesco National AMT-Free Municipal Bond ETF,0.0463,0.0629,21.6,0.74,0.63,08-18-2023
+PZT,Invesco New York AMT-Free Municipal Bond ETF,0.0463,0.0598,21.6,0.77,0.63,08-18-2023
+PBTP,Invesco PureBeta℠ 0-5 Yr US TIPS ETF,0.0227,0.037,44.05,0.61,2.06,08-18-2023
+ISDB,Invesco Short Duration Bond ETF,0.0695,0.0297,14.39,2.34,0.78,08-18-2023
+BAB,Invesco Taxable Municipal Bond ETF,0.0545,0.0976,18.35,0.56,0.13,08-18-2023
+GTO,Invesco Total Return Bond ETF,0.0662,0.0644,15.11,1.03,0.58,08-18-2023
+CLTL,Invesco Treasury Collateral ETF,0.0527,0.0189,18.98,2.79,0.24,08-18-2023
+GSY,Invesco Ultra Short Duration ETF,0.0619,0.0142,16.16,4.36,0.32,08-18-2023
+PVI,Invesco VRDO Tax-Free ETF,0.0304,0.0093,32.89,3.27,1.6,08-18-2023
+VRIG,Invesco Variable Rate Investment Grade ETF,0.0725,0.022,13.79,3.3,0.96,08-18-2023
+FTSM,First Trust Enhanced Short Maturity ETF,0.0579,0.0112,17.27,5.17,0.07,08-21-2023
+FSIG,First Trust Limited Duration Investment Grade Corporate ETF,0.0569,0.0358,17.57,1.59,0.01,08-21-2023
+LGOV,First Trust Long Duration Opportunities ETF,0.0469,0.0862,21.32,0.54,0.59,07-31-2023
+LMBS,First Trust Low Duration Opportunities ETF,0.0541,0.0294,18.48,1.84,0.16,07-31-2023
+FTSL,First Trust Senior Loan Fund,0.0876,0.0367,11.42,2.39,1.88,08-21-2023
+HYLS,First Trust Tactical High Yield ETF,0.0883999999999999,0.0541,11.31,1.63,1.92,08-21-2023
+FIXD,First Trust TCW Opportunistic Fixed Income ETF,0.0552,0.0719,18.12,0.77,0.09,07-31-2023
+DEED,First Trust TCW Securitized Plus ETF,0.066,0.0705,15.15,0.94,0.56,07-31-2023
+UCON,First Trust TCW Unconstrained Plus Bond ETF,0.0669,0.0499,14.95,1.34,0.62,07-31-2023
+FCAL,First Trust California Municipal High Income ETF,0.038,0.0438,26.32,0.87,1.14,07-31-2023
+FMB,First Trust Managed Municipal ETF,0.0405,0.0364,24.69,1.11,0.98,07-31-2023
+FMHI,First Trust Municipal High Income ETF,0.0499,0.0508,20.04,0.98,0.41,07-31-2023
+FMNY,First Trust New York Municipal High Income ETF,0.0364,0.0376,27.47,0.97,1.23,07-31-2023
+FSMB,First Trust Short Duration Managed Municipal ETF,0.0375999999999999,0.0224,26.6,1.68,1.16,07-31-2023
+FUMB,First Trust Ultra Short Duration Municipal ETF,0.0363,0.0281,27.55,1.29,1.24,07-31-2023
+JSCP,JPMorgan Short Duration Core Plus ETF,0.0655,0.024,15.27,2.73,0.53,07-31-2023
+BBSA,JPMorgan BetaBuilders 1-5 Year U.S. Aggregate Bond ETF,0.0501999999999999,0.0267,19.92,1.88,0.39,07-31-2023
+JCPI,JPMorgan Inflation Managed Bond ETF,0.0555,0.0479,18.02,1.16,0.07,07-31-2023
+JCPB,JPMorgan Core Plus Bond ETF,0.0605999999999999,0.0581,16.5,1.04,0.24,07-31-2023
+BBIP,JPMorgan BetaBuilders U.S. TIPS 0-5 Year ETF,0.0254,0.0242,39.37,1.05,1.9,07-31-2023
+BBIB,JPMorgan BetaBuilders U.S. Treasury Bond 3-10 Year ETF,0.0418,0.0568,23.92,0.74,0.9,07-31-2023
+JPIE,JPMorgan Income ETF,0.0719,0.0514,13.91,1.4,0.92,07-31-2023
+JPMB,JPMorgan USD Emerging Markets Sovereign Bond ETF,0.0661,0.0691,15.13,0.96,0.57,07-31-2023
+BBHY,JPMorgan BetaBuilders USD High Yield Corporate Bond ETF,0.0842,0.0579,11.88,1.45,1.67,07-31-2023
+BBCB,JPMorgan BetaBuilders USD Investment Grade Corporate Bond ETF,0.055,0.0742,18.18,0.74,0.1,07-31-2023
+JPST,JPMorgan Ultra-Short Income ETF,0.0608,0.0119,16.45,5.11,0.25,08-21-2023
+BBSB,JPMorgan BetaBuilders U.S. Treasury Bond 1-3 Year ETF,0.0495,0.026,20.2,1.9,0.44,07-31-2023
+BBAG,JPMorgan BetaBuilders U.S. Aggregate Bond ETF,0.0481,0.0654,20.79,0.74,0.52,07-31-2023
+BBLB,JPMorgan BetaBuilders U.S. Treasury Bond 20+ Year ETF,0.0411,0.1392,24.33,0.3,0.95,07-31-2023
+JPLD,JPMorgan Limited Duration Bond ETF,0.0647,0.03,15.46,2.16,0.49,07-31-2023
+JPIB,JPMorgan International Bond Opportunities ETF,0.0646,0.0489,15.48,1.32,0.48,07-31-2023
+MUNI,Intermediate Municipal Bond Active Exchange-Traded Fund,0.0397,0.0324,25.19,1.23,1.03,08-18-2023
+LTPZ,15+ Year U.S. TIPS Index Exchange-Traded Fund,0.0469,0.1536,21.32,0.31,0.59,08-18-2023
+STPZ,1-5 Year U.S. TIPS Index Exchange-Traded Fund,0.0498,0.0303,20.08,1.64,0.42,08-18-2023
+LDUR,Enhanced Low Duration Active Exchange-Traded Fund,0.0579999999999999,0.0213,17.24,2.72,0.08,08-18-2023
+SMMU,Short Term Municipal Bond Active Exchange-Traded Fund,0.0401,0.0147,24.94,2.73,1.01,08-18-2023
+ZROZ,25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund,0.0438,0.2318,22.83,0.19,0.78,08-18-2023
+CORP,Investment Grade Corporate Bond Index Exchange-Traded Fund,0.0584,0.07,17.12,0.83,0.1,08-18-2023
+BOND,Active Bond Exchange-Traded Fund,0.0579,0.057,17.27,1.02,0.07,08-18-2023
+MINO,Municipal Income Opportunities Active Exchange-Traded Fund,0.0474,0.0485,21.1,0.98,0.56,08-18-2023
+HYS,0-5 Year High Yield Corporate Bond Index Exchange-Traded Fund,0.0877,0.0465,11.4,1.89,1.88,08-18-2023
+USFR,WisdomTree Floating Rate Treasury Fund,0.055,0.0108,18.18,5.09,0.1,08-21-2023
+UNIY,WisdomTree Voya Yield Enhanced USD Universal Bond Fund,0.0554,0.0497,18.05,1.11,0.08,08-21-2023
+AGGY,WisdomTree Yield Enhanced U.S. Aggregate Bond Fund,0.0548,0.0597,18.25,0.92,0.12,08-21-2023
+WFHY,WisdomTree U.S. High Yield Corporate Bond Fund,0.0863,0.0596,11.59,1.45,1.8,08-21-2023
+AGZD,WisdomTree Interest Rate Hedged U.S. Aggregate Bond Fund,0.0519,0.0398,19.27,1.3,0.29,08-21-2023
+HYZD,WisdomTree Interest Rate Hedged High Yield Bond Fund,0.0872,0.0453,11.47,1.92,1.85,08-21-2023
+ELD,WisdomTree Emerging Markets Local Debt Fund,0.0733999999999999,0.0916,13.62,0.8,1.01,08-21-2023
+SHAG,WisdomTree Yield Enhanced U.S. Short-Term Aggregate Bond Fund,0.0537,0.0259,18.62,2.07,0.18,08-21-2023
+EMCB,WisdomTree Emerging Markets Corporate Bond Fund,0.0755,0.0531,13.25,1.42,1.14,08-21-2023
+SFIG,WisdomTree U.S. Short-Term Corporate Bond Fund,0.0576,0.0242,17.36,2.38,0.05,08-21-2023
+MTGP,WisdomTree Mortgage Plus Bond Fund,0.0545,0.0783,18.35,0.7,0.13,08-21-2023
+WFIG,WisdomTree U.S. Corporate Bond Fund,0.0587,0.0727,17.04,0.81,0.12,08-21-2023
+GIGB,Goldman Sachs Access Investment Grade Corporate Bond ETF,0.0587,0.0736,17.04,0.8,0.12,08-21-2023
+GSST,Goldman Sachs Access Ultra Short Bond ETF,0.059,0.012,16.95,4.92,0.14,08-21-2023
+GBIL,Goldman Sachs Access Treasury 0-1 Year ETF,0.0530999999999999,0.0112,18.83,4.74,0.22,08-21-2023
+GSIG,Goldman Sachs Access Investment Grade Corporate 1-5 Year Bond ETF,0.0582,0.0313,17.18,1.86,0.09,08-21-2023
+GEMD,Goldman Sachs Access Emerging Markets USD Bond ETF,0.074,0.0813,13.51,0.91,1.05,08-21-2023
+GCOR,Goldman Sachs Access U.S. Aggregate Bond ETF,0.0523,0.0644,19.12,0.81,0.27,08-21-2023
+GHYB,Goldman Sachs Access High Yield Corporate Bond ETF,0.0817,0.0647,12.24,1.26,1.52,08-21-2023
+JAAA,AAA CLO ETF,0.0739,0.0167,13.53,4.43,1.04,08-21-2023
+VNLA,Short Duration Income ETF,0.0603,0.0247,16.58,2.44,0.22,08-21-2023
+JBBB,B-BBB CLO ETF,0.0998,0.0426,10.02,2.34,2.62,08-21-2023
+JMBS,Mortgage-Backed Securities ETF,0.067,0.0709,14.93,0.94,0.63,08-21-2023
+JIB,Sustainable & Impact Core Bond ETF,0.0504,0.0478,19.84,1.05,0.38,08-21-2023
+SCRD,Sustainable Corporate Bond ETF,0.0588,0.0669,17.01,0.88,0.13,08-21-2023
+DFCA,California Municipal Bond ETF,0.0306,0.0182,32.68,1.68,1.58,07-31-2023
+DFCF,Core Fixed Income ETF,0.0507,0.0721,19.72,0.7,0.36,07-31-2023
+DFSB,Global Sustainability Fixed Income ETF,0.0559999999999999,0.0658,17.86,0.85,0.04,07-31-2023
+DFIP,Inflation Protected Securities ETF,0.0177,0.0747,56.5,0.24,2.37,07-31-2023
+DFNM,National Municipal Bond ETF,0.0297,0.031,33.67,0.96,1.64,07-31-2023
+DFSD,Short Duration Fixed Income ETF,0.057,0.0229,17.54,2.49,0.02,07-31-2023
+BNDC,FLEXSHARES CORE SELECT BOND FUND,0.0475999999999999,0.0669,21.01,0.71,0.55,08-21-2023
+FEHY,FLEXSHARES ESG & CLIMATE HIGH YIELD CORPORATE CORE INDEX FUND,0.0511,0.0924,19.57,0.55,0.34,07-11-2023
+FEIG,FLEXSHARES ESG & CLIMATE INVESTMENT GRADE CORPORATE CORE INDEX FUND,0.0584999999999999,0.084,17.09,0.7,0.11,08-21-2023
+HYGV,FLEXSHARES HIGH YIELD VALUE-SCORED BOND INDEX FUND,0.0998,0.0665,10.02,1.5,2.62,08-21-2023
+LKOR,FLEXSHARES CREDIT-SCORED US LONG CORPORATE BOND INDEX FUND,0.0612,0.1318,16.34,0.46,0.27,08-21-2023
+MBSD,FLEXSHARES DISCIPLINED DURATION MBS INDEX FUND,0.0567,0.0571,17.64,0.99,0.0,08-21-2023
+RAVI,FLEXSHARES ULTRA-SHORT INCOME FUND,0.0591,0.0148,16.92,3.99,0.15,08-21-2023
+SKOR,FLEXSHARES CREDIT-SCORED US CORPORATE BOND INDEX FUND,0.0592,0.0489,16.89,1.21,0.15,08-21-2023
+TDTF,FLEXSHARES IBOXX 5-YEAR TARGET DURATION TIPS INDEX FUND,0.0448,0.062,22.32,0.72,0.72,08-21-2023
+TDTT,FLEXSHARES IBOXX 3-YEAR TARGET DURATION TIPS INDEX FUND,0.0465,0.0419,21.51,1.11,0.62,08-21-2023

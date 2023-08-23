@@ -1,5 +1,11 @@
+from arch.__future__ import reindexing
+
 import os
 import pandas as pd
+from yahooquery import Ticker
+from arch import arch_model
+from tqdm import tqdm
+import numpy as np
 
 
 def ishares():
@@ -201,7 +207,7 @@ def flexshares():
     return df
 
 
-def process_data():
+def combine_data():
     """
     :description: This function processes the ETF data.
 
@@ -242,3 +248,111 @@ def process_data():
     ])
 
     return combined_df.dropna()
+
+
+def download_stock_data(tickers, period='3y'):
+    ticker_str = ' '.join(tickers)
+    ticker_obj = Ticker(ticker_str, asynchronous=True)
+    stock_data = ticker_obj.history(period=period)
+
+    return stock_data
+
+
+def get_standard_deviation(stock_data):
+    std_devs = {}
+    for symbol in stock_data.index.get_level_values('symbol').unique():
+        symbol_data = stock_data.loc[symbol]
+        returns = symbol_data['close'].pct_change().dropna()
+        annualized_std_dev = returns.std() * np.sqrt(252)
+        std_devs[symbol] = annualized_std_dev
+
+    return round(pd.DataFrame.from_dict(std_devs, orient='index', columns=['Standard Deviation']), 4)
+
+
+# Function to tune GARCH parameters
+def tune_garch_parameters(returns):
+    best_aic = np.inf
+    best_order = None
+    p_values = range(1, 3)
+    q_values = range(1, 3)
+    for p in p_values:
+        for q in q_values:
+            try:
+                model = arch_model(returns, vol='Garch', p=p, o=0, q=q, rescale=False)
+                res = model.fit(disp='off')
+                if res.aic < best_aic:
+                    best_aic = res.aic
+                    best_order = (p, q)
+            except:
+                continue
+    return best_order
+
+
+def get_expected_standard_deviation(stock_data):
+    expected_std_devs = {}
+    for symbol in tqdm(stock_data.index.get_level_values('symbol').unique()):
+        symbol_data = stock_data.loc[symbol]
+        returns = symbol_data['close'].pct_change().dropna() * 100
+
+        # Call the tuning function to get the best p and q
+        try:
+            best_p, best_q = tune_garch_parameters(returns)
+        except TypeError:
+            continue
+
+        # Fit a GARCH model with the best p and q
+        model = arch_model(returns, vol='GARCH', p=best_p, o=0, q=best_q, rescale=False)
+        res = model.fit(disp='off')
+
+        # Get the last forecast of the conditional volatility and annualize it
+        forecast = res.forecast(start=0).variance.iloc[-1][0] ** 0.5 * np.sqrt(252)
+
+        # Rescale the forecast back to the original scale
+        expected_std_dev = forecast / 100
+
+        # Store the result
+        expected_std_devs[symbol] = round(expected_std_dev, 4)
+
+    # Return the results as a DataFrame
+    return pd.DataFrame.from_dict(expected_std_devs, orient='index', columns=['Expected Annualized Std Dev'])
+
+
+def process_data():
+    df = combine_data()
+    tickers = list(df.index)
+    stock_data_dict = download_stock_data(tickers)
+    std_dev_df = get_standard_deviation(stock_data_dict)
+    expected_std_dev_df = get_expected_standard_deviation(stock_data_dict)
+    std_dev_df_df = std_dev_df.join(expected_std_dev_df)
+    std_dev_df_df.index.name = 'Ticker'
+
+    final_df = pd.concat([df, std_dev_df_df], axis=1).dropna()
+    final_df['Yield to Volatility'] = round(final_df['Yield to Maturity'] / final_df['Expected Annualized Std Dev'], 2)
+    final_df['P/E Ratio'] = round(1 / final_df['Yield to Maturity'], 2)
+    final_df = final_df[[
+        'Name', 'Yield to Maturity', 'Expected Annualized Std Dev', 'P/E Ratio', 'Yield to Volatility', 'Date'
+    ]]
+    final_df['Yield to Maturity'] = (final_df['Yield to Maturity'])
+    final_df['Expected Annualized Std Dev'] = (final_df['Expected Annualized Std Dev'])
+    final_df['Yield ZScore'] = round(np.abs(
+        (final_df['Yield to Maturity'] - final_df['Yield to Maturity'].mean()) / final_df['Yield to Maturity'].std()),
+                                     2)
+    final_df = final_df[
+        ['Name', 'Yield to Maturity', 'Expected Annualized Std Dev', 'P/E Ratio', 'Yield to Volatility', 'Yield ZScore',
+         'Date']]
+
+    return final_df
+
+
+def filtered_df(final_df):
+    df = final_df.copy()
+    df['Yield to Maturity'] = (df['Yield to Maturity'] * 100).apply(lambda x: f"{x:.2f}%")
+    df['Expected Annualized Std Dev'] = (df['Expected Annualized Std Dev'] * 100).apply(
+        lambda x: f"{x:.2f}%")
+    return df.sort_values(
+        by='Yield to Volatility',
+        ascending=False
+    ).head(30).sort_values(
+        by='Yield to Maturity',
+        ascending=False
+    )
