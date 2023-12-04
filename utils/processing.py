@@ -2,10 +2,11 @@ from arch.__future__ import reindexing
 
 import os
 import pandas as pd
+import numpy as np
 from yahooquery import Ticker
 from arch import arch_model
 from tqdm import tqdm
-import numpy as np
+from typing import Tuple
 
 
 def ishares():
@@ -214,7 +215,6 @@ def combine_data():
     :return: The processed ETF data
     :rtype: pd.DataFrame
     """
-    print("process_data is being called.")
     ishares_df = ishares()
     vanguard_df = vanguard()
     state_street_df = state_street()
@@ -230,7 +230,8 @@ def combine_data():
     dimensional_df = dimensional()
     flexshares_df = flexshares()
 
-    combined_df = pd.concat([
+    # List of dataframes
+    dfs = [
         ishares_df,
         vanguard_df,
         state_street_df,
@@ -245,12 +246,28 @@ def combine_data():
         janus_henderson_df,
         dimensional_df,
         flexshares_df
-    ])
+    ]
 
+    # Drop all-NA columns from each DataFrame before concatenation
+    cleaned_dfs = [df.dropna(axis=1, how='all') for df in dfs]
+
+    combined_df = pd.concat(cleaned_dfs)
+
+    # Drop rows with any NA values
     return combined_df.dropna()
 
 
 def download_stock_data(tickers, period='3y'):
+    """
+    :description: This function downloads the stock data.
+
+    :param tickers: Tickers to download
+    :type tickers: list
+    :param period: Period to download
+    :type period: str
+    :return: The stock data
+    :rtype: pd.DataFrame
+    """
     ticker_str = ' '.join(tickers)
     ticker_obj = Ticker(ticker_str, asynchronous=True)
     stock_data = ticker_obj.history(period=period)
@@ -259,6 +276,14 @@ def download_stock_data(tickers, period='3y'):
 
 
 def get_standard_deviation(stock_data):
+    """
+    :description: This function calculates the standard deviation of the stock data.
+
+    :param stock_data: The stock data
+    :type stock_data: pd.DataFrame
+    :return: Standard deviation of the stock data
+    :rtype: pd.DataFrame
+    """
     std_devs = {}
     for symbol in stock_data.index.get_level_values('symbol').unique():
         symbol_data = stock_data.loc[symbol]
@@ -266,7 +291,7 @@ def get_standard_deviation(stock_data):
         annualized_std_dev = returns.std() * np.sqrt(252)
         std_devs[symbol] = annualized_std_dev
 
-    return round(pd.DataFrame.from_dict(std_devs, orient='index', columns=['Standard Deviation']), 4)
+    return round(pd.DataFrame.from_dict(std_devs, orient='index', columns=['Historical Volatility']), 4)
 
 
 # Function to tune GARCH parameters
@@ -314,45 +339,152 @@ def get_expected_standard_deviation(stock_data):
         expected_std_devs[symbol] = round(expected_std_dev, 4)
 
     # Return the results as a DataFrame
-    return pd.DataFrame.from_dict(expected_std_devs, orient='index', columns=['Expected Annualized Std Dev'])
+    return pd.DataFrame.from_dict(expected_std_devs, orient='index', columns=['Expected Volatility'])
 
 
-def process_data():
+def get_expected_semi_deviation(stock_data):
+    expected_semi_devs = {}
+    for symbol in tqdm(stock_data.index.get_level_values('symbol').unique()):
+        symbol_data = stock_data.loc[symbol]
+        returns = symbol_data['close'].pct_change().dropna() * 100
+
+        # Filter negative returns
+        negative_returns = returns[returns < returns.mean()]
+
+        # Call the tuning function to get the best p and q
+        try:
+            best_p, best_q = tune_garch_parameters(negative_returns)
+        except TypeError:
+            continue
+
+        # Fit a GARCH model with the best p and q
+        model = arch_model(negative_returns, vol='GARCH', p=best_p, o=0, q=best_q, rescale=False)
+        res = model.fit(disp='off')
+
+        # Get the last forecast of the conditional volatility and annualize it
+        forecast = res.forecast(start=0).variance.iloc[-1].iloc[0] ** 0.5 * np.sqrt(252)
+
+        # Rescale the forecast back to the original scale
+        expected_semi_dev = forecast / 100
+
+        # Store the result
+        expected_semi_devs[symbol] = round(expected_semi_dev, 4)
+
+    # Return the results as a DataFrame
+    return pd.DataFrame.from_dict(
+        expected_semi_devs,
+        orient='index',
+        columns=['Downside Volatility']
+    )
+
+
+def get_risk_free_rate(ticker: str = '^TNX') -> Tuple[float, str]:
+    """
+    Fetch the risk-free rate from a specific ticker, typically a Treasury note yield.
+
+    Parameters:
+    - ticker (str, optional): The ticker symbol for the risk-free rate, defaults to '^TNX' for 10-year Treasury note
+                              yield.
+
+    Returns:
+    - Tuple[float, str]: A tuple containing the risk-free rate as a float and the long name of the risk-free rate
+                         source.
+    """
+    data_dict = Ticker(ticker).price
+    risk_free_rate = pd.DataFrame.from_dict(data_dict, orient='index').transpose()
+    risk_free_rate_name = risk_free_rate.loc['longName'].squeeze()
+    risk_free_rate = round(risk_free_rate.loc['regularMarketPrice'].squeeze() / 100, 4)
+    return risk_free_rate, risk_free_rate_name
+
+
+def process_data(
+        mar: float = None
+) -> pd.DataFrame:
+    """
+    :description: This function processes the ETF data.
+
+    :param mar: The minimum acceptable return
+    :type mar: float
+    :return: The processed ETF data
+    :rtype: pd.DataFrame
+    """
     df = combine_data()
+
     tickers = list(df.index)
     stock_data_dict = download_stock_data(tickers)
-    std_dev_df = get_standard_deviation(stock_data_dict)
-    expected_std_dev_df = get_expected_standard_deviation(stock_data_dict)
-    std_dev_df_df = std_dev_df.join(expected_std_dev_df)
-    std_dev_df_df.index.name = 'Ticker'
 
-    final_df = pd.concat([df, std_dev_df_df], axis=1).dropna()
-    final_df['Yield to Volatility'] = round(final_df['Yield to Maturity'] / final_df['Expected Annualized Std Dev'], 2)
+    expected_semi_dev_df = get_expected_semi_deviation(stock_data_dict)
+    expected_semi_dev_df.index.name = 'Ticker'
+
+    final_df = pd.concat([df, expected_semi_dev_df], axis=1).dropna()
+
+    if mar is not None:
+        final_df['Sortino Ratio'] = round(
+            (final_df['Yield to Maturity'] - mar) /
+            final_df['Downside Volatility'],
+            2
+        )
+    else:
+        rf = get_risk_free_rate()[0]
+        final_df['Sortino Ratio'] = round(
+            (final_df['Yield to Maturity'] - rf) /
+            final_df['Downside Volatility'],
+            2
+        )
+
     final_df['P/E Ratio'] = round(1 / final_df['Yield to Maturity'], 2)
+
     final_df = final_df[[
-        'Name', 'Yield to Maturity', 'Expected Annualized Std Dev', 'P/E Ratio', 'Yield to Volatility', 'Date'
+        'Name',
+        'Yield to Maturity',
+        'Downside Volatility',
+        'Sortino Ratio',
+        'P/E Ratio',
+        'Date'
     ]]
+
     final_df['Yield to Maturity'] = (final_df['Yield to Maturity'])
-    final_df['Expected Annualized Std Dev'] = (final_df['Expected Annualized Std Dev'])
-    final_df['Yield ZScore'] = round(np.abs(
-        (final_df['Yield to Maturity'] - final_df['Yield to Maturity'].mean()) / final_df['Yield to Maturity'].std()),
-                                     2)
-    final_df = final_df[
-        ['Name', 'Yield to Maturity', 'Expected Annualized Std Dev', 'P/E Ratio', 'Yield to Volatility', 'Yield ZScore',
-         'Date']]
+    final_df['Downside Volatility'] = (final_df['Downside Volatility'])
+    final_df['Sortino Ratio Z-Score'] = round(
+        (final_df['Sortino Ratio'] - final_df['Sortino Ratio'].mean()) /
+        final_df['Sortino Ratio'].std(),
+        2
+    )
+
+    final_df = final_df[[
+        'Name',
+        'Yield to Maturity',
+        'Downside Volatility',
+        'Sortino Ratio',
+        'Sortino Ratio Z-Score',
+        'P/E Ratio',
+        'Date'
+    ]]
 
     return final_df
 
 
-def filtered_df(final_df):
+def filtered_df(
+        final_df,
+        min_zscore=1.5,
+        sort_by='Yield to Maturity',
+        ascending=False,
+        file_path=None,
+        return_df=False
+):
     df = final_df.copy()
-    df['Yield to Maturity'] = (df['Yield to Maturity'] * 100).apply(lambda x: f"{x:.2f}%")
-    df['Expected Annualized Std Dev'] = (df['Expected Annualized Std Dev'] * 100).apply(
-        lambda x: f"{x:.2f}%")
-    return df.sort_values(
-        by='Yield to Volatility',
-        ascending=False
-    ).head(30).sort_values(
-        by='Yield to Maturity',
-        ascending=False
+
+    df = df[df['Sortino Ratio Z-Score'] >= min_zscore].sort_values(
+        by=sort_by,
+        ascending=ascending
     )
+
+    df['Yield to Maturity'] = (df['Yield to Maturity'] * 100).apply(lambda x: f"{x:.2f}%")
+    df['Downside Volatility'] = (df['Downside Volatility'] * 100).apply(
+        lambda x: f"{x:.2f}%")
+
+    if file_path is not None:
+        df.to_csv(file_path)
+
+    if return_df:
+        return df

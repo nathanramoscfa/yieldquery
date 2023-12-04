@@ -58,7 +58,7 @@ def main():
         run_bot(bot, name)
 
     print('Processing bond ETF yield data...')
-    df = process_data()
+    df = process_data(mar=0)
     print('Saving bond ETF yield data...')
     df.to_csv('data/bond_etf_yield.csv')
     print('Done!')

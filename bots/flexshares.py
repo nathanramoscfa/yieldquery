@@ -21,7 +21,7 @@ def reject_cookies(driver):
     """
     try:
         cookie_button = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, '#onetrust-reject-all-handler')))
+            EC.element_to_be_clickable((By.CSS_SELECTOR, '#truste-consent-required')))
         cookie_button.click()
     except (TimeoutException, ElementClickInterceptedException):
         pass

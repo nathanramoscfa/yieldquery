@@ -79,7 +79,9 @@ def invesco_bot():
     df = pd.DataFrame(data, columns=headers)
 
     # Clean the data in the DataFrame
-    df = df.applymap(lambda x: x.replace('\n', '').replace('\t', '').replace('\r', '') if isinstance(x, str) else x)
+    for col in df.columns:
+        df[col] = df[col].map(
+            lambda x: x.replace('\n', '').replace('\t', '').replace('\r', '') if isinstance(x, str) else x)
 
     # Add ticker and edit product name columns
     df['Ticker'] = tickers

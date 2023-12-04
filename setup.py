@@ -4,7 +4,7 @@ setup(
     name='yieldquery',
     version='0.0.0',
     author='Nathan Ramos, CFA®',
-    author_email='info@nrcapitalmanagement.com',
+    author_email='nathan.ramos.github@gmail.com',
     description="Yield Query is a Python library for retrieving bond ETF yield data from each ETF issuer's website "
                 "using a collection of bots for automated data collection.",
     long_description=open('README.md').read(),

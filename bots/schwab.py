@@ -115,7 +115,7 @@ def get_yield_data(links):
 
 def data_to_dataframe(tickers_and_names, yield_data):
     """
-    :description: Convert the yield data to a DataFrame
+    Convert the yield data to a DataFrame.
 
     :param tickers_and_names: The tickers and names of the ETFs
     :type tickers_and_names: list
@@ -126,24 +126,21 @@ def data_to_dataframe(tickers_and_names, yield_data):
     """
     df = pd.DataFrame(yield_data, columns=['Link', 'Yield Type', 'As of Date', 'Yield Value'])
 
-    # Create a dictionary with link as the key and ticker-name tuple as the value
-    tickers_names_dict = {f"https://www.schwabassetmanagement.com/products/{ticker.lower()}": (ticker, name) for
-                          ticker, name in tickers_and_names}
+    # Make sure the link format matches what's in the yield_data
+    tickers_names_dict = {
+        f"https://schwabfunds.schwab.acsitefactory.com/products/{ticker.lower()}": (ticker, name)
+        for ticker, name in tickers_and_names
+    }
 
-    # Apply a function to the 'Link' column to map each link to its corresponding ticker and name
-    df['Ticker'] = df['Link'].apply(lambda x: tickers_names_dict[x][0] if x in tickers_names_dict else np.nan)
-    df['ETF Name'] = df['Link'].apply(lambda x: tickers_names_dict[x][1] if x in tickers_names_dict else np.nan)
+    # Map each link to its corresponding ticker and name
+    df['Ticker'] = df['Link'].apply(lambda x: tickers_names_dict.get(x, (np.nan, np.nan))[0])
+    df['ETF Name'] = df['Link'].apply(lambda x: tickers_names_dict.get(x, (np.nan, np.nan))[1])
 
-    # Convert yield values to decimal format
+    # Convert yield values and dates
     df['Yield Value'] = df['Yield Value'].str.rstrip('%').astype('float') / 100.0
+    df['As of Date'] = pd.to_datetime(df['As of Date'], format='%m/%d/%Y').dt.strftime('%m-%d-%Y')
 
-    # Convert date strings to datetime format
-    df['As of Date'] = pd.to_datetime(df['As of Date'], format='%m/%d/%Y')
-
-    # Change date format to 'MM-DD-YYYY'
-    df['As of Date'] = df['As of Date'].dt.strftime('%m-%d-%Y')
-
-    # Pivot DataFrame so each yield type becomes a separate column
+    # Pivot DataFrame
     df_pivot_yield = df.pivot(index='Ticker', columns='Yield Type', values='Yield Value')
     df_pivot_date = df.pivot(index='Ticker', columns='Yield Type', values='As of Date')
 
@@ -151,14 +148,14 @@ def data_to_dataframe(tickers_and_names, yield_data):
     df_pivot = df_pivot_yield.join(df_pivot_date, lsuffix='', rsuffix=' Date')
 
     # Add ETF Name back into the DataFrame
-    df_pivot['ETF Name'] = df_pivot.index.to_series().apply(
-        lambda x: tickers_names_dict[f"https://www.schwabassetmanagement.com/products/{x.lower()}"][
-            1] if f"https://www.schwabassetmanagement.com/products/{x.lower()}" in tickers_names_dict else np.nan)
+    df_pivot['ETF Name'] = df_pivot.index.map(lambda x: tickers_names_dict.get(
+        f"https://schwabfunds.schwab.acsitefactory.com/products/{x.lower()}", (np.nan, np.nan))[1])
 
     # Rearrange columns
-    df_pivot = df_pivot[['ETF Name', 'SEC Yield (30 Day)', 'SEC Yield (30 Day) Date', 'Distribution Yield (TTM)',
-                         'Distribution Yield (TTM) Date', 'Average Yield to Maturity',
-                         'Average Yield to Maturity Date']]
+    column_order = ['ETF Name', 'SEC Yield (30 Day)', 'SEC Yield (30 Day) Date', 'Distribution Yield (TTM)',
+                    'Distribution Yield (TTM) Date', 'Average Yield to Maturity',
+                    'Average Yield to Maturity Date']
+    df_pivot = df_pivot.reindex(columns=column_order)
 
     # Remove column name
     df_pivot.rename_axis(None, axis=1, inplace=True)

@@ -6,12 +6,14 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 from tqdm import tqdm
 from bs4 import BeautifulSoup
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from utils.drivers import setup_driver
+from selenium.webdriver.chrome.service import Service
+from utils.drivers import setup_driver, webdriver_path
 
 base_url = 'https://www.ishares.com'
 filepath = './data/downloads/ishares.xml'
@@ -98,16 +100,20 @@ def ishares_query():
     return df
 
 
-def download_xls():
+def download_xls(headless=True):
     """
     :description: Download the iShares ETF list as a xls file
+
+    :param headless: Whether to run the browser in headless mode, defaults to True
+    :type headless: bool, optional
 
     :return: None
     :rtype: None
     """
     # Prepare Chrome options. Headless mode means the browser is run in the background
     webdriver_options = Options()
-    webdriver_options.add_argument('--headless')
+    if headless:
+        webdriver_options.add_argument('--headless')
 
     # Set default download directory and disable download prompt
     download_dir = os.path.join(os.path.expanduser('~'), 'Downloads')
@@ -119,8 +125,14 @@ def download_xls():
     }
     webdriver_options.add_experimental_option('prefs', prefs)
 
+    # Set user-agent
+    webdriver_options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/89.0.4389.82 Safari/537.36")
+
     # Create a new instance of the Chrome driver
-    driver = setup_driver()
+    # driver = setup_driver()
+    driver = webdriver.Chrome(service=Service(webdriver_path()), options=webdriver_options)
 
     # Go to the webpage
     etf_list_url = 'https://www.ishares.com/us/products/etf-investments#/?productView=etf&fac=43549%7C43563%7C435' \
@@ -277,7 +289,7 @@ def xml_to_df():
     return df
 
 
-def ishares_bot(method='xls', return_df=False):
+def ishares_bot(method='xls', return_df=False, headless=True):
     """
     Downloads, moves, and loads iShares ETF data into a pandas DataFrame.
 
@@ -285,12 +297,14 @@ def ishares_bot(method='xls', return_df=False):
     :type method: str
     :param return_df: True or False
     :type return_df: bool
+    :param headless: Whether to run the browser in headless mode, defaults to True
+    :type headless: bool, optional
     :return: pandas DataFrame
     :rtype: pd.DataFrame
     """
     if method == 'xls':
         print('Downloading iShares ETF yield data...')
-        download_xls()
+        download_xls(headless)
         move_xls()
         df = xml_to_df()
         print('Saving iShares ETF data...')

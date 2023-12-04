@@ -1,21 +1,21 @@
 Ticker,Name,Yield to Maturity,As of Date,Weighted Avg Coupon,Effective Duration,Weighted Avg Maturity,Option Adjusted Spread,Yield to Worst,Average Price,,Number of Holdings,Average Coupon (%),Effective Maturity (yrs),Option Adjusted Duration (yrs),"Yield to Maturity,capped (YTM,%)","Yield to Worst,capped (YTW,%)","% of Green,Social,Sustainability Bonds",    % Green,    % Social,    % Sustainability,P/E Ratio,P/B Ratio,Weighted Average Market Cap (Bn)
-GIGB,Goldman Sachs Access Investment Grade Corporate Bond ETF,0.0587,08-21-2023,0.038599999999999995,6.88,11.29,121.11,0.058600000000000006,88.56,,,,,,,,,,,,,,
-GMUN,Goldman Sachs Community Municipal Bond ETF,,08-21-2023,,,,,,,Fund,308,4.51,5.92,3.93,3.64,3.37,11.42,8.91,2.17,0.34,,,
-GSST,Goldman Sachs Access Ultra Short Bond ETF,0.059000000000000004,08-21-2023,0.0495,0.67,7.9,66.9,0.057999999999999996,98.8,,,,,,,,,,,,,,
-GBIL,Goldman Sachs Access Treasury 0-1 Year ETF,0.053099999999999994,08-21-2023,0.0001,0.28,0.29,,0.053099999999999994,98.47,,,,,,,,,,,,,,
-GSIG,Goldman Sachs Access Investment Grade Corporate 1-5 Year Bond ETF,0.0582,08-21-2023,0.0358,2.57,3.41,94.66,0.0582,94.52,,,,,,,,,,,,,,
-GEMD,Goldman Sachs Access Emerging Markets USD Bond ETF,0.07400000000000001,08-21-2023,0.0519,6.99,12.35,279.08,0.07400000000000001,87.32,,,,,,,,,,,,,,
-GCOR,Goldman Sachs Access U.S. Aggregate Bond ETF,0.052300000000000006,08-21-2023,0.027000000000000003,6.15,13.4,41.92,0.052300000000000006,87.56,,,,,,,,,,,,,,
-GTIP,Goldman Sachs Access Inflation Protected USD Bond ETF,,08-21-2023,,6.67,7.15,,,90.68,,,,,,,,,,,,,,
-GHYB,Goldman Sachs Access High Yield Corporate Bond ETF,0.0817,08-21-2023,0.0565,3.6,4.75,348.1,0.0815,89.67,,,,,,,,,,,,,,
-GVIP,Goldman Sachs Hedge Industry VIP ETF,,08-21-2023,,,,,,,,,,,,,,,,,,15.24,3.76,352.38
-JUST,Goldman Sachs JUST U.S. Large Cap Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,22.26,4.15,652.32
-GTEK,Goldman Sachs Future Tech Leaders Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,27.05,4.56,32.63
-GSEU,Goldman Sachs ActiveBeta Europe Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,12.29,1.80,92.75
-GSJY,Goldman Sachs ActiveBeta Japan Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,13.42,1.33,42.69
-GUSA,Goldman Sachs MarketBeta US 1000 Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,21.65,4.01,579.99
-GDEF,Goldman Sachs Defensive Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,26.07,5.01,539.82
-GPAL,Goldman Sachs ActiveBeta Paris-Aligned Climate U.S. Large Cap Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,22.33,4.05,577.80
-GINN,Goldman Sachs Innovate Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,22.22,2.96,289.95
-GSIE,Goldman Sachs ActiveBeta International Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,12.11,1.67,68.13
-GCLN,Goldman Sachs Bloomberg Clean Energy Equity ETF,,08-21-2023,,,,,,,,,,,,,,,,,,17.91,2.41,91.23
+GIGB,Goldman Sachs Access Investment Grade Corporate Bond ETF,0.0555,11-30-2023,0.039599999999999996,6.87,11.06,104.42,0.0554,90.52,,,,,,,,,,,,,,
+GMUN,Goldman Sachs Community Municipal Bond ETF,,11-29-2023,,,,,,,Fund,311,4.50,5.90,3.86,3.46,3.17,11.99,9.28,2.37,0.34,,,
+GSST,Goldman Sachs Access Ultra Short Bond ETF,0.0581,11-29-2023,0.049699999999999994,0.63,7.08,80.73,0.0576,99.02,,,,,,,,,,,,,,
+GBIL,Goldman Sachs Access Treasury 0-1 Year ETF,0.053099999999999994,11-30-2023,0.0004,0.35,0.36,,0.053099999999999994,98.21,,,,,,,,,,,,,,
+GSIG,Goldman Sachs Access Investment Grade Corporate 1-5 Year Bond ETF,0.055,11-30-2023,0.0368,2.53,3.29,90.3,0.054900000000000004,95.65,,,,,,,,,,,,,,
+GEMD,Goldman Sachs Access Emerging Markets USD Bond ETF,0.0717,11-29-2023,0.052199999999999996,6.87,11.97,268.34,0.0717,88.88,,,,,,,,,,,,,,
+GCOR,Goldman Sachs Access U.S. Aggregate Bond ETF,0.0504,11-29-2023,0.0274,6.3,13.23,37.09,0.050300000000000004,88.64,,,,,,,,,,,,,,
+GTIP,Goldman Sachs Access Inflation Protected USD Bond ETF,0.0695,11-29-2023,0.0055000000000000005,6.57,7.05,298.08,0.0695,90.83,,,,,,,,,,,,,,
+GHYB,Goldman Sachs Access High Yield Corporate Bond ETF,0.07719999999999999,11-29-2023,0.056900000000000006,3.42,4.63,326.89,0.0766,91.73,,,,,,,,,,,,,,
+GVIP,Goldman Sachs Hedge Industry VIP ETF,,11-30-2023,,,,,,,,,,,,,,,,,,13.95,3.79,346.05
+JUST,Goldman Sachs JUST U.S. Large Cap Equity ETF,,11-30-2023,,,,,,,,,,,,,,,,,,22.61,4.29,743.61
+GSC,Goldman Sachs Small Cap Core Equity ETF,,11-30-2023,,,,,,,,,,,,,,,,,,15.82,2.42,4.76
+GTEK,Goldman Sachs Future Tech Leaders Equity ETF,,11-30-2023,,,,,,,,,,,,,,,,,,27.68,4.76,38.56
+GSEU,Goldman Sachs ActiveBeta Europe Equity ETF,,11-30-2023,,,,,,,,,,,,,,,,,,12.35,1.82,93.79
+GSJY,Goldman Sachs ActiveBeta Japan Equity ETF,,11-30-2023,,,,,,,,,,,,,,,,,,14.28,1.38,47.46
+GUSA,Goldman Sachs MarketBeta US 1000 Equity ETF,,11-30-2023,,,,,,,,,,,,,,,,,,22.00,4.13,659.05
+GDEF,Goldman Sachs Defensive Equity ETF,,11-30-2023,,,,,,,,,,,,,,,,,,25.10,5.40,624.36
+GPIX,Goldman Sachs S&P 500 Core Premium Income ETF,,11-30-2023,,,,,,,,,,,,,,,,,,22.61,4.28,728.20
+GPAL,Goldman Sachs ActiveBeta Paris-Aligned Climate U.S. Large Cap Equity ETF,,11-30-2023,,,,,,,,,,,,,,,,,,22.09,4.11,663.28
+GINN,Goldman Sachs Innovate Equity ETF,,11-30-2023,,,,,,,,,,,,,,,,,,21.67,2.91,304.74
