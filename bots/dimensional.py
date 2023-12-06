@@ -24,8 +24,6 @@ def navigate_to_page(driver, url):
     driver.get(url)
     try:
         # Try to find and click the "A Financial Advisor" button
-        # advisor_button_selector = 'body > div.main > div > div > div > div.public-global-splash-content > ' \
-        #                           'div.public-global-splash-right > div > ul > li:nth-child(1) > button'
         advisor_button_selector = 'body > div.main > div > div > div > div.public-global-splash-content > div > ' \
                                   'div.public-global-splash-right > div > ul > li:nth-child(1) > button > div'
         button = WebDriverWait(driver, 20).until(

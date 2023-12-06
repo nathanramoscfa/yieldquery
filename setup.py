@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='yieldquery',
-    version='0.0.0',
+    version='0.0.1',
     author='Nathan Ramos, CFA®',
     author_email='nathan.ramos.github@gmail.com',
     description="Yield Query is a Python library for retrieving bond ETF yield data from each ETF issuer's website "

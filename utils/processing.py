@@ -1,12 +1,26 @@
-from arch.__future__ import reindexing
-
 import os
 import pandas as pd
 import numpy as np
 from yahooquery import Ticker
 from arch import arch_model
+from arch.__future__ import reindexing
 from tqdm import tqdm
 from typing import Tuple
+
+processing_dir = os.path.dirname(__file__)
+project_root = os.path.dirname(processing_dir)
+
+
+def build_file_path(file_name):
+    """
+    :description: Build an absolute file path for the given file name in the 'data' directory.
+
+    :param file_name: Name of the file in the 'data' directory
+    :type file_name: str
+    :return: Absolute file path
+    :rtype: str
+    """
+    return os.path.join(project_root, 'data', file_name)
 
 
 def ishares():
@@ -16,7 +30,7 @@ def ishares():
     :return: The iShares ETF data
     :rtype: pd.DataFrame
     """
-    file_path = os.path.abspath('./data/ishares.csv')
+    file_path = build_file_path('ishares.csv')
     df = pd.read_csv(file_path, index_col=0)
     df = df[['Name', 'Avg. Yield (%)', 'Avg. Yield as of Date']]
     df.rename(columns={'Avg. Yield (%)': 'Yield to Maturity', 'Avg. Yield as of Date': 'Date'}, inplace=True)
@@ -30,7 +44,8 @@ def vanguard():
     :return: The Vanguard ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/vanguard.csv', index_col=0)
+    filepath = build_file_path('vanguard.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Name', 'Yield to Maturity', 'As of']]
     df.rename(columns={'Avg. Yield (%)': 'Yield to Maturity', 'As of': 'Date'}, inplace=True)
     return df
@@ -43,7 +58,8 @@ def state_street():
     :return: The State Street ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/state_street.csv', index_col=0)
+    filepath = build_file_path('state_street.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Name', 'Yield to Maturity', 'As of Date']]
     df.rename(columns={'Avg. Yield (%)': 'Yield to Maturity', 'As of Date': 'Date'}, inplace=True)
     return df
@@ -56,7 +72,8 @@ def schwab():
     :return: The Schwab ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/schwab.csv', index_col=0)
+    filepath = build_file_path('schwab.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['ETF Name', 'Average Yield to Maturity', 'Average Yield to Maturity Date']]
     df.rename(columns={
         'ETF Name': 'Name',
@@ -73,7 +90,8 @@ def invesco():
     :return: The Invesco ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/invesco.csv', index_col=0)
+    filepath = build_file_path('invesco.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Product Name', 'YTM (%)', 'As of Date']]
     df.rename(columns={'Product Name': 'Name', 'YTM (%)': 'Yield to Maturity', 'As of Date': 'Date'}, inplace=True)
     return df
@@ -86,7 +104,8 @@ def first_trust():
     :return: The First Trust ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/first_trust.csv', index_col=0)
+    filepath = build_file_path('first_trust.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['ETF Name', 'Weighted Average Yield-to-Worst', 'As of']]
     df.rename(columns={
         'ETF Name': 'Name',
@@ -103,7 +122,8 @@ def jpmorgan():
     :return: The JPMorgan ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/jpmorgan.csv', index_col=0)
+    filepath = build_file_path('jpmorgan.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Name', 'Yield to Maturity', 'As of Date']]
     df.rename(columns={'As of Date': 'Date'}, inplace=True)
     return df
@@ -116,7 +136,8 @@ def pimco():
     :return: The PIMCO ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/pimco.csv', index_col=0)
+    filepath = build_file_path('pimco.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Name', 'Yield to Maturity', 'As of Date']]
     df.rename(columns={'As of Date': 'Date'}, inplace=True)
     return df
@@ -129,7 +150,8 @@ def wisdomtree():
     :return: The WisdomTree ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/wisdomtree.csv', index_col=0)
+    filepath = build_file_path('wisdomtree.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Name', 'Yield to Maturity', 'As of Date']]
     df.rename(columns={'As of Date': 'Date'}, inplace=True)
     return df
@@ -142,7 +164,8 @@ def vaneck():
     :return: The VanEck ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/vaneck.csv', index_col=0)
+    filepath = build_file_path('vaneck.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Name', 'Yield to Maturity', 'As of Date']]
     df.rename(columns={'As of Date': 'Date'}, inplace=True)
     return df
@@ -155,7 +178,8 @@ def goldman_sachs():
     :return: The Goldman Sachs ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/goldman_sachs.csv', index_col=0)
+    filepath = build_file_path('goldman_sachs.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Name', 'Yield to Maturity', 'As of Date']]
     df.rename(columns={'As of Date': 'Date'}, inplace=True)
     return df
@@ -168,7 +192,8 @@ def janus_henderson():
     :return: The Janus Henderson ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/janus_henderson.csv', index_col=0)
+    filepath = build_file_path('janus_henderson.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Name', 'Yield to Worst', 'As of Date']]
     df.rename(columns={'Yield to Worst': 'Yield to Maturity', 'As of Date': 'Date'}, inplace=True)
     return df
@@ -181,7 +206,8 @@ def dimensional():
     :return: The Dimensional ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/dimensional.csv', index_col=0)
+    filepath = build_file_path('dimensional.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df = df[['Name', 'Yield to Maturity', 'As of Date']]
     df.rename(columns={'As of Date': 'Date'}, inplace=True)
     return df
@@ -194,7 +220,8 @@ def flexshares():
     :return: The FlexShares ETF data
     :rtype: pd.DataFrame
     """
-    df = pd.read_csv('./data/flexshares.csv', index_col=0)
+    filepath = build_file_path('flexshares.csv')
+    df = pd.read_csv(filepath, index_col=0)
     df['WEIGHTED AVG YIELD TO MATURITY'] = df['WEIGHTED AVG YIELD TO MATURITY'].fillna(
         df['WEIGHTED AVG YIELD TO WORST'])
     df['WEIGHTED AVG YIELD TO MATURITY'] = df['WEIGHTED AVG YIELD TO MATURITY'].fillna(df['WEIGHTED AVG NOMINAL YIELD'])
@@ -409,13 +436,10 @@ def process_data(
     :rtype: pd.DataFrame
     """
     df = combine_data()
-
     tickers = list(df.index)
     stock_data_dict = download_stock_data(tickers)
-
     expected_semi_dev_df = get_expected_semi_deviation(stock_data_dict)
     expected_semi_dev_df.index.name = 'Ticker'
-
     final_df = pd.concat([df, expected_semi_dev_df], axis=1).dropna()
 
     if mar is not None:
@@ -465,26 +489,53 @@ def process_data(
 
 
 def filtered_df(
-        final_df,
-        min_zscore=1.5,
-        sort_by='Yield to Maturity',
-        ascending=False,
-        file_path=None,
-        return_df=False
-):
+        final_df: pd.DataFrame,
+        min_zscore: float = 1.5,
+        sort_by: str = 'Yield to Maturity',
+        ascending: bool = False,
+        file_path: str = None,
+        return_df: bool = True
+) -> pd.DataFrame:
+    """
+    :description: Filters and sorts a DataFrame based on specified criteria, and optionally saves it to a CSV file.
+
+    :param final_df: DataFrame to be filtered and sorted.
+    :type final_df: pd.DataFrame
+    :param min_zscore: Minimum Z-Score to filter the DataFrame.
+    :type min_zscore: float
+    :param sort_by: Column name to sort the DataFrame.
+    :type sort_by: str
+    :param ascending: Sort order. If False, sort in descending order.
+    :type ascending: bool
+    :param file_path: Path to save the DataFrame as a CSV file. If None, file is not saved.
+    :type file_path: str
+    :param return_df: If True, returns the modified DataFrame.
+    :type return_df: bool
+    :return: Optionally returns the filtered and sorted DataFrame.
+    :rtype: pd.DataFrame
+    """
+    if not isinstance(final_df, pd.DataFrame):
+        raise ValueError("final_df must be a pandas DataFrame.")
+
+    if sort_by not in final_df.columns:
+        raise ValueError(f"Column '{sort_by}' not found in DataFrame.")
+
     df = final_df.copy()
 
-    df = df[df['Sortino Ratio Z-Score'] >= min_zscore].sort_values(
-        by=sort_by,
-        ascending=ascending
-    )
+    # Filtering and sorting
+    df = df[df['Sortino Ratio Z-Score'] >= min_zscore].sort_values(by=sort_by, ascending=ascending)
 
-    df['Yield to Maturity'] = (df['Yield to Maturity'] * 100).apply(lambda x: f"{x:.2f}%")
-    df['Downside Volatility'] = (df['Downside Volatility'] * 100).apply(
-        lambda x: f"{x:.2f}%")
+    # Formatting columns
+    df['Yield to Maturity'] = df['Yield to Maturity'].apply(lambda x: f"{x * 100:.2f}%")
+    df['Downside Volatility'] = df['Downside Volatility'].apply(lambda x: f"{x * 100:.2f}%")
 
-    if file_path is not None:
-        df.to_csv(file_path)
+    # Save to CSV if file_path is provided
+    if file_path:
+        try:
+            df.to_csv(file_path)
+        except Exception as e:
+            raise IOError(f"Failed to save DataFrame to {file_path}: {e}")
 
+    # Return DataFrame if return_df is True
     if return_df:
         return df

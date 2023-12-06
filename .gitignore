@@ -21,3 +21,4 @@ drivers/LICENSE.chromedriver
 
 # Temporary or generated data files
 data/downloads/
+utils/__pycache__/processing.cpython-311.pyc
