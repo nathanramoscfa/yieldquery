@@ -3,7 +3,7 @@ import time
 import pandas as pd
 from tqdm import tqdm
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from utils.drivers import setup_driver
@@ -68,40 +68,46 @@ def get_yield_data(driver, links):
     wait_time = 10
     data = {}
     for link in tqdm(links):
-        driver.get(link)
-        time.sleep(4)
-        ticker_element = driver.find_element(
-            By.CSS_SELECTOR,
-            '#Dashboard > div.container > div > div.col-md-6.col-lg-8 > h1.ticker.rps-display-one'
-        )
-        ticker = ticker_element.text
+        try:
+            driver.get(link)
+            time.sleep(4)
+            ticker_element = driver.find_element(
+                By.CSS_SELECTOR,
+                '#Dashboard > div.container > div > div.col-md-6.col-lg-8 > h1.ticker.rps-display-one'
+            )
+            ticker = ticker_element.text
 
-        name_element = driver.find_element(
-            By.CSS_SELECTOR,
-            '#Dashboard > div.container > div > div.col-md-6.col-lg-8 > h1.fund-name.rps-display-two'
-        )
-        name = name_element.text
+            name_element = driver.find_element(
+                By.CSS_SELECTOR,
+                '#Dashboard > div.container > div > div.col-md-6.col-lg-8 > h1.fund-name.rps-display-two'
+            )
+            name = name_element.text
 
-        yield_element = (
-            By.CSS_SELECTOR,
-            '#characteristics-tabset > characteristics-contianer > div > div > div > fixed-income-characteristic > '
-            'div > div > table > tr:nth-child(3) > td:nth-child(2)'
-        )
-        yield_element = WebDriverWait(driver, wait_time).until(EC.presence_of_element_located(yield_element))
-        yield_to_maturity = yield_element.get_attribute("innerText")
+            yield_element = (
+                By.CSS_SELECTOR,
+                '#characteristics-tabset > characteristics-contianer > div > div > div > fixed-income-characteristic > '
+                'div > div > table > tr:nth-child(3) > td:nth-child(2)'
+            )
+            yield_element = WebDriverWait(driver, wait_time).until(EC.presence_of_element_located(yield_element))
+            yield_to_maturity = yield_element.get_attribute("innerText")
 
-        as_of_element = driver.find_element(
-            By.CSS_SELECTOR,
-            '#characteristics-tabset > characteristics-contianer > div > div > p'
-        )
-        as_of = as_of_element.get_attribute("innerText")
+            as_of_element = driver.find_element(
+                By.CSS_SELECTOR,
+                '#characteristics-tabset > characteristics-contianer > div > div > p'
+            )
+            as_of = as_of_element.get_attribute("innerText")
 
-        data[ticker] = {
-            'Name': name,
-            'Yield to Maturity': yield_to_maturity,
-            'As of': as_of.split(' ')[-1]
-        }
+            data[ticker] = {
+                'Name': name,
+                'Yield to Maturity': yield_to_maturity,
+                'As of': as_of.split(' ')[-1]
+            }
+        except TimeoutException:
+            print(f"TimeoutException encountered for {link}. Skipping to next link.")
+            continue
+
     return data
+
 
 
 def create_and_save_dataframe(data, file_path):

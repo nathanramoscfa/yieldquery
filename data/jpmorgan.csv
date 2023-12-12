@@ -1,18 +1,18 @@
 Ticker,Name,Yield to Maturity,As of Date
-JBND,JPMorgan Active Bond ETF,0.060599999999999994,10-31-2023
-BBIB,JPMorgan BetaBuilders U.S. Treasury Bond 3-10 Year ETF,0.048799999999999996,10-31-2023
-JCPI,JPMorgan Inflation Managed Bond ETF,0.0603,10-31-2023
-BBIP,JPMorgan BetaBuilders U.S. TIPS 0-5 Year ETF,0.0302,10-31-2023
-BBAG,JPMorgan BetaBuilders U.S. Aggregate Bond ETF,0.0564,10-31-2023
-JCPB,JPMorgan Core Plus Bond ETF,0.0699,10-31-2023
-JPLD,JPMorgan Limited Duration Bond ETF,0.0674,10-31-2023
+BBCB,JPMorgan BetaBuilders USD Investment Grade Corporate Bond ETF,0.0635,10-31-2023
+BBSB,JPMorgan BetaBuilders U.S. Treasury Bond 1-3 Year ETF,0.051100000000000007,10-31-2023
+JSCP,JPMorgan Short Duration Core Plus ETF,0.0702,10-31-2023
+JPMB,JPMorgan USD Emerging Markets Sovereign Bond ETF,0.07339999999999999,10-31-2023
 JPIE,JPMorgan Income ETF,0.0832,10-31-2023
+BBAG,JPMorgan BetaBuilders U.S. Aggregate Bond ETF,0.0564,10-31-2023
+JCPI,JPMorgan Inflation Managed Bond ETF,0.0603,10-31-2023
+JPLD,JPMorgan Limited Duration Bond ETF,0.0674,10-31-2023
+BBIB,JPMorgan BetaBuilders U.S. Treasury Bond 3-10 Year ETF,0.048799999999999996,10-31-2023
+JPST,JPMorgan Ultra-Short Income ETF,0.0581,12-08-2023
+BBIP,JPMorgan BetaBuilders U.S. TIPS 0-5 Year ETF,0.0302,10-31-2023
+BBSA,JPMorgan BetaBuilders 1-5 Year U.S. Aggregate Bond ETF,0.0542,10-31-2023
+BBHY,JPMorgan BetaBuilders USD High Yield Corporate Bond ETF,0.0949,10-31-2023
 BBLB,JPMorgan BetaBuilders U.S. Treasury Bond 20+ Year ETF,0.0513,10-31-2023
 JPIB,JPMorgan International Bond Opportunities ETF,0.0717,10-31-2023
-JSCP,JPMorgan Short Duration Core Plus ETF,0.0702,10-31-2023
-BBHY,JPMorgan BetaBuilders USD High Yield Corporate Bond ETF,0.0949,10-31-2023
-JPST,JPMorgan Ultra-Short Income ETF,0.057999999999999996,12-05-2023
-BBSB,JPMorgan BetaBuilders U.S. Treasury Bond 1-3 Year ETF,0.051100000000000007,10-31-2023
-BBSA,JPMorgan BetaBuilders 1-5 Year U.S. Aggregate Bond ETF,0.0542,10-31-2023
-JPMB,JPMorgan USD Emerging Markets Sovereign Bond ETF,0.07339999999999999,10-31-2023
-BBCB,JPMorgan BetaBuilders USD Investment Grade Corporate Bond ETF,0.0635,10-31-2023
+JCPB,JPMorgan Core Plus Bond ETF,0.0699,10-31-2023
+JBND,JPMorgan Active Bond ETF,0.060599999999999994,10-31-2023

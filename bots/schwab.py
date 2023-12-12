@@ -5,6 +5,7 @@ import numpy as np
 from tqdm import tqdm
 from bs4 import BeautifulSoup
 
+base_url = 'https://www.schwabassetmanagement.com'
 table_url = 'https://www.schwabassetmanagement.com/product-finder?combine=&field_product_solution_target_id%5B%5D=291' \
             '&field_asset_class_target_id%5B%5D=271&field_asset_class_target_id%5B%5D=286'
 
@@ -46,20 +47,14 @@ def get_table():
 
 
 def get_links(table_html):
-    """
-    :description: Get the links to the ETF pages
-
-    :param table_html: The table HTML
-    :type table_html: bs4.element.Tag
-    :return: The links to the ETF pages
-    :rtype: list
-    """
     links = []
     h3_tags = table_html.find_all('h3', class_='accordion-title')
     for tag in tqdm(h3_tags):
         a_tag = tag.find('a')
         if a_tag:
-            links.append(a_tag['href'])
+            relative_link = a_tag['href']
+            absolute_link = base_url + relative_link
+            links.append(absolute_link)
     return links
 
 
@@ -126,9 +121,8 @@ def data_to_dataframe(tickers_and_names, yield_data):
     """
     df = pd.DataFrame(yield_data, columns=['Link', 'Yield Type', 'As of Date', 'Yield Value'])
 
-    # Make sure the link format matches what's in the yield_data
     tickers_names_dict = {
-        f"https://schwabfunds.schwab.acsitefactory.com/products/{ticker.lower()}": (ticker, name)
+        f"https://www.schwabassetmanagement.com/products/{ticker.lower()}": (ticker, name)
         for ticker, name in tickers_and_names
     }
 
@@ -149,7 +143,7 @@ def data_to_dataframe(tickers_and_names, yield_data):
 
     # Add ETF Name back into the DataFrame
     df_pivot['ETF Name'] = df_pivot.index.map(lambda x: tickers_names_dict.get(
-        f"https://schwabfunds.schwab.acsitefactory.com/products/{x.lower()}", (np.nan, np.nan))[1])
+        f"https://www.schwabassetmanagement.com/products/{x.lower()}", (np.nan, np.nan))[1])
 
     # Rearrange columns
     column_order = ['ETF Name', 'SEC Yield (30 Day)', 'SEC Yield (30 Day) Date', 'Distribution Yield (TTM)',

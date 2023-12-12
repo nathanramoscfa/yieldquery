@@ -4,8 +4,7 @@ import pandas as pd
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from utils.drivers import setup_driver
 from tqdm import tqdm
 
@@ -94,15 +93,16 @@ def extract_etf_info(driver, url):
 
     # Try to extract yield_to_maturity, if it's not available print the ticker and skip to next link
     try:
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR,
-                                                                        '#funds > div > span > div > div > '
-                                                                        'div.tools-compare-content > '
-                                                                        'div.tools-tracked-scroll.tools-compare'
-                                                                        '-lenses > div > div:nth-child(13) > div > '
-                                                                        'div.tools-lens-characteristics.tools-lens'
-                                                                        '-characteristics-fixed-income > div > '
-                                                                        'div:nth-child(6) > '
-                                                                        'div.tools-lens-type-characteristics-title')))
+        WebDriverWait(driver, 20).until(EC.presence_of_element_located((
+            By.CSS_SELECTOR,
+            '#funds > div > span > div > div > '
+            'div.tools-compare-content > '
+            'div.tools-tracked-scroll.tools-compare'
+            '-lenses > div > div:nth-child(13) > div > '
+            'div.tools-lens-characteristics.tools-lens'
+            '-characteristics-fixed-income > div > '
+            'div:nth-child(6) > '
+            'div.tools-lens-type-characteristics-title')))
         yield_to_maturity = driver.find_element(By.CSS_SELECTOR,
                                                 '#funds > div > span > div > div > div.tools-compare-content > '
                                                 'div.tools-tracked-scroll.tools-compare-lenses > div > div:nth-child('
@@ -111,13 +111,14 @@ def extract_etf_info(driver, url):
                                                 '-income > div > div:nth-child(6) > '
                                                 'div.tools-lens-type-characteristics-title').text
     except TimeoutException:
-        return None  # Returns None if yield_to_maturity is not present, which leads to skipping this ETF
+        return print(f"TimeoutException encountered for {url}. Skipping to next link.")
 
-    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR,
-                                                                    '#funds > div > span > div > div > '
-                                                                    'div.tools-compare-content > '
-                                                                    'div.tools-tracked-scroll.tools-compare-lenses > '
-                                                                    'div > div:nth-child(2) > section > div > div')))
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((
+        By.CSS_SELECTOR,
+        '#funds > div > span > div > div > '
+        'div.tools-compare-content > '
+        'div.tools-tracked-scroll.tools-compare-lenses > '
+        'div > div:nth-child(2) > section > div > div')))
 
     # Extract the info
     name = driver.find_element(By.CSS_SELECTOR, '#modal-funddetails-label').text
@@ -152,6 +153,8 @@ def get_etf_data(driver, links):
         # Only add the etf_data to the list if it's not None and if Yield to Maturity is not '—'
         if etf_data is not None and etf_data['Yield to Maturity'] != '—':
             data.append(etf_data)
+        elif etf_data is not None and etf_data['Yield to Maturity'] == '—':
+            continue
 
         time.sleep(3)
 
@@ -188,7 +191,12 @@ def dimensional_bot(return_df=False, headless=True):
     driver = setup_driver(headless)
     navigate_to_page(driver, url)
     links = get_links(driver)
-    df = get_etf_data(driver, links)
+
+    try:
+        df = get_etf_data(driver, links)
+    except KeyError as e:
+        print(f"KeyError encountered: {e}. Skipping Dimensional ETF yield data.")
+        return None
 
     # Get the absolute path of the project's root directory
     project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
