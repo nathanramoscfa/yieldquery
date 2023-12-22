@@ -115,6 +115,9 @@ def janus_henderson_bot(return_df=False, headless=True):
     if headless:
         options.add_argument('--headless')
 
+    # Suppress WebDriver Logs
+    options.add_argument('--log-level=3')
+
     with webdriver.Chrome(service=Service(webdriver_path()), options=options) as driver:
         driver.get('https://www.janushenderson.com/en-us/advisor/product/?vehicle=ETF')
         data = get_etf_data(driver)

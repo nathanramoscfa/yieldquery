@@ -28,6 +28,9 @@ def setup_driver(headless=True):
         options.add_argument('--headless')
         options.add_argument('--window-size=1920x1080')
 
+    # Suppress WebDriver Logs
+    options.add_argument('--log-level=3')
+
     # Set user-agent
     options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "

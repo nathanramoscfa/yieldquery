@@ -13,7 +13,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
-from utils.drivers import setup_driver, webdriver_path
+from utils.drivers import webdriver_path
 
 base_url = 'https://www.ishares.com'
 filepath = './data/downloads/ishares.xml'
@@ -114,6 +114,9 @@ def download_xls(headless=True):
     webdriver_options = Options()
     if headless:
         webdriver_options.add_argument('--headless')
+
+    # Suppress WebDriver Logs
+    webdriver_options.add_argument('--log-level=3')
 
     # Set default download directory and disable download prompt
     download_dir = os.path.join(os.path.expanduser('~'), 'Downloads')

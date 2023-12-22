@@ -109,7 +109,6 @@ def get_yield_data(driver, links):
     return data
 
 
-
 def create_and_save_dataframe(data, file_path):
     """
     :description: Create a dataframe from the data and save it to a CSV file
