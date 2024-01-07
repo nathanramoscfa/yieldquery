@@ -95,21 +95,14 @@ def extract_etf_info(driver, url):
     try:
         WebDriverWait(driver, 20).until(EC.presence_of_element_located((
             By.CSS_SELECTOR,
-            '#funds > div > span > div > div > '
-            'div.tools-compare-content > '
-            'div.tools-tracked-scroll.tools-compare'
-            '-lenses > div > div:nth-child(13) > div > '
-            'div.tools-lens-characteristics.tools-lens'
-            '-characteristics-fixed-income > div > '
-            'div:nth-child(6) > '
+            '#charsFixedIncomeBondBlendedWithTBACashOffset > '
+            'div.tools-lens-characteristics.tools-lens-characteristics-fixed-income > div > div:nth-child(5) > '
             'div.tools-lens-type-characteristics-title')))
-        yield_to_maturity = driver.find_element(By.CSS_SELECTOR,
-                                                '#funds > div > span > div > div > div.tools-compare-content > '
-                                                'div.tools-tracked-scroll.tools-compare-lenses > div > div:nth-child('
-                                                '13) > div > '
-                                                'div.tools-lens-characteristics.tools-lens-characteristics-fixed'
-                                                '-income > div > div:nth-child(6) > '
-                                                'div.tools-lens-type-characteristics-title').text
+        yield_to_maturity = driver.find_element(
+            By.CSS_SELECTOR,
+            '#charsFixedIncomeBondBlendedWithTBACashOffset > '
+            'div.tools-lens-characteristics.tools-lens-characteristics-fixed-income > div > div:nth-child(5) > '
+            'div.tools-lens-type-characteristics-title').text
     except TimeoutException:
         return print(f"TimeoutException encountered for {url}. Skipping to next link.")
 

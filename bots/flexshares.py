@@ -58,17 +58,17 @@ def navigate_to_page(driver, url):
 
 def get_links(driver):
     """
-    :description: Get the links to the ETF pages
+    :description: Get the links to the ETF pages from the FUND_NAME column
 
     :param driver: Selenium driver
     :type driver: selenium.webdriver.chrome.webdriver.WebDriver
     :return: The links to the ETF pages
     :rtype: list
     """
-    link_elements = driver.find_elements(By.CSS_SELECTOR,
-                                         '#container-8d26eb3d06 > div > '
-                                         'div.fund-performance.aem-GridColumn.aem-GridColumn--default--12 > div > div '
-                                         '> div.table-responsive > table > tbody > tr > td:nth-child(1) > div > a')
+    # CSS Selector targeting the <a> tags inside the first <td> of each row in the table body
+    link_elements = driver.find_elements(
+        By.CSS_SELECTOR,
+        'table.table > tbody > tr > td:nth-child(1) .fund-name-data > a')
     links = [elem.get_attribute('href') for elem in link_elements]
     return links
 
