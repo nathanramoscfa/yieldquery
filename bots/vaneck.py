@@ -48,7 +48,7 @@ def get_links(driver):
 
     links = links1 + links2
 
-    return sorted(list(set([link.get_attribute('href') for link in links if link.get_attribute('href') is not None])))
+    return sorted(list(set([link.get_attribute('href') + 'portfolio/' for link in links if link.get_attribute('href') is not None])))
 
 
 def scroll_until_found(driver, css_selector):
@@ -137,23 +137,25 @@ def extract_etf_info(driver, url):
 
     # Extract the info
     try:
-        name_element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR,
-                                                                                       '#overview > section > div.row '
-                                                                                       '> '
-                                                                                       'div.fund-top-stats-wrapper.d'
-                                                                                       '-flex.flex-column.col-12.col'
-                                                                                       '-md-8.col-lg-9 > div > h1 > '
-                                                                                       'div.fund-title')))
-        name = name_element.text
-
-        ticker_element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR,
-                                                                                         '#overview > section > '
-                                                                                         'div.row > '
-                                                                                         'div.fund-top-stats-wrapper'
-                                                                                         '.d-flex.flex-column.col-12'
-                                                                                         '.col-md-8.col-lg-9 > div > '
-                                                                                         'h1 > div.ticker.d-inline')))
+        ticker_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((
+                By.CSS_SELECTOR,
+                '#root > main > div.container > '
+                'div.fund-page-secondary-nav-wrp.fixed-nav > '
+                've-fundpagesecondarynav > div > div > div.inner-container > '
+                'div.fund-label.d-flex > div.ticker-label.pr-2.font-weight-bold'
+            )))
         ticker = ticker_element.text
+
+        name_element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((
+                By.CSS_SELECTOR,
+                '#root > main > div.container > '
+                'div.fund-page-secondary-nav-wrp.fixed-nav > '
+                've-fundpagesecondarynav > div > div > div.inner-container > '
+                'div.fund-label.d-flex > div.fund-name-label.px-2'
+            )))
+        name = name_element.text
     except TimeoutException:
         return None
 
@@ -161,22 +163,30 @@ def extract_etf_info(driver, url):
 
     # Scroll to the yield_to_worst element
     try:
-        scroll_until_found(driver, '#portfolio > div > div:nth-child(1) > ve-contentareablock > section > div > '
-                                   'div:nth-child(1) > ul')
-        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR,
-                                                                    '#portfolio > div > div:nth-child(1) > '
-                                                                    've-contentareablock > section > div > '
-                                                                    'div:nth-child(1) > ul')))
-        name_element = driver.find_element(By.CSS_SELECTOR,
-                                           '#portfolio > div > div:nth-child(1) > ve-contentareablock > section > div '
-                                           '> div:nth-child(1) > ul > li:nth-child(1) > p:nth-child(1)').text
+        # scroll_until_found(
+        #     driver,
+        #     '#portfolio'
+        # )
+        WebDriverWait(driver, 20).until(EC.presence_of_element_located((
+            By.CSS_SELECTOR,
+            '#portfolio > div > div:nth-child(1) > ve-contentareablock > '
+            'section > div > div:nth-child(1) > ul'
+        )))
+        name_element = driver.find_element(
+            By.CSS_SELECTOR,
+            '#portfolio > div > div:nth-child(1) > ve-contentareablock > '
+            'section > div > div:nth-child(1) > ul > li:nth-child(1) > '
+            'div:nth-child(1)'
+        ).text
         if name_element == 'Yield to Maturity':
             yield_to_worst = None
         elif name_element == 'Yield to Worst':
-            yield_to_worst_element = driver.find_element(By.CSS_SELECTOR,
-                                                         '#portfolio > div > div:nth-child(1) > ve-contentareablock > '
-                                                         'section > div > div:nth-child(1) > ul > li:nth-child(1) > '
-                                                         'span')
+            yield_to_worst_element = driver.find_element(
+                By.CSS_SELECTOR,
+                '#portfolio > div > div:nth-child(1) > '
+                've-contentareablock > section > div > div:nth-child(1) > ul > '
+                'li:nth-child(1) > div:nth-child(2)'
+            )
             yield_to_worst = yield_to_worst_element.text
         else:
             yield_to_worst = None
@@ -188,15 +198,19 @@ def extract_etf_info(driver, url):
     # Try to extract yield_to_maturity
     try:
         if name_element == 'Yield to Maturity':
-            yield_to_maturity = driver.find_element(By.CSS_SELECTOR,
-                                                    '#portfolio > div > div:nth-child(1) > ve-contentareablock > '
-                                                    'section > div > div:nth-child(1) > ul > li:nth-child(1) > '
-                                                    'span').text
+            yield_to_maturity = driver.find_element(
+                By.CSS_SELECTOR,
+                '#portfolio > div > div:nth-child(1) > '
+                've-contentareablock > section > div > div:nth-child(1) > ul > '
+                'li:nth-child(1) > div:nth-child(2)'
+            ).text
         elif name_element == 'Yield to Worst':
-            yield_to_maturity = driver.find_element(By.CSS_SELECTOR,
-                                                    '#portfolio > div > div:nth-child(1) > ve-contentareablock > '
-                                                    'section > div > div:nth-child(1) > ul > li:nth-child(2) > '
-                                                    'span').text
+            yield_to_maturity = driver.find_element(
+                By.CSS_SELECTOR,
+                '#portfolio > div > div:nth-child(1) > '
+                've-contentareablock > section > div > div:nth-child(1) > ul > '
+                'li:nth-child(3) > div:nth-child(2)'
+            ).text
         else:
             yield_to_maturity = None
     except TimeoutException:
@@ -204,18 +218,26 @@ def extract_etf_info(driver, url):
 
     # Try to extract as_of_date
     try:
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR,
-                                                                        '#portfolio > div > div:nth-child(1) > '
-                                                                        've-contentareablock > section > div > '
-                                                                        'div:nth-child(1)')))
-        as_of_date = driver.find_element(By.CSS_SELECTOR,
-                                         '#portfolio > div > div:nth-child(1) > ve-contentareablock > section > div > '
-                                         'div:nth-child(1) > h3 > span').text
+        WebDriverWait(driver, 20).until(EC.presence_of_element_located((
+            By.CSS_SELECTOR,
+            '#portfolio > div > div:nth-child(1) > ve-contentareablock > '
+            'section > div > div:nth-child(1) > h3 > span'
+        )))
+        as_of_date = driver.find_element(
+            By.CSS_SELECTOR,
+            '#portfolio > div > div:nth-child(1) > ve-contentareablock > '
+            'section > div > div:nth-child(1) > h3 > span'
+        ).text
     except TimeoutException:
         as_of_date = None  # Returns None if yield_to_maturity is not present
 
-    return {"Ticker": ticker, "Name": name, "Yield to Worst": yield_to_worst, "Yield to Maturity": yield_to_maturity,
-            "As of Date": as_of_date}
+    return {
+        "Ticker": ticker,
+        "Name": name,
+        "Yield to Worst": yield_to_worst,
+        "Yield to Maturity": yield_to_maturity,
+        "As of Date": as_of_date
+    }
 
 
 def get_etf_data(driver, links):
@@ -293,8 +315,10 @@ def vaneck_bot(return_df=False, headless=True):
     :rtype: pd.DataFrame
     """
     print('Downloading VanEck ETF yield data...')
-    url = 'https://www.vaneck.com/us/en/etf-mutual-fund-finder/etfs/prices-returns/?InvType=etf&AssetClass=cb,ib,mb,' \
-          'fr&Funds=emf,esf,grf,iigf,mwmf,emlf,embf,ccif&ShareClass=a,c,i,y,z&tab=price-returns&Sort=name&SortDesc=true'
+    url = ('https://www.vaneck.com/us/en/etf-mutual-fund-finder/etfs/'
+           'prices-returns/?InvType=etf&AssetClass=cb,ib,mb,fr&Funds=emf,esf,'
+           'grf,iigf,mwmf,emlf,embf,ccif&ShareClass=a,c,i,y,z&'
+           'tab=price-returns&Sort=name&SortDesc=true')
     driver = setup_driver(headless)
     navigate_to_page(driver, url)
     links = get_links(driver)

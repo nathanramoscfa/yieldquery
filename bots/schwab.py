@@ -1,177 +1,186 @@
 import os
-import requests
+import time
 import pandas as pd
-import numpy as np
 from tqdm import tqdm
-from bs4 import BeautifulSoup
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, ElementNotInteractableException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from utils.drivers import setup_driver
 
-base_url = 'https://www.schwabassetmanagement.com'
-table_url = 'https://www.schwabassetmanagement.com/product-finder?combine=&field_product_solution_target_id%5B%5D=291' \
-            '&field_asset_class_target_id%5B%5D=271&field_asset_class_target_id%5B%5D=286'
+
+def scroll_down(driver, percentage=0.05):
+    # Scroll down about 5% of the webpage
+    scroll_height = driver.execute_script("return document.body.scrollHeight")
+    driver.execute_script(f"window.scrollTo(0, {scroll_height * percentage});")
+    time.sleep(1)  # delay to allow the page to load
 
 
-def get_soup(url):
+def navigate_to_page(driver, url):
     """
-    :description: Get the BeautifulSoup object
+    :description: Navigate to the target page
 
+    :param driver: Selenium driver
+    :type driver: selenium.webdriver.chrome.webdriver.WebDriver
     :param url: The url of the target page
     :type url: str
-    :return: The BeautifulSoup object
-    :rtype: bs4.BeautifulSoup
+    :return: None
+    :rtype: None
     """
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) '
-                      'Chrome/91.0.4472.164 Safari/537.36'
-    }
-    response = requests.get(url, headers=headers)
-    if response.status_code != 200:
-        print(f'Failed to retrieve page: {url}')
-        return None
-    return BeautifulSoup(response.content, 'html.parser')
+    driver.get(url)
+    try:
+        # Handle the pop-up
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+            (By.CSS_SELECTOR, '#marquee--7646 > div.container > div > div.marquee__content.col-12 > '
+                              'div.marquee__attachment.col-12 > div > div > div > div:nth-child(1) > div > a')))
+        limited_experience_button = driver.find_element(By.CSS_SELECTOR,
+                                                        '#marquee--7646 > div.container > div > '
+                                                        'div.marquee__content.col-12 > div.marquee__attachment.col-12 '
+                                                        '> div > div > div > div:nth-child(1) > div > a')
+        limited_experience_button.click()
+
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+            (By.CSS_SELECTOR, 'body > div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog'
+                              '-buttons > div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div > '
+                              'button:nth-child(1)')))
+        confirm_button = driver.find_element(By.CSS_SELECTOR,
+                                             'body > div.ui-dialog.ui-corner-all.ui-widget.ui-widget'
+                                             '-content.ui-front.ui-dialog-buttons > '
+                                             'div.ui-dialog-buttonpane.ui-widget-content.ui-helper'
+                                             '-clearfix > div > button:nth-child(1)')
+        confirm_button.click()
+    except (NoSuchElementException, TimeoutException, ElementNotInteractableException):
+        # Ignore if the pop-up is not found
+        pass
+
+    # Re-navigate to the URL after handling the pop-up
+    driver.get(url)
+
+    # Wait for the table to load
+    WebDriverWait(driver, 5).until(EC.presence_of_element_located((
+        By.CSS_SELECTOR,
+        '#page_product_finder'
+    )))
 
 
-def get_table():
+def get_links(driver):
     """
-    :description: Get the table from the soup object
+    :description: Get the links to the ETF pages
 
-    :return: The table
-    :rtype: bs4.element.Tag
+    :param driver: Selenium driver
+    :type driver: selenium.webdriver.chrome.webdriver.WebDriver
+    :return: The links to the ETF pages
+    :rtype: list
     """
-    soup = get_soup(table_url)
-    if soup is not None:
-        table = soup.find('div', class_='view-content')
-        return table
-    else:
-        print("Failed to get soup.")
-        return None
+    scroll_down(driver)
 
-
-def get_links(table_html):
     links = []
-    h3_tags = table_html.find_all('h3', class_='accordion-title')
-    for tag in tqdm(h3_tags):
-        a_tag = tag.find('a')
-        if a_tag:
-            relative_link = a_tag['href']
-            absolute_link = base_url + relative_link
-            links.append(absolute_link)
+    i = 1
+    while True:
+        try:
+            link_element = driver.find_element(
+                By.CSS_SELECTOR,
+                f'#page_product_finder > table.views-table.views-table--responsive.views-view-table.cols-7.sticky'
+                f'-enabled.table--page_product_finder.table-funds.d-none.d-lg-table.sticky-table > tbody > '
+                f'tr:nth-child({i}) > td.td--fund.views-field.row-data > a'
+            )
+            links.append(link_element.get_attribute('href'))
+            i += 1
+        except NoSuchElementException:
+            break
     return links
 
 
-def get_tickers_and_names(table_html):
-    """
-    :description: Get the tickers and names of the ETFs
-
-    :param table_html: The table HTML
-    :type table_html: bs4.element.Tag
-    :return: The tickers and names of the ETFs
-    :rtype: list
-    """
-    items = table_html.find_all('li', class_='product-table-mobile-list__item')
-    tickers_and_names = []
-    for item in tqdm(items):
-        ticker = item.find('span', class_='symbol').text
-        name = item.find('h3', class_='accordion-title').find('a').text.replace(ticker, '').strip()
-        tickers_and_names.append((ticker, name))
-
-    return tickers_and_names
-
-
-def get_yield_data(links):
+def get_yield_data(driver, links):
     """
     :description: Get the yield data
 
+    :param driver: Selenium driver
+    :type driver: selenium.webdriver.chrome.webdriver.WebDriver
     :param links: The links to the ETF pages
     :type links: list
     :return: The yield data
-    :rtype: list
+    :rtype: dict
     """
-    data = []
+    wait_time = 5
+    data = {}
     for link in tqdm(links):
-        soup = get_soup(link)
-        if soup is not None:
-            table = soup.find('div', id='sfm-table--yields')
-            if table is not None:
-                rows = table.find_all('tr')
-                for row in rows:
-                    cols = row.find_all('td')
-                    if cols:  # Skip the header row
-                        # Extract yield type, as-of date, and yield value
-                        yield_type = row.find('span').text
-                        as_of_date = cols[0].text
-                        yield_value = cols[1].text
-                        data.append([link, yield_type, as_of_date, yield_value])
-            else:
-                print("Table not found.")
-        else:
-            print("Failed to get soup.")
+        try:
+            driver.get(link)
+            time.sleep(2)
+
+            ticker = link.split('/')[-1].upper()
+
+            name_element = driver.find_element(
+                By.XPATH,
+                "//*[starts-with(@id, 'product_intro--')]"
+            )
+            name = name_element.text.split('\n')[0]
+
+            yield_element = (
+                By.CSS_SELECTOR,
+                '#sfm-table--yields > table > tbody > tr:nth-child(3) > td:nth-child(3)'
+            )
+            yield_element = WebDriverWait(driver, wait_time).until(EC.presence_of_element_located(yield_element))
+            yield_to_maturity = yield_element.get_attribute("innerText")
+
+            as_of_element = driver.find_element(
+                By.CSS_SELECTOR,
+                '#sfm-table--yields > table > tbody > tr:nth-child(3) > th > div'
+            )
+            as_of = as_of_element.get_attribute("innerText")
+
+            data[ticker] = {
+                'Name': name,
+                'Yield to Maturity': yield_to_maturity,
+                'As of': as_of.split(' ')[-1]
+            }
+        except TimeoutException:
+            print(f"TimeoutException encountered for {link}. Skipping to next link.")
+            continue
+
     return data
 
 
-def data_to_dataframe(tickers_and_names, yield_data):
+def create_and_save_dataframe(data, file_path):
     """
-    Convert the yield data to a DataFrame.
+    :description: Create a dataframe from the data and save it to a CSV file
 
-    :param tickers_and_names: The tickers and names of the ETFs
-    :type tickers_and_names: list
-    :param yield_data: The yield data
-    :type yield_data: list
-    :return: The yield data as a DataFrame
+    :param data: The data
+    :type data: dict
+    :param file_path: The path to the CSV file
+    :type file_path: str
+    :return: The dataframe
     :rtype: pd.DataFrame
     """
-    df = pd.DataFrame(yield_data, columns=['Link', 'Yield Type', 'As of Date', 'Yield Value'])
-
-    tickers_names_dict = {
-        f"https://www.schwabassetmanagement.com/products/{ticker.lower()}": (ticker, name)
-        for ticker, name in tickers_and_names
-    }
-
-    # Map each link to its corresponding ticker and name
-    df['Ticker'] = df['Link'].apply(lambda x: tickers_names_dict.get(x, (np.nan, np.nan))[0])
-    df['ETF Name'] = df['Link'].apply(lambda x: tickers_names_dict.get(x, (np.nan, np.nan))[1])
-
-    # Convert yield values and dates
-    df['Yield Value'] = df['Yield Value'].str.rstrip('%').astype('float') / 100.0
-    df['As of Date'] = pd.to_datetime(df['As of Date'], format='%m/%d/%Y').dt.strftime('%m-%d-%Y')
-
-    # Pivot DataFrame
-    df_pivot_yield = df.pivot(index='Ticker', columns='Yield Type', values='Yield Value')
-    df_pivot_date = df.pivot(index='Ticker', columns='Yield Type', values='As of Date')
-
-    # Join the two pivot tables
-    df_pivot = df_pivot_yield.join(df_pivot_date, lsuffix='', rsuffix=' Date')
-
-    # Add ETF Name back into the DataFrame
-    df_pivot['ETF Name'] = df_pivot.index.map(lambda x: tickers_names_dict.get(
-        f"https://www.schwabassetmanagement.com/products/{x.lower()}", (np.nan, np.nan))[1])
-
-    # Rearrange columns
-    column_order = ['ETF Name', 'SEC Yield (30 Day)', 'SEC Yield (30 Day) Date', 'Distribution Yield (TTM)',
-                    'Distribution Yield (TTM) Date', 'Average Yield to Maturity',
-                    'Average Yield to Maturity Date']
-    df_pivot = df_pivot.reindex(columns=column_order)
-
-    # Remove column name
-    df_pivot.rename_axis(None, axis=1, inplace=True)
-
-    return df_pivot
+    df = pd.DataFrame.from_dict(data, orient='index')
+    df['Yield to Maturity'] = df['Yield to Maturity'].str.rstrip('%').astype('float') / 100.0
+    df['As of'] = pd.to_datetime(df['As of'])
+    df['As of'] = df['As of'].dt.strftime('%m-%d-%Y')
+    df.index.name = 'Ticker'
+    df.to_csv(file_path)
+    return df
 
 
-def schwab_bot(return_df=False):
+def schwab_bot(return_df=False, headless=True):
     """
-    :description: Run the Schwab ETF yield bot
+    :description: Download Vanguard ETF yield data and save it to a CSV file
 
-    :param return_df: return the DataFrame if True, default is False
-    :type return_df: bool, optional
-    :return: Schwab ETF yield data
+    :param return_df: Whether to return the dataframe
+    :type return_df: bool
+    :param headless: Whether to run the bot in headless mode
+    :type headless: bool
+    :return: The dataframe
     :rtype: pd.DataFrame
     """
     print('Downloading Schwab ETF yield data...')
-    table_html = get_table()
-    links = get_links(table_html)
-    tickers_and_names = get_tickers_and_names(table_html)
-    yield_data = get_yield_data(links)
-    df = data_to_dataframe(tickers_and_names, yield_data)
+    url = 'https://www.schwabassetmanagement.com/product-finder?combine=&field_product_solution_target_id%5B%5D=291' \
+          '&field_asset_class_target_id%5B%5D=271&field_asset_class_target_id%5B%5D=286'
+    driver = setup_driver(headless)
+    navigate_to_page(driver, url)
+    links = get_links(driver)
+    data = get_yield_data(driver, links)
+    driver.quit()
 
     # Get the absolute path of the project's root directory
     project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -183,8 +192,7 @@ def schwab_bot(return_df=False):
     csv_path = os.path.join(project_dir, 'data', 'schwab.csv')
 
     print('Saving Schwab ETF yield data to CSV file...')
-    df.to_csv(csv_path)
+    df = create_and_save_dataframe(data, csv_path)
     print('Done!')
-
     if return_df:
         return df

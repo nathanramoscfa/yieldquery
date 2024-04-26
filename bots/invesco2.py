@@ -233,21 +233,15 @@ def process_data(data_list: List[str]) -> pd.DataFrame:
         'Yield to Maturity (%)': [],
         'Yield to Worst (%)': [],
         'Years to Maturity': [],
-        'Yield (%)': [],
         'Weighted Avg Coupon (%)': [],
         'Weighted Avg Price': [],
         'As of Date': []
     }
 
-    all_keys = ['Effective Duration (yrs)',
-                'Modified Duration (yrs)',
+    all_keys = ['Effective Duration (yrs)', 'Modified Duration (yrs)',
                 'Yield to Maturity (%)',
-                'Yield to Worst (%)',
-                'Yield (%)',
-                'Years to Maturity',
-                'Weighted Avg Coupon (%)',
-                'Weighted Avg Price'
-                ]
+                'Yield to Worst (%)', 'Years to Maturity',
+                'Weighted Avg Coupon (%)', 'Weighted Avg Price']
 
     as_of_dates_captured = {}
 
@@ -287,10 +281,6 @@ def process_data(data_list: List[str]) -> pd.DataFrame:
                 elif line == 'Years to Maturity':
                     # noinspection PyTypeChecker
                     temp_dict['Years to Maturity'] = float(lines[i + 1])
-                elif line == 'Yield':
-                    # noinspection PyTypeChecker
-                    temp_dict['Yield (%)'] = float(
-                        lines[i + 1].rstrip('%')) / 100
                 elif line == 'Weighted Avg Coupon':
                     # noinspection PyTypeChecker
                     temp_dict['Weighted Avg Coupon (%)'] = float(
@@ -308,7 +298,7 @@ def process_data(data_list: List[str]) -> pd.DataFrame:
                     temp_dict['As of Date'] = pd.to_datetime(
                         line.split(' ')[-1],
                         format='%m/%d/%Y'
-                    ).strftime('%m-%d-%Y')
+                    ).strftime('%Y-%m-%d')
                     as_of_dates_captured[ticker] = True
 
             for key in all_keys:

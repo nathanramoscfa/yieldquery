@@ -1,22 +1,26 @@
 Ticker,Name,Yield to Maturity,As of
-VWOB,Vanguard Emerging Markets Government Bond ETF,0.07400000000000001,11-30-2023
-VCEB,Vanguard ESG U.S. Corporate Bond ETF,0.055999999999999994,11-30-2023
-EDV,Vanguard Extended Duration Treasury ETF,0.047,11-30-2023
-BIV,Vanguard Intermediate-Term Bond ETF,0.049,11-30-2023
-VCIT,Vanguard Intermediate-Term Corporate Bond ETF,0.055999999999999994,11-30-2023
-VGIT,Vanguard Intermediate-Term Treasury ETF,0.044000000000000004,11-30-2023
-BLV,Vanguard Long-Term Bond ETF,0.052000000000000005,11-30-2023
-VCLT,Vanguard Long-Term Corporate Bond ETF,0.057,11-30-2023
-VGLT,Vanguard Long-Term Treasury ETF,0.047,11-30-2023
-VMBS,Vanguard Mortgage-Backed Securities ETF,0.051,11-30-2023
-BSV,Vanguard Short-Term Bond ETF,0.049,11-30-2023
-VCSH,Vanguard Short-Term Corporate Bond ETF,0.055,11-30-2023
-VTIP,Vanguard Short-Term Inflation-Protected Securities ETF,0.046,11-30-2023
-VTES,Vanguard Short-Term Tax-Exempt Bond ETF,0.03,11-30-2023
-VGSH,Vanguard Short-Term Treasury ETF,0.048,11-30-2023
-VTEB,Vanguard Tax-Exempt Bond ETF,0.036000000000000004,11-30-2023
-BND,Vanguard Total Bond Market ETF,0.05,11-30-2023
-VTC,Vanguard Total Corporate Bond ETF,0.055999999999999994,11-30-2023
-BNDX,Vanguard Total International Bond ETF,0.053,11-30-2023
-BNDW,Vanguard Total World Bond ETF,0.051,11-30-2023
-VUSB,Vanguard Ultra-Short Bond ETF,0.057,11-30-2023
+VTEC,Vanguard California Tax-Exempt Bond ETF,0.03,02-29-2024
+VCRB,Vanguard Core Bond ETF,0.05,02-29-2024
+VPLS,Vanguard Core-Plus Bond ETF,0.053,02-29-2024
+VWOB,Vanguard Emerging Markets Government Bond ETF,0.07,02-29-2024
+VCEB,Vanguard ESG U.S. Corporate Bond ETF,0.054000000000000006,02-29-2024
+EDV,Vanguard Extended Duration Treasury ETF,0.045,02-29-2024
+BIV,Vanguard Intermediate-Term Bond ETF,0.047,02-29-2024
+VCIT,Vanguard Intermediate-Term Corporate Bond ETF,0.054000000000000006,02-29-2024
+VTEI,Vanguard Intermediate-Term Tax-Exempt Bond ETF,0.031,02-29-2024
+VGIT,Vanguard Intermediate-Term Treasury ETF,0.043,02-29-2024
+BLV,Vanguard Long-Term Bond ETF,0.051,02-29-2024
+VCLT,Vanguard Long-Term Corporate Bond ETF,0.055999999999999994,02-29-2024
+VGLT,Vanguard Long-Term Treasury ETF,0.045,02-29-2024
+VMBS,Vanguard Mortgage-Backed Securities ETF,0.052000000000000005,02-29-2024
+BSV,Vanguard Short-Term Bond ETF,0.048,02-29-2024
+VCSH,Vanguard Short-Term Corporate Bond ETF,0.053,02-29-2024
+VTIP,Vanguard Short-Term Inflation-Protected Securities ETF,0.045,02-29-2024
+VTES,Vanguard Short-Term Tax-Exempt Bond ETF,0.028999999999999998,02-29-2024
+VGSH,Vanguard Short-Term Treasury ETF,0.047,02-29-2024
+VTEB,Vanguard Tax-Exempt Bond ETF,0.034,02-29-2024
+BND,Vanguard Total Bond Market ETF,0.049,02-29-2024
+VTC,Vanguard Total Corporate Bond ETF,0.054000000000000006,02-29-2024
+BNDX,Vanguard Total International Bond ETF,0.05,02-29-2024
+BNDW,Vanguard Total World Bond ETF,0.049,02-29-2024
+VUSB,Vanguard Ultra-Short Bond ETF,0.055,02-29-2024

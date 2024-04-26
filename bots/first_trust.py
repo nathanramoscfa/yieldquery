@@ -2,10 +2,14 @@ import os
 import re
 import time
 import requests
+import random
 import pandas as pd
 from bs4 import BeautifulSoup
 from datetime import datetime
 from tqdm import tqdm
+from time import sleep
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 
 def get_as_of_date(soup):
@@ -44,6 +48,16 @@ def clean_index_field(field):
     return re.sub(r'\d+$', '', field)
 
 
+# Pool of user agents
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 "
+    "Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 "
+    "Safari/605.1.15",
+    # Add more user agents here if needed
+]
+
+
 def get_etf_data(ticker):
     """
     :description: Get the ETF data
@@ -54,26 +68,55 @@ def get_etf_data(ticker):
     :rtype: dict
     """
     url = f'https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker={ticker}'
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
 
-    # Extract ETF name
-    etf_name_span = soup.find('span', {'id': 'FundNavigation_lblPageHeader'})
-    if etf_name_span is not None:
-        etf_name = re.sub(r' \(.*\)', '', etf_name_span.text)
+    # Select a random user-agent
+    headers = {
+        'User-Agent': random.choice(USER_AGENTS)
+    }
 
-    table = soup.find('table', {'id': 'FundCharacteristics_FundControlContainer_NameValuePairListing'})
+    # Retry strategy
+    retry_strategy = Retry(
+        total=1,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["HEAD", "GET", "OPTIONS"],
+        backoff_factor=1
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    http = requests.Session()
+    http.mount("https://", adapter)
 
-    data_dict = {}
-    rows = table.find_all('tr')
-    for row in rows:
-        cols = row.find_all('td')
-        field_name = clean_index_field(cols[0].text.strip())
-        value = cols[1].text.strip()
-        data_dict[field_name] = value
-    data_dict['As of'] = get_as_of_date(soup)
-    data_dict['ETF Name'] = etf_name
-    return data_dict
+    # Making the request with retries and random delays
+    for attempt in range(3):
+        try:
+            response = http.get(url, headers=headers)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'html.parser')
+            etf_name = None
+
+            # Extract ETF name
+            etf_name_span = soup.find('span', {'id': 'FundNavigation_lblPageHeader'})
+            if etf_name_span is not None:
+                etf_name = re.sub(r' \(.*\)', '', etf_name_span.text)
+
+            table = soup.find('table', {'id': 'FundCharacteristics_FundControlContainer_NameValuePairListing'})
+
+            data_dict = {}
+            rows = table.find_all('tr')
+            for row in rows:
+                cols = row.find_all('td')
+                field_name = clean_index_field(cols[0].text.strip())
+                value = cols[1].text.strip()
+                data_dict[field_name] = value
+            data_dict['As of'] = get_as_of_date(soup)
+            data_dict['ETF Name'] = etf_name
+            return data_dict
+
+        except requests.exceptions.RequestException as e:
+            print(f"Attempt {attempt + 1} failed: {e}")
+            sleep(random.uniform(1, 5))  # Random delay between 1 and 5 seconds
+
+    print(f"Failed to retrieve data for ticker {ticker} after 3 attempts.")
+    return None
 
 
 def first_trust_bot(return_df=False):

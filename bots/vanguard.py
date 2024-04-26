@@ -23,8 +23,8 @@ def navigate_to_page(driver, url):
     driver.get(url)
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((
         By.CSS_SELECTOR,
-        'body > app-root > vfa-list-page > div > div:nth-child(2) > div.col-md-9.col-sm-12 > div > vfa-results > div '
-        '> vfa-overview > div > div > table'
+        'body > app-root > vfa-list-page > div > div:nth-child(2) > div.col-lg-9.col-md-8.col-sm-12.p-0 > div > '
+        'vfa-results > div > vfa-overview > div > div > table'
     )))
 
 
@@ -43,9 +43,9 @@ def get_links(driver):
         try:
             link_element = driver.find_element(
                 By.CSS_SELECTOR,
-                f'body > app-root > vfa-list-page > div > div:nth-child(2) > div.col-md-9.col-sm-12 > div > '
-                f'vfa-results > div > vfa-overview > div > div > table > tbody > tr:nth-child({i}) > th > p > '
-                f'span:nth-child(2) > a'
+                f'body > app-root > vfa-list-page > div > div:nth-child(2) > '
+                f'div.col-lg-9.col-md-8.col-sm-12.p-0 > div > vfa-results > div > vfa-overview > div > div > table > '
+                f'tbody > tr:nth-child({i}) > th > p > span:nth-child(2) > a'
             )
             links.append(link_element.get_attribute('href'))
             i += 1

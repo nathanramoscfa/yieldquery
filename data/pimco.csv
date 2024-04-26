@@ -1,10 +1,11 @@
 Ticker,Name,Yield to Maturity,As of Date
-MUNI,Intermediate Municipal Bond Active Exchange-Traded Fund,0.0371,01-02-2024
-SMMU,Short Term Municipal Bond Active Exchange-Traded Fund,0.034300000000000004,01-02-2024
-BOND,Active Bond Exchange-Traded Fund,0.0528,01-02-2024
-CORP,Investment Grade Corporate Bond Index Exchange-Traded Fund,0.052000000000000005,01-02-2024
-LDUR,Enhanced Low Duration Active Exchange-Traded Fund,0.0493,01-02-2024
-STPZ,1-5 Year U.S. TIPS Index Exchange-Traded Fund,0.043899999999999995,01-02-2024
-ZROZ,25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund,0.0407,01-02-2024
-TIPZ,Broad U.S. TIPS Index Exchange-Traded Fund,0.043899999999999995,01-02-2024
-HYS,0-5 Year High Yield Corporate Bond Index Exchange-Traded Fund,0.0794,01-02-2024
+LDUR,Enhanced Low Duration Active Exchange-Traded Fund,0.0535,04-01-2024
+STPZ,1-5 Year U.S. TIPS Index Exchange-Traded Fund,0.047400000000000005,04-01-2024
+LTPZ,15+ Year U.S. TIPS Index Exchange-Traded Fund,0.0472,04-01-2024
+ZROZ,25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund,0.044500000000000005,04-01-2024
+BOND,Active Bond Exchange-Traded Fund,0.0565,04-01-2024
+MINO,Municipal Income Opportunities Active Exchange-Traded Fund,0.046,04-01-2024
+TIPZ,Broad U.S. TIPS Index Exchange-Traded Fund,0.047,04-01-2024
+SMMU,Short Term Municipal Bond Active Exchange-Traded Fund,0.038599999999999995,04-01-2024
+HYS,0-5 Year High Yield Corporate Bond Index Exchange-Traded Fund,0.0803,04-01-2024
+CORP,Investment Grade Corporate Bond Index Exchange-Traded Fund,0.0545,04-01-2024

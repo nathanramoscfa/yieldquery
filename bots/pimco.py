@@ -27,7 +27,7 @@ def navigate_to_page(driver, url):
     # Helper function to click buttons
     def click_button(css_selector):
         try:
-            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, css_selector)))
+            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, css_selector)))
             button = driver.find_element(By.CSS_SELECTOR, css_selector)
             button.click()
             time.sleep(2)  # delay to allow the page to react
@@ -58,7 +58,7 @@ def navigate_to_page(driver, url):
     for selector in sector_selectors:
         click_button(selector)
 
-    time.sleep(10)  # delay before proceeding to next step
+    time.sleep(2)  # delay before proceeding to next step
 
 
 def get_links(driver):
@@ -75,7 +75,7 @@ def get_links(driver):
     # Helper function to get scroll height
     def get_scroll_height():
         # Adding a wait condition here for the page to fully load
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'body')))
+        WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'body')))
         return driver.execute_script("return document.body.scrollHeight")
 
     # Initial height
@@ -113,13 +113,16 @@ def extract_etf_info(driver, url):
     # Navigate to the url
     driver.get(url)
 
-    # Check for the pop-up
+    # Check for the " pop-up
     try:
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located(
-            (By.CSS_SELECTOR, '#SplashPage1 > section > div > div.listOfRoles > ul > li:nth-child(1) > label')))
-        financial_advisor_button = driver.find_element(By.CSS_SELECTOR,
-                                                       '#SplashPage1 > section > div > div.listOfRoles > ul > '
-                                                       'li:nth-child(1) > label')
+        WebDriverWait(driver, 5).until(EC.presence_of_element_located((
+            By.CSS_SELECTOR,
+            '#SplashPage1 > section > div > div.listOfRoles > fieldset > ul > li:nth-child(1) > label'
+        )))
+        financial_advisor_button = driver.find_element(
+            By.CSS_SELECTOR,
+            '#SplashPage1 > section > div > div.listOfRoles > fieldset > ul > li:nth-child(1) > label'
+        )
         financial_advisor_button.click()
     except (NoSuchElementException, TimeoutException, ElementNotInteractableException):
         # Ignore if the pop-up is not found
@@ -127,16 +130,34 @@ def extract_etf_info(driver, url):
 
     # Check for the "Provide Feedback" pop-up
     try:
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR,
-                                                                        'body > div.QSIWebResponsive > div > div > '
-                                                                        'div.QSIWebResponsiveDialog-Layout1'
-                                                                        '-SI_25LWeavDH1uFWca_button-container > '
-                                                                        'button:nth-child(2)')))
-        no_thanks_button = driver.find_element(By.CSS_SELECTOR,
-                                               'body > div.QSIWebResponsive > div > div > '
-                                               'div.QSIWebResponsiveDialog-Layout1-SI_25LWeavDH1uFWca_button'
-                                               '-container > button:nth-child(2)')
+        WebDriverWait(driver, 5).until(EC.presence_of_element_located((
+            By.CSS_SELECTOR,
+            'body > div.QSIWebResponsive > div > div > '
+            'div.QSIWebResponsiveDialog-Layout1'
+            '-SI_25LWeavDH1uFWca_button-container > '
+            'button:nth-child(2)')))
+        no_thanks_button = driver.find_element(
+            By.CSS_SELECTOR,
+           'body > div.QSIWebResponsive > div > div > '
+           'div.QSIWebResponsiveDialog-Layout1-SI_25LWeavDH1uFWca_button'
+           '-container > button:nth-child(2)'
+        )
         no_thanks_button.click()
+    except (NoSuchElementException, TimeoutException):
+        # Ignore if the pop-up is not found
+        pass
+
+    # # Check for the "Select Language" pop-up
+    # try:
+    #     WebDriverWait(driver, 5).until(EC.presence_of_element_located((
+    #         By.CSS_SELECTOR,
+    #         '#SplashPage1 > section > div > div.languageSelectorContainer > div > span:nth-child(1)'
+    #     ))).click()
+    #     WebDriverWait(driver, 5).until(EC.presence_of_element_located((
+    #         By.CSS_SELECTOR,
+    #         '#SplashPage1 > section > div > div.bottom.submissionContainer > a'
+    #     ))).click()
+
     except (NoSuchElementException, TimeoutException):
         # Ignore if the pop-up is not found
         pass
@@ -148,7 +169,7 @@ def extract_etf_info(driver, url):
 
     try:
         # First try with the usual CSS selector
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+        WebDriverWait(driver, 5).until(EC.presence_of_element_located(
             (By.CSS_SELECTOR, '#pageWrapper > section:nth-child(2) > div:nth-child(19) > div.row > div > div > div')))
         yield_to_maturity = driver.find_element(By.CSS_SELECTOR,
                                                 '#pageWrapper > section:nth-child(2) > div:nth-child(19) > div.row > '
@@ -156,7 +177,7 @@ def extract_etf_info(driver, url):
     except NoSuchElementException:
         # If the usual CSS selector fails, try the second CSS selector
         try:
-            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR,
+            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR,
                                                                             '#pageWrapper > section:nth-child(2) > '
                                                                             'div:nth-child(20) > div.row > div > div '
                                                                             '> div')))
@@ -171,14 +192,14 @@ def extract_etf_info(driver, url):
         return None
 
     # Extract the info
-    name = WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+    name = WebDriverWait(driver, 5).until(EC.presence_of_element_located(
         (By.CSS_SELECTOR, '#etf-header > div.container > div.etf-title-row > div.etf-name'))).text
 
     try:
         # First try with the usual CSS selector
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located(
+        WebDriverWait(driver, 5).until(EC.presence_of_element_located(
             (By.CSS_SELECTOR, '#pageWrapper > section:nth-child(2) > div:nth-child(19) > div.row > div > div > div')))
-        as_of_date = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR,
+        as_of_date = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR,
                                                                                      '#pageWrapper > '
                                                                                      'section:nth-child(2) > '
                                                                                      'div:nth-child(19) > div.row > '
@@ -188,11 +209,11 @@ def extract_etf_info(driver, url):
     except (NoSuchElementException, TimeoutException):
         try:
             # If the usual CSS selector fails, try the second CSS selector
-            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR,
-                                                                            '#pageWrapper > section:nth-child(2) > '
+            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR,
+                                                                            '#pageWrapper > section:nth-child(2) >'
                                                                             'div:nth-child(20) > div.row > div > div '
                                                                             '> div')))
-            as_of_date = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR,
+            as_of_date = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR,
                                                                                          '#pageWrapper > '
                                                                                          'section:nth-child(2) > '
                                                                                          'div:nth-child(20) > div.row '
@@ -205,7 +226,7 @@ def extract_etf_info(driver, url):
         # If it takes too long to find an element
         raise Exception(f"Timed out when trying to find the 'as_of_date' element on {url}")
 
-    ticker = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR,
+    ticker = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR,
                                                                              '#etf-header > div.container > '
                                                                              'div.etf-title-row > h1'))).text
 

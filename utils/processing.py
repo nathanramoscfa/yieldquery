@@ -33,7 +33,10 @@ def ishares():
     file_path = build_file_path('ishares.csv')
     df = pd.read_csv(file_path, index_col=0)
     df = df[['Name', 'Avg. Yield (%)', 'Avg. Yield as of Date']]
-    df.rename(columns={'Avg. Yield (%)': 'Yield to Maturity', 'Avg. Yield as of Date': 'Date'}, inplace=True)
+    df.rename(columns={
+        'Avg. Yield (%)': 'Yield to Maturity',
+        'Avg. Yield as of Date': 'Date'
+    }, inplace=True)
     return df
 
 
@@ -74,11 +77,14 @@ def schwab():
     """
     filepath = build_file_path('schwab.csv')
     df = pd.read_csv(filepath, index_col=0)
-    df = df[['ETF Name', 'Average Yield to Maturity', 'Average Yield to Maturity Date']]
+    # df = df[['ETF Name', 'Average Yield to Maturity', 'Average Yield to Maturity Date']]
+    # df.rename(columns={
+    #     'ETF Name': 'Name',
+    #     'Average Yield to Maturity': 'Yield to Maturity',
+    #     'Average Yield to Maturity Date': 'Date'
+    # }, inplace=True)
     df.rename(columns={
-        'ETF Name': 'Name',
-        'Average Yield to Maturity': 'Yield to Maturity',
-        'Average Yield to Maturity Date': 'Date'
+        'As of': 'Date'
     }, inplace=True)
     return df
 
@@ -92,8 +98,26 @@ def invesco():
     """
     filepath = build_file_path('invesco.csv')
     df = pd.read_csv(filepath, index_col=0)
-    df = df[['Product Name', 'YTM (%)', 'As of Date']]
-    df.rename(columns={'Product Name': 'Name', 'YTM (%)': 'Yield to Maturity', 'As of Date': 'Date'}, inplace=True)
+    df = df[[
+        'ETF Name',
+        'Yield to Maturity (%)',
+        'Yield to Worst (%)',
+        'Yield (%)',
+        'As of Date'
+    ]]
+    df.rename(columns={
+        'ETF Name': 'Name',
+        'Yield to Maturity (%)': 'Yield to Maturity',
+        'Yield to Worst (%)': 'Yield to Worst',
+        'Yield (%)': 'Yield',
+        'As of Date': 'Date'
+    }, inplace=True)
+    df['Yield to Maturity'] = df.apply(
+        lambda x: x['Yield to Worst'] if pd.notnull(x['Yield to Worst']) else (
+            x['Yield'] if pd.notnull(x['Yield']) else x['Yield to Maturity']),
+        axis=1
+    )
+    df.drop(columns=['Yield to Worst', 'Yield'], inplace=True)
     return df
 
 
@@ -424,23 +448,41 @@ def get_risk_free_rate(ticker: str = '^TNX') -> Tuple[float, str]:
     return risk_free_rate, risk_free_rate_name
 
 
-def process_data(
-        mar: float = None
-) -> pd.DataFrame:
+def process_data(mar: float = None) -> pd.DataFrame:
     """
     :description: This function processes the ETF data.
 
-    :param mar: The minimum acceptable return
+    :param mar: The minimum acceptable return.
     :type mar: float
-    :return: The processed ETF data
+    :return: The processed ETF data.
     :rtype: pd.DataFrame
     """
-    df = combine_data()
+    df = combine_data()  # Assuming this returns a DataFrame with ETF data
     tickers = list(df.index)
     stock_data_dict = download_stock_data(tickers)
     expected_semi_dev_df = get_expected_semi_deviation(stock_data_dict)
     expected_semi_dev_df.index.name = 'Ticker'
-    final_df = pd.concat([df, expected_semi_dev_df], axis=1).dropna()
+
+    # Ensure both DataFrames have 'Ticker' as their index name for clarity
+    df.index.name = 'Ticker'
+
+    # Check and remove any duplicate indices to ensure uniqueness
+    df = df[~df.index.duplicated(keep='first')]
+    expected_semi_dev_df = expected_semi_dev_df[~expected_semi_dev_df.index.duplicated(keep='first')]
+
+    # Compute the intersection of indices (common tickers) explicitly
+    common_tickers = df.index.intersection(expected_semi_dev_df.index)
+
+    # Reindex both DataFrames to only include the common tickers
+    df_common = df.reindex(common_tickers)
+    expected_semi_dev_common = expected_semi_dev_df.reindex(common_tickers)
+
+    # Concatenate the filtered DataFrames
+    final_df = pd.concat(
+        [df_common, expected_semi_dev_common],
+        axis=1,
+        join='inner'
+    ).dropna()
 
     if mar is not None:
         final_df['Sortino Ratio'] = round(

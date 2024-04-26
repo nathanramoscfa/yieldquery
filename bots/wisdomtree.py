@@ -33,7 +33,7 @@ def navigate_to_page(driver, url):
         EC.presence_of_element_located((By.CSS_SELECTOR, asset_class_menu_selector)))
     asset_class_menu.click()
 
-    fixed_income_selector = '#react-select-3-option-5'
+    fixed_income_selector = '#react-select-3-option-6'
     select_fixed_income = WebDriverWait(driver, 20).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, fixed_income_selector)))
     select_fixed_income.click()
@@ -60,8 +60,8 @@ def get_links(driver):
         try:
             # Try finding the link in the current row
             link = driver.find_element(By.CSS_SELECTOR,
-                                       f'#fundlisting > div > div:nth-child(2) > div.table-responsive > table > tbody '
-                                       f'> tr:nth-child({idx}) > td.nameLink > a')
+                                       f'#fundlisting > div > div:nth-child(2) > div.table-responsive > table > '
+                                       f'tbody > tr:nth-child({idx}) > td.nameLink > a')
             links.append(link.get_attribute('href'))
             idx += 1
         except NoSuchElementException:
@@ -129,11 +129,14 @@ def get_etf_data(driver, links):
     # Get data for all ETFs
     data = []
     for link in tqdm(links):
-        etf_data = extract_etf_info(driver, link)
+        try:
+            etf_data = extract_etf_info(driver, link)
 
-        # Only add the etf_data to the list if it's not None
-        if etf_data is not None:
-            data.append(etf_data)
+            # Only add the etf_data to the list if it's not None
+            if etf_data is not None:
+                data.append(etf_data)
+        except NoSuchElementException:
+            print(f"Failed to retrieve data for {link}. Skipping to next link.")
 
     # Convert data list to a pandas DataFrame
     df = pd.DataFrame(data)

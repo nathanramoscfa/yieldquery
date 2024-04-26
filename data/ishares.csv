@@ -1,126 +1,126 @@
 Ticker,Name,Net Expense Ratio (%),Net Assets (USD),Asset Class,Sub Asset Class,Region,Market,Location,Investment Style,Duration (yrs),Avg. Yield (%),Avg. Yield as of Date
-AGG,iShares Core U.S. Aggregate Bond ETF,0.0003,101029402418.35,Fixed Income,Multi Sectors,North America,Developed,United States,Index,6.17,0.046,01-02-2024
-TLT,iShares 20+ Year Treasury Bond ETF,0.0015,51372768124.25,Fixed Income,Government,North America,Developed,United States,Index,17.05,0.042,01-02-2024
-MUB,iShares National Muni Bond ETF,0.0005,38162459034.7,Fixed Income,Municipals,North America,Developed,United States,Index,5.98,0.0305,01-02-2024
-LQD,iShares iBoxx $ Investment Grade Corporate Bond ETF,0.0014000000000000002,31647065364.58,Fixed Income,Credit,North America,Developed,United States,Index,8.46,0.0512,01-02-2024
-MBB,iShares MBS ETF,0.0004,28583545596.44,Fixed Income,Mortgages,North America,Developed,United States,Index,5.8,0.0472,01-02-2024
-IEF,iShares 7-10 Year Treasury Bond ETF,0.0015,27557596196.04,Fixed Income,Government,North America,Developed,United States,Index,7.36,0.0395,01-02-2024
-SHY,iShares 1-3 Year Treasury Bond ETF,0.0015,25617758996.03,Fixed Income,Government,North America,Developed,United States,Index,1.88,0.0438,01-02-2024
-IUSB,iShares Core Total USD Bond Market ETF,0.0006,23692828646.06,Fixed Income,Multi Sectors,North America,Developed,United States,Index,5.96,0.0489,01-02-2024
-GOVT,iShares U.S. Treasury Bond ETF,0.0005,22602817699.33,Fixed Income,Government,North America,Developed,United States,Index,6.12,0.0416,01-02-2024
-IGSB,iShares 1-5 Year Investment Grade Corporate Bond ETF,0.0004,21422323543.62,Fixed Income,Credit,North America,Developed,United States,Index,2.54,0.0513,01-02-2024
-HYG,iShares iBoxx $ High Yield Corporate Bond ETF,0.0049,18693964963.53,Fixed Income,High Yield,North America,Developed,United States,Index,3.31,0.0762,01-02-2024
-SHV,iShares Short Treasury Bond ETF,0.0015,18608044750.53,Fixed Income,Government,North America,Developed,United States,Index,0.28,0.0528,01-02-2024
-TIP,iShares TIPS Bond ETF,0.0019,18583875022.64,Fixed Income,Inflation,North America,Developed,United States,Index,6.52,0.0408,01-02-2024
-SGOV,iShares 0-3 Month Treasury Bond ETF,0.0007000000000000001,17518579441.57,Fixed Income,Government,North America,Developed,United States,Index,0.09,0.0538,01-02-2024
-EMB,iShares J.P. Morgan USD Emerging Markets Bond ETF,0.0039000000000000003,16393170757.38,Fixed Income,Government,Global,Emerging,Broad,Index,7.19,0.0688,01-02-2024
-IEI,iShares 3-7 Year Treasury Bond ETF,0.0015,12958977546.9,Fixed Income,Government,North America,Developed,United States,Index,4.38,0.0398,01-02-2024
-IGIB,iShares 5-10 Year Investment Grade Corporate Bond ETF,0.0004,12249294126.82,Fixed Income,Credit,North America,Developed,United States,Index,6.07,0.051399999999999994,01-02-2024
-USHY,iShares Broad USD High Yield Corporate Bond ETF,0.0008,12094143748.62,Fixed Income,High Yield,North America,Developed,United States,Index,3.38,0.0781,01-02-2024
-TFLO,iShares Treasury Floating Rate Bond ETF,0.0015,10344690154.57,Fixed Income,Government,North America,Developed,United States,Index,0.0,0.0562,01-02-2024
-USIG,iShares Broad USD Investment Grade Corporate Bond ETF,0.0004,10095000478.68,Fixed Income,Credit,North America,Developed,United States,Index,6.78,0.052000000000000005,01-02-2024
-SUB,iShares Short-Term National Muni Bond ETF,0.0007000000000000001,9112448472.38,Fixed Income,Municipals,North America,Developed,United States,Index,1.86,0.0264,01-02-2024
-STIP,iShares 0-5 Year TIPS Bond ETF,0.0003,8417406275.02,Fixed Income,Inflation,North America,Developed,United States,Index,2.35,0.042800000000000005,01-02-2024
-TLH,iShares 10-20 Year Treasury Bond ETF,0.0015,7768344645.49,Fixed Income,Government,North America,Developed,United States,Index,13.11,0.042199999999999994,01-02-2024
-FLOT,iShares Floating Rate Bond ETF,0.0015,7335693842.15,Fixed Income,Credit,North America,Developed,United States,Index,0.01,0.062,01-02-2024
-ICSH,BlackRock Ultra Short-Term Bond ETF,0.0008,6094759240.35,Fixed Income,Multi Sectors,North America,Developed,United States,Active,0.42,0.0548,01-02-2024
-IAGG,iShares Core International Aggregate Bond ETF,0.0007000000000000001,5436438911.99,Fixed Income,Multi Sectors,Global,Developed,Broad,Index,6.77,0.0297,01-02-2024
-SHYG,iShares 0-5 Year High Yield Corporate Bond ETF,0.003,5273966077.03,Fixed Income,High Yield,North America,Developed,United States,Index,2.18,0.0755,01-02-2024
-ISTB,iShares Core 1-5 Year USD Bond ETF,0.0006,4203039856.46,Fixed Income,Multi Sectors,North America,Developed,United States,Index,2.64,0.048600000000000004,01-02-2024
-EAGG,iShares ESG Aware U.S. Aggregate Bond ETF,0.001,3557994793.01,Fixed Income,Multi Sectors,North America,Developed,United States,Index,6.19,0.0458,01-02-2024
-GVI,iShares Intermediate Government/Credit Bond ETF,0.002,3555788737.6,Fixed Income,Multi Sectors,North America,Developed,United States,Index,3.79,0.044500000000000005,01-02-2024
-NEAR,BlackRock Short Duration Bond ETF,0.0025,3050612271.16,Fixed Income,Multi Sectors,North America,Developed,United States,Active,1.83,0.058499999999999996,01-02-2024
-IBTE,iShares® iBonds® Dec 2024 Term Treasury ETF,0.0007000000000000001,2752761348.29,Fixed Income,Government,North America,Developed,United States,Index,0.49,0.051399999999999994,01-02-2024
-IBDP,iShares® iBonds® Dec 2024 Term Corporate ETF,0.001,2717115701.4,Fixed Income,Credit,North America,Developed,United States,Index,0.46,0.057,01-02-2024
-CMF,iShares California Muni Bond ETF,0.0025,2705519398.09,Fixed Income,Municipals,North America,Developed,United States,Index,6.14,0.0296,01-02-2024
-IBDQ,iShares® iBonds® Dec 2025 Term Corporate ETF,0.001,2414681007.23,Fixed Income,Credit,North America,Developed,United States,Index,1.32,0.052000000000000005,01-02-2024
-SLQD,iShares 0-5 Year Investment Grade Corporate Bond ETF,0.0006,2202697748.43,Fixed Income,Credit,North America,Developed,United States,Index,2.12,0.0513,01-02-2024
-IGLB,iShares 10+ Year Investment Grade Corporate Bond ETF,0.0004,2140502027.22,Fixed Income,Credit,North America,Developed,United States,Index,12.81,0.0536,01-02-2024
-IBDR,iShares® iBonds® Dec 2026 Term Corporate ETF,0.001,2119420813.95,Fixed Income,Credit,North America,Developed,United States,Index,2.22,0.049699999999999994,01-02-2024
-IBDS,iShares® iBonds® Dec 2027 Term Corporate ETF,0.001,1877040586.49,Fixed Income,Credit,North America,Developed,United States,Index,3.1,0.048600000000000004,01-02-2024
-IBTF,iShares® iBonds® Dec 2025 Term Treasury ETF,0.0007000000000000001,1839936991.97,Fixed Income,Government,North America,Developed,United States,Index,1.44,0.0455,01-02-2024
-ICVT,iShares Convertible Bond ETF,0.002,1566722101.45,Fixed Income,Credit,North America,Developed,United States,Index,1.52,0.0424,01-02-2024
-FALN,iShares Fallen Angels USD Bond ETF,0.0025,1537614639.79,Fixed Income,High Yield,North America,Developed,United States,Index,4.8,0.0728,01-02-2024
-IBDT,iShares® iBonds® Dec 2028 Term Corporate ETF,0.001,1456702456.94,Fixed Income,Credit,North America,Developed,United States,Index,3.89,0.0487,01-02-2024
-SUSC,iShares ESG Aware USD Corporate Bond ETF,0.0018,1195767357.99,Fixed Income,Credit,North America,Developed,United States,Index,7.06,0.0513,01-02-2024
-QLTA,iShares Aaa - A Rated Corporate Bond ETF,0.0015,1068648515.8,Fixed Income,Credit,North America,Developed,United States,Index,7.12,0.0492,01-02-2024
-IBDU,iShares® iBonds® Dec 2029 Term Corporate ETF,0.001,911929373.91,Fixed Income,Credit,North America,Developed,United States,Index,4.73,0.0483,01-02-2024
-TLTW,iShares 20+ Year Treasury Bond BuyWrite Strategy ETF,0.0034999999999999996,899931293.1,Fixed Income,Government,North America,Developed,United States,Index,17.01,0.042,01-02-2024
-SUSB,iShares ESG Aware 1-5 Year USD Corporate Bond ETF,0.0012,865302962.83,Fixed Income,Credit,North America,Developed,United States,Index,2.55,0.0506,01-02-2024
-IBTG,iShares® iBonds® Dec 2026 Term Treasury ETF,0.0007000000000000001,753688032.68,Fixed Income,Government,North America,Developed,United States,Index,2.37,0.04190000000000001,01-02-2024
-IBDV,iShares® iBonds® Dec 2030 Term Corporate ETF,0.001,689805766.39,Fixed Income,Credit,North America,Developed,United States,Index,5.54,0.0493,01-02-2024
-AGZ,iShares Agency Bond ETF,0.002,675923456.66,Fixed Income,Government,North America,Developed,United States,Index,3.24,0.045,01-02-2024
-NYF,iShares New York Muni Bond ETF,0.0025,660894428.76,Fixed Income,Municipals,North America,Developed,United States,Index,5.89,0.030899999999999997,01-02-2024
-IBTH,iShares® iBonds® Dec 2027 Term Treasury ETF,0.0007000000000000001,642971098.84,Fixed Income,Government,North America,Developed,United States,Index,3.32,0.0403,01-02-2024
-IBDW,iShares® iBonds® Dec 2031 Term Corporate ETF,0.001,639365709.74,Fixed Income,Credit,North America,Developed,United States,Index,6.41,0.0504,01-02-2024
-MEAR,BlackRock Short Maturity Municipal Bond ETF,0.0025,623028175.75,Fixed Income,Municipals,North America,Developed,United States,Active,0.54,0.0398,01-02-2024
-ILTB,iShares Core 10+ Year USD Bond ETF,0.0006,601624587.06,Fixed Income,Multi Sectors,North America,Developed,United States,Index,13.74,0.050499999999999996,01-02-2024
-EUSB,iShares ESG Advanced Total USD Bond Market ETF,0.0012,581099608.37,Fixed Income,Multi Sectors,North America,Developed,United States,Index,5.85,0.048,01-02-2024
-IGOV,iShares International Treasury Bond ETF,0.0034999999999999996,575864410.3,Fixed Income,Government,Global,Developed,Broad,Index,8.16,0.0269,01-02-2024
-IBMN,iShares® iBonds® Dec 2025 Term Muni Bond ETF,0.0018,569670186.91,Fixed Income,Municipals,North America,Developed,United States,Index,1.43,0.0269,01-02-2024
-IBMM,iShares® iBonds® Dec 2024 Term Muni Bond ETF,0.0018,508177454.7,Fixed Income,Municipals,North America,Developed,United States,Index,0.49,0.0297,01-02-2024
-IBHD,iShares® iBonds® 2024 Term High Yield and Income ETF,0.0034999999999999996,483901618.78,Fixed Income,High Yield,North America,Developed,United States,Index,0.6,0.0699,01-02-2024
-LEMB,iShares J.P. Morgan EM Local Currency Bond ETF,0.003,481655167.23,Fixed Income,Government,Global,Emerging,Broad,Index,4.8,0.0779,01-02-2024
-IGEB,iShares Investment Grade Bond Factor ETF,0.0018,424287411.15,Fixed Income,Credit,North America,Developed,United States,Index,6.31,0.054000000000000006,01-02-2024
-IBDX,iShares® iBonds® Dec 2032 Term Corporate ETF,0.001,412669825.1,Fixed Income,Credit,North America,Developed,United States,Index,6.86,0.050300000000000004,01-02-2024
-GNMA,iShares GNMA Bond ETF,0.001,411746709.51,Fixed Income,Mortgages,North America,Developed,United States,Index,5.52,0.0471,01-02-2024
-CEMB,iShares J.P. Morgan EM Corporate Bond ETF,0.005,408072472.02,Fixed Income,Credit,Global,Emerging,Broad,Index,4.55,0.06849999999999999,01-02-2024
-IBMO,iShares® iBonds® Dec 2026 Term Muni Bond ETF,0.0018,406605782.84,Fixed Income,Municipals,North America,Developed,United States,Index,2.19,0.0258,01-02-2024
-CMBS,iShares CMBS ETF,0.0025,393922308.55,Fixed Income,Mortgages,North America,Developed,United States,Index,4.29,0.055099999999999996,01-02-2024
-IBMP,iShares® iBonds® Dec 2027 Term Muni Bond ETF,0.0018,380565434.04,Fixed Income,Municipals,North America,Developed,United States,Index,2.98,0.024700000000000003,01-02-2024
-IBTI,iShares® iBonds® Dec 2028 Term Treasury ETF,0.0007000000000000001,357572569.55,Fixed Income,Government,North America,Developed,United States,Index,4.17,0.0398,01-02-2024
-IBHE,iShares® iBonds® 2025 Term High Yield and Income ETF,0.0034999999999999996,341049285.66,Fixed Income,High Yield,North America,Developed,United States,Index,1.03,0.0775,01-02-2024
-HYDB,iShares High Yield Bond Factor ETF,0.0034999999999999996,335890840.98,Fixed Income,High Yield,North America,Developed,United States,Index,3.56,0.0759,01-02-2024
-GBF,iShares Government/Credit Bond ETF,0.002,335099358.04,Fixed Income,Multi Sectors,North America,Developed,United States,Index,6.36,0.0453,01-02-2024
-BGRN,iShares USD Green Bond ETF,0.002,333366378.5,Fixed Income,Credit,North America,Developed,United States,Index,5.18,0.0501,01-02-2024
-EMHY,iShares J.P. Morgan EM High Yield Bond ETF,0.005,329906250.03,Fixed Income,High Yield,Global,Emerging,Broad,Index,5.01,0.0907,01-02-2024
-IBMQ,iShares® iBonds® Dec 2028 Term Muni Bond ETF,0.0018,293822966.76,Fixed Income,Municipals,North America,Developed,United States,Index,3.81,0.0241,01-02-2024
-HYBB,iShares BB Rated Corporate Bond ETF,0.0025,286320619.71,Fixed Income,High Yield,North America,Developed,United States,Index,3.65,0.0654,01-02-2024
-LQDH,iShares Interest Rate Hedged Corporate Bond ETF,0.0024,273678949.28,Fixed Income,Credit,North America,Developed,United States,Index,-0.06,0.0679,01-02-2024
-IBHF,iShares® iBonds® 2026 Term High Yield and Income ETF,0.0034999999999999996,260451960.05,Fixed Income,High Yield,North America,Developed,United States,Index,1.64,0.0748,01-02-2024
-IBDY,iShares® iBonds® Dec 2033 Term Corporate ETF,0.001,227096254.65,Fixed Income,Credit,North America,Developed,United States,Index,7.23,0.050499999999999996,01-02-2024
-GOVZ,iShares 25+ Year Treasury STRIPS Bond ETF,0.001,199522475.0,Fixed Income,Government,North America,Developed,United States,Index,26.9,0.0409,01-02-2024
-IBTK,iShares® iBonds® Dec 2030 Term Treasury ETF,0.0007000000000000001,189514752.23,Fixed Income,Government,North America,Developed,United States,Index,5.87,0.039599999999999996,01-02-2024
-HYGH,iShares Interest Rate Hedged High Yield Bond ETF,0.0051,176373819.38,Fixed Income,High Yield,North America,Developed,United States,Index,0.08,0.0888,01-02-2024
-IBTM,iShares® iBonds® Dec 2032 Term Treasury ETF,0.0007000000000000001,171384487.36,Fixed Income,Government,North America,Developed,United States,Index,7.35,0.0395,01-02-2024
-IBTJ,iShares® iBonds® Dec 2029 Term Treasury ETF,0.0007000000000000001,170388126.32,Fixed Income,Government,North America,Developed,United States,Index,4.96,0.0395,01-02-2024
-LQDW,iShares Investment Grade Corporate Bond BuyWrite Strategy ETF,0.0034000000000000002,169972163.8,Fixed Income,Credit,North America,Developed,United States,Index,8.44,0.0512,01-02-2024
-IMTB,iShares Core 5-10 Year USD Bond ETF,0.0006,164349878.66,Fixed Income,Multi Sectors,North America,Developed,United States,Index,5.95,0.048600000000000004,01-02-2024
-IBTL,iShares® iBonds® Dec 2031 Term Treasury ETF,0.0007000000000000001,163667710.69,Fixed Income,Government,North America,Developed,United States,Index,6.93,0.0392,01-02-2024
-BYLD,iShares Yield Optimized Bond ETF,0.0019,128237220.03,Fixed Income,Multi Sectors,North America,Developed,United States,Index,4.71,0.0584,01-02-2024
-IBTO,iShares® iBonds® Dec 2033 Term Treasury ETF,0.0007000000000000001,127316750.35,Fixed Income,Government,North America,Developed,United States,Index,7.81,0.0394,01-02-2024
-GHYG,iShares US & Intl High Yield Corp Bond ETF,0.004,127103544.22,Fixed Income,High Yield,Global,Developed,Broad,Index,3.2,0.0724,01-02-2024
-HYXF,iShares ESG Advanced High Yield Corporate Bond ETF,0.0034999999999999996,120192051.53,Fixed Income,High Yield,North America,Developed,United States,Index,3.59,0.0779,01-02-2024
-HYMU,BlackRock High Yield Muni Income Bond ETF,0.0034999999999999996,81589412.23,Fixed Income,Municipals,North America,Developed,United States,Active,7.6,0.049,01-02-2024
-ISHG,iShares 1-3 Year International Treasury Bond ETF,0.0034999999999999996,78520002.48,Fixed Income,Government,Global,Developed,Broad,Index,1.89,0.0269,01-02-2024
-IBHG,iShares® iBonds® 2027 Term High Yield and Income ETF,0.0034999999999999996,70772719.7,Fixed Income,High Yield,North America,Developed,United States,Index,2.48,0.0759,01-02-2024
-IGBH,iShares Interest Rate Hedged Long-Term Corporate Bond ETF,0.0014000000000000002,68706732.6,Fixed Income,Credit,North America,Developed,United States,Index,-0.09,0.0712,01-02-2024
-IBMR,iShares® iBonds® Dec 2029 Term Muni Bond ETF,0.0018,65112126.59,Fixed Income,Municipals,North America,Developed,United States,Index,4.64,0.0235,01-02-2024
-CLOA,BlackRock AAA CLO ETF,0.002,61461912.63,Fixed Income,High Yield Bank Loan,North America,Developed,United States,Active,0.05,0.0697,01-02-2024
-FIBR,iShares U.S. Fixed Income Balanced Risk Factor ETF,0.0025,60147428.66,Fixed Income,Multi Sectors,North America,Developed,United States,Index,3.29,0.0537,01-02-2024
-HYXU,iShares International High Yield Bond ETF,0.004,48752300.87,Fixed Income,High Yield,Global,Developed,Broad,Index,2.96,0.0587,01-02-2024
-HYGW,iShares High Yield Corporate Bond BuyWrite Strategy ETF,0.0069,47607698.64,Fixed Income,High Yield,North America,Developed,United States,Index,3.31,0.0761,01-02-2024
-IBHH,iShares® iBonds® 2028 Term High Yield and Income ETF,0.0034999999999999996,46270636.1,Fixed Income,High Yield,North America,Developed,United States,Index,3.04,0.0747,01-02-2024
-LQDI,iShares Inflation Hedged Corporate Bond ETF,0.0018,44400715.94,Fixed Income,Credit,North America,Developed,United States,Index,8.05,0.049699999999999994,01-02-2024
-BEMB,iShares J.P. Morgan Broad USD Emerging Markets Bond ETF,0.0018,41166979.83,Fixed Income,Corporates,Global,Emerging,Broad,Index,6.04,0.0678,01-02-2024
-LQDB,iShares BBB Rated Corporate Bond ETF,0.0015,30081301.14,Fixed Income,Credit,North America,Developed,United States,Index,6.63,0.0528,01-02-2024
-INMU,BlackRock Intermediate Muni Income Bond ETF,0.003,23808972.56,Fixed Income,Municipals,North America,Developed,United States,Active,4.33,0.0387,01-02-2024
-BRLN,BlackRock Floating Rate Loan ETF,0.0055000000000000005,20802637.67,Fixed Income,High Yield Bank Loan,North America,Developed,United States,Active,0.28,0.0933,01-02-2024
-CALY,BlackRock Short-Term California Muni Bond ETF,0.002,20117167.78,Fixed Income,Municipals,North America,Developed,United States,Active,1.07,0.0316,01-02-2024
-IBHI,iShares® iBonds® 2029 Term High Yield and Income ETF,0.0034999999999999996,16108501.82,Fixed Income,High Yield,North America,Developed,United States,Index,3.98,0.07429999999999999,01-02-2024
-IBHJ,iShares® iBonds® 2030 Term High Yield and Income ETF,0.0034999999999999996,14213918.31,Fixed Income,High Yield,North America,Developed,United States,Index,4.22,0.0712,01-02-2024
-USBF,iShares USD Bond Factor ETF,0.0018,12698860.97,Fixed Income,Multi Sectors,North America,Developed,United States,Index,5.88,0.050199999999999995,01-02-2024
-ELQD,iShares ESG Advanced Investment Grade Corporate Bond ETF,0.0018,12347987.21,Fixed Income,Credit,North America,Developed,United States,Index,8.35,0.051100000000000007,01-02-2024
-IBIJ,iShares® iBonds® Oct 2033 Term TIPS ETF,0.001,9022308.63,Fixed Income,Inflation,North America,Developed,United States,Index,8.56,0.0391,01-02-2024
-IBIC,iShares® iBonds® Oct 2026 Term TIPS ETF,0.001,8850132.93,Fixed Income,Inflation,North America,Developed,United States,Index,2.32,0.0409,01-02-2024
-IBIE,iShares® iBonds® Oct 2028 Term TIPS ETF,0.001,7629152.15,Fixed Income,Inflation,North America,Developed,United States,Index,4.16,0.039900000000000005,01-02-2024
-IBID,iShares® iBonds® Oct 2027 Term TIPS ETF,0.001,7609360.68,Fixed Income,Inflation,North America,Developed,United States,Index,3.27,0.0407,01-02-2024
-IBIA,iShares® iBonds® Oct 2024 Term TIPS ETF,0.001,7511937.01,Fixed Income,Inflation,North America,Developed,United States,Index,0.39,0.0501,01-02-2024
-IBIF,iShares® iBonds® Oct 2029 Term TIPS ETF,0.001,6380492.29,Fixed Income,Inflation,North America,Developed,United States,Index,4.95,0.0392,01-02-2024
-IBIB,iShares® iBonds® Oct 2025 Term TIPS ETF,0.001,6286158.73,Fixed Income,Inflation,North America,Developed,United States,Index,1.32,0.0433,01-02-2024
-IBIH,iShares® iBonds® Oct 2031 Term TIPS ETF,0.001,5137598.65,Fixed Income,Inflation,North America,Developed,United States,Index,7.11,0.0387,01-02-2024
-AGRH,iShares Interest Rate Hedged U.S. Aggregate Bond ETF,0.0013,5133732.71,Fixed Income,Multi Sectors,North America,Developed,United States,Index,0.03,0.062,01-02-2024
-IBII,iShares® iBonds® Oct 2032 Term TIPS ETF,0.001,5125963.88,Fixed Income,Inflation,North America,Developed,United States,Index,7.92,0.038900000000000004,01-02-2024
-IBIG,iShares® iBonds® Oct 2030 Term TIPS ETF,0.001,5120006.97,Fixed Income,Inflation,North America,Developed,United States,Index,6.15,0.0388,01-02-2024
-HYGI,iShares Inflation Hedged High Yield Bond ETF,0.0051,2582874.67,Fixed Income,High Yield,North America,Developed,United States,Index,3.13,0.0754,01-02-2024
-AGIH,iShares Inflation Hedged U.S. Aggregate Bond ETF,0.0013,2453635.08,Fixed Income,Multi Sectors,North America,Developed,United States,Index,5.84,0.04650000000000001,01-02-2024
+AGG,iShares Core U.S. Aggregate Bond ETF,0.0003,104848286751.65,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,6.08,0.0484,03-28-2024
+TLT,iShares 20+ Year Treasury Bond ETF,0.0015,49129989990.65,Fixed Income,Government,North America,Developed,United States,Passive,16.7,0.0444,03-28-2024
+MUB,iShares National Muni Bond ETF,0.0005,36942898686.71,Fixed Income,Municipals,North America,Developed,United States,Passive,6.01,0.034,03-28-2024
+LQD,iShares iBoxx $ Investment Grade Corporate Bond ETF,0.0014000000000000002,32601852664.31,Fixed Income,Credit,North America,Developed,United States,Passive,8.39,0.0526,03-28-2024
+MBB,iShares MBS ETF,0.0004,28756876885.04,Fixed Income,Mortgages,North America,Developed,United States,Passive,5.72,0.0501,03-28-2024
+IEF,iShares 7-10 Year Treasury Bond ETF,0.0015,28030713823.0,Fixed Income,Government,North America,Developed,United States,Passive,7.29,0.042199999999999994,03-28-2024
+IUSB,iShares Core Total USD Bond Market ETF,0.0006,27947311898.83,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,5.87,0.0509,03-28-2024
+GOVT,iShares U.S. Treasury Bond ETF,0.0005,25485714786.08,Fixed Income,Government,North America,Developed,United States,Passive,6.0,0.0444,03-28-2024
+SHY,iShares 1-3 Year Treasury Bond ETF,0.0015,24754861243.48,Fixed Income,Government,North America,Developed,United States,Passive,1.88,0.046799999999999994,03-28-2024
+IGSB,iShares 1-5 Year Investment Grade Corporate Bond ETF,0.0004,21054678522.05,Fixed Income,Credit,North America,Developed,United States,Passive,2.58,0.0525,03-28-2024
+SGOV,iShares 0-3 Month Treasury Bond ETF,0.0007000000000000001,19301262050.68,Fixed Income,Government,North America,Developed,United States,Passive,0.1,0.0418,03-28-2024
+TIP,iShares TIPS Bond ETF,0.0019,18814048939.27,Fixed Income,Inflation,North America,Developed,United States,Passive,6.7,0.0435,03-28-2024
+SHV,iShares Short Treasury Bond ETF,0.0015,18144255908.51,Fixed Income,Government,North America,Developed,United States,Passive,0.29,0.047599999999999996,03-28-2024
+HYG,iShares iBoxx $ High Yield Corporate Bond ETF,0.0049,16915945780.44,Fixed Income,High Yield,North America,Developed,United States,Passive,3.28,0.076,03-28-2024
+EMB,iShares J.P. Morgan USD Emerging Markets Bond ETF,0.0039000000000000003,13594933177.9,Fixed Income,Government,Global,Emerging,Broad,Passive,7.12,0.0679,03-28-2024
+IEI,iShares 3-7 Year Treasury Bond ETF,0.0015,13390999194.28,Fixed Income,Government,North America,Developed,United States,Passive,4.37,0.042800000000000005,03-28-2024
+IGIB,iShares 5-10 Year Investment Grade Corporate Bond ETF,0.0004,12859923512.99,Fixed Income,Credit,North America,Developed,United States,Passive,6.07,0.0529,03-28-2024
+USHY,iShares Broad USD High Yield Corporate Bond ETF,0.0008,11829927103.63,Fixed Income,High Yield,North America,Developed,United States,Passive,3.33,0.0768,03-28-2024
+USIG,iShares Broad USD Investment Grade Corporate Bond ETF,0.0004,10701865718.98,Fixed Income,Credit,North America,Developed,United States,Passive,6.71,0.053399999999999996,03-28-2024
+SUB,iShares Short-Term National Muni Bond ETF,0.0007000000000000001,8820223098.5,Fixed Income,Municipals,North America,Developed,United States,Passive,1.81,0.0318,03-28-2024
+TLH,iShares 10-20 Year Treasury Bond ETF,0.0015,7992375737.61,Fixed Income,Government,North America,Developed,United States,Passive,12.87,0.0444,03-28-2024
+STIP,iShares 0-5 Year TIPS Bond ETF,0.0003,7756371027.57,Fixed Income,Inflation,North America,Developed,United States,Passive,2.37,0.045700000000000005,03-28-2024
+FLOT,iShares Floating Rate Bond ETF,0.0015,7294128135.3,Fixed Income,Credit,North America,Developed,United States,Passive,0.03,0.059699999999999996,03-28-2024
+TFLO,iShares Treasury Floating Rate Bond ETF,0.0015,6775072040.94,Fixed Income,Government,North America,Developed,United States,Passive,0.01,0.0558,03-28-2024
+SHYG,iShares 0-5 Year High Yield Corporate Bond ETF,0.003,5847455568.08,Fixed Income,High Yield,North America,Developed,United States,Passive,2.3,0.0761,03-28-2024
+IAGG,iShares Core International Aggregate Bond ETF,0.0007000000000000001,5830117932.96,Fixed Income,Multi Sectors,Global,Developed,Broad,Passive,6.81,0.03,03-28-2024
+ICSH,BlackRock Ultra Short-Term Bond ETF,0.0008,5567527281.55,Fixed Income,Multi Sectors,North America,Developed,United States,Active,0.44,0.0552,03-28-2024
+ISTB,iShares Core 1-5 Year USD Bond ETF,0.0006,4120220308.53,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,2.63,0.0506,03-28-2024
+EAGG,iShares ESG Aware U.S. Aggregate Bond ETF,0.001,3578369277.65,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,6.11,0.0483,03-28-2024
+GVI,iShares Intermediate Government/Credit Bond ETF,0.002,3184799824.74,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,3.79,0.046900000000000004,03-28-2024
+NEAR,BlackRock Short Duration Bond ETF,0.0025,3011941222.49,Fixed Income,Multi Sectors,North America,Developed,United States,Active,1.88,0.053899999999999997,03-28-2024
+IBTE,iShares® iBonds® Dec 2024 Term Treasury ETF,0.0007000000000000001,2882358480.34,Fixed Income,Government,North America,Developed,United States,Passive,0.38,0.050199999999999995,03-28-2024
+CMF,iShares California Muni Bond ETF,0.0008,2792668357.95,Fixed Income,Municipals,North America,Developed,United States,Passive,6.18,0.0323,03-28-2024
+IBDP,iShares® iBonds® Dec 2024 Term Corporate ETF,0.001,2693865934.23,Fixed Income,Credit,North America,Developed,United States,Passive,0.36,0.0556,03-28-2024
+IBDQ,iShares® iBonds® Dec 2025 Term Corporate ETF,0.001,2611133725.67,Fixed Income,Credit,North America,Developed,United States,Passive,1.12,0.0542,03-28-2024
+IBDR,iShares® iBonds® Dec 2026 Term Corporate ETF,0.001,2518461484.24,Fixed Income,Credit,North America,Developed,United States,Passive,2.0,0.0518,03-28-2024
+IBDS,iShares® iBonds® Dec 2027 Term Corporate ETF,0.001,2241712167.08,Fixed Income,Credit,North America,Developed,United States,Passive,2.87,0.050499999999999996,03-28-2024
+IBTF,iShares® iBonds® Dec 2025 Term Treasury ETF,0.0007000000000000001,2219046193.29,Fixed Income,Government,North America,Developed,United States,Passive,1.21,0.0492,03-28-2024
+IGLB,iShares 10+ Year Investment Grade Corporate Bond ETF,0.0004,2203263104.93,Fixed Income,Credit,North America,Developed,United States,Passive,12.68,0.055099999999999996,03-28-2024
+SLQD,iShares 0-5 Year Investment Grade Corporate Bond ETF,0.0006,2102954402.99,Fixed Income,Credit,North America,Developed,United States,Passive,2.12,0.0525,03-28-2024
+ICVT,iShares Convertible Bond ETF,0.002,1828866634.54,Fixed Income,Credit,North America,Developed,United States,Passive,1.41,0.0392,03-28-2024
+IBDT,iShares® iBonds® Dec 2028 Term Corporate ETF,0.001,1745103449.92,Fixed Income,Credit,North America,Developed,United States,Passive,3.69,0.0504,03-28-2024
+FALN,iShares Fallen Angels USD Bond ETF,0.0025,1716284659.95,Fixed Income,High Yield,North America,Developed,United States,Passive,4.84,0.0717,03-28-2024
+IBDU,iShares® iBonds® Dec 2029 Term Corporate ETF,0.001,1252898690.06,Fixed Income,Credit,North America,Developed,United States,Passive,4.47,0.0504,03-28-2024
+SUSC,iShares ESG Aware USD Corporate Bond ETF,0.0018,1079711799.92,Fixed Income,Credit,North America,Developed,United States,Passive,7.0,0.0528,03-28-2024
+QLTA,iShares Aaa - A Rated Corporate Bond ETF,0.0015,1058162623.11,Fixed Income,Credit,North America,Developed,United States,Passive,7.03,0.051,03-28-2024
+IBTG,iShares® iBonds® Dec 2026 Term Treasury ETF,0.0007000000000000001,984714836.15,Fixed Income,Government,North America,Developed,United States,Passive,2.11,0.045899999999999996,03-28-2024
+TLTW,iShares 20+ Year Treasury Bond BuyWrite Strategy ETF,0.0034999999999999996,917653873.88,Fixed Income,Government,North America,Developed,United States,Passive,16.58,0.044500000000000005,03-28-2024
+SUSB,iShares ESG Aware 1-5 Year USD Corporate Bond ETF,0.0012,858658961.4,Fixed Income,Credit,North America,Developed,United States,Passive,2.6,0.052000000000000005,03-28-2024
+IBDV,iShares® iBonds® Dec 2030 Term Corporate ETF,0.001,837802785.84,Fixed Income,Credit,North America,Developed,United States,Passive,5.33,0.051,03-28-2024
+IBDW,iShares® iBonds® Dec 2031 Term Corporate ETF,0.001,781453459.76,Fixed Income,Credit,North America,Developed,United States,Passive,6.16,0.052000000000000005,03-28-2024
+IBTH,iShares® iBonds® Dec 2027 Term Treasury ETF,0.0007000000000000001,767094534.42,Fixed Income,Government,North America,Developed,United States,Passive,3.03,0.044000000000000004,03-28-2024
+AGZ,iShares Agency Bond ETF,0.002,695152422.1,Fixed Income,Government,North America,Developed,United States,Passive,3.23,0.0473,03-28-2024
+NYF,iShares New York Muni Bond ETF,0.0025,673227033.97,Fixed Income,Municipals,North America,Developed,United States,Passive,5.92,0.0342,03-28-2024
+MEAR,BlackRock Short Maturity Municipal Bond ETF,0.0025,633538317.53,Fixed Income,Municipals,North America,Developed,United States,Active,0.55,0.0414,03-28-2024
+ILTB,iShares Core 10+ Year USD Bond ETF,0.0006,623227625.01,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,13.51,0.0521,03-28-2024
+EUSB,iShares ESG Advanced Total USD Bond Market ETF,0.0012,615151966.13,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,5.74,0.050300000000000004,03-28-2024
+IGEB,iShares Investment Grade Systematic Bond ETF,0.0018,599743357.0,Fixed Income,Credit,North America,Developed,United States,Passive,6.56,0.058899999999999994,03-28-2024
+IBDX,iShares® iBonds® Dec 2032 Term Corporate ETF,0.001,549110576.17,Fixed Income,Credit,North America,Developed,United States,Passive,6.67,0.0521,03-28-2024
+IBMN,iShares® iBonds® Dec 2025 Term Muni Bond ETF,0.0018,535773162.45,Fixed Income,Municipals,North America,Developed,United States,Passive,1.2,0.032400000000000005,03-28-2024
+IGOV,iShares International Treasury Bond ETF,0.0034999999999999996,523295698.09,Fixed Income,Government,Global,Developed,Broad,Passive,8.14,0.0291,03-28-2024
+HYDB,iShares High Yield Systematic Bond ETF,0.0034999999999999996,508197888.31,Fixed Income,High Yield,North America,Developed,United States,Passive,3.42,0.0759,03-28-2024
+IBMM,iShares® iBonds® Dec 2024 Term Muni Bond ETF,0.0018,482795513.66,Fixed Income,Municipals,North America,Developed,United States,Passive,0.32,0.0375,03-28-2024
+IBHD,iShares® iBonds® 2024 Term High Yield and Income ETF,0.0034999999999999996,478808375.32,Fixed Income,High Yield,North America,Developed,United States,Passive,0.47,0.06570000000000001,03-28-2024
+IBHE,iShares® iBonds® 2025 Term High Yield and Income ETF,0.0034999999999999996,466396489.19,Fixed Income,High Yield,North America,Developed,United States,Passive,0.88,0.07339999999999999,03-28-2024
+IBTI,iShares® iBonds® Dec 2028 Term Treasury ETF,0.0007000000000000001,459294188.27,Fixed Income,Government,North America,Developed,United States,Passive,3.93,0.043,03-28-2024
+IBMO,iShares® iBonds® Dec 2026 Term Muni Bond ETF,0.0018,450735746.22,Fixed Income,Municipals,North America,Developed,United States,Passive,1.96,0.030600000000000002,03-28-2024
+LEMB,iShares J.P. Morgan EM Local Currency Bond ETF,0.003,447893560.28,Fixed Income,Government,Global,Emerging,Broad,Passive,5.0,0.07429999999999999,03-28-2024
+CMBS,iShares CMBS ETF,0.0025,431195453.29,Fixed Income,Mortgages,North America,Developed,United States,Passive,4.19,0.053899999999999997,03-28-2024
+CEMB,iShares J.P. Morgan EM Corporate Bond ETF,0.005,430551953.58,Fixed Income,Credit,Global,Emerging,Broad,Passive,4.48,0.0664,03-28-2024
+IBMP,iShares® iBonds® Dec 2027 Term Muni Bond ETF,0.0018,417074729.37,Fixed Income,Municipals,North America,Developed,United States,Passive,2.76,0.028999999999999998,03-28-2024
+IBDY,iShares® iBonds® Dec 2033 Term Corporate ETF,0.001,385010061.41,Fixed Income,Credit,North America,Developed,United States,Passive,7.07,0.0524,03-28-2024
+EMHY,iShares J.P. Morgan EM High Yield Bond ETF,0.005,369839877.23,Fixed Income,High Yield,Global,Emerging,Broad,Passive,5.0,0.085,03-28-2024
+IBHF,iShares® iBonds® 2026 Term High Yield and Income ETF,0.0034999999999999996,369818100.86,Fixed Income,High Yield,North America,Developed,United States,Passive,1.51,0.0754,03-28-2024
+HYBB,iShares BB Rated Corporate Bond ETF,0.0025,369054810.46,Fixed Income,High Yield,North America,Developed,United States,Passive,3.61,0.06480000000000001,03-28-2024
+BGRN,iShares USD Green Bond ETF,0.002,348372095.65,Fixed Income,Credit,North America,Developed,United States,Passive,5.12,0.052000000000000005,03-28-2024
+GNMA,iShares GNMA Bond ETF,0.001,330476424.53,Fixed Income,Mortgages,North America,Developed,United States,Passive,5.5,0.050300000000000004,03-28-2024
+LQDH,iShares Interest Rate Hedged Corporate Bond ETF,0.0023,314879045.27,Fixed Income,Credit,North America,Developed,United States,Passive,0.05,0.0658,03-28-2024
+IBMQ,iShares® iBonds® Dec 2028 Term Muni Bond ETF,0.0018,313212343.63,Fixed Income,Municipals,North America,Developed,United States,Passive,3.59,0.0278,03-28-2024
+GBF,iShares Government/Credit Bond ETF,0.002,238372143.17,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,6.29,0.047599999999999996,03-28-2024
+HYGH,iShares Interest Rate Hedged High Yield Bond ETF,0.0052,226805212.88,Fixed Income,High Yield,North America,Developed,United States,Passive,0.03,0.08539999999999999,03-28-2024
+IBTJ,iShares® iBonds® Dec 2029 Term Treasury ETF,0.0007000000000000001,223358165.57,Fixed Income,Government,North America,Developed,United States,Passive,4.67,0.0424,03-28-2024
+IBTK,iShares® iBonds® Dec 2030 Term Treasury ETF,0.0007000000000000001,215273882.29,Fixed Income,Government,North America,Developed,United States,Passive,5.64,0.042300000000000004,03-28-2024
+GOVZ,iShares 25+ Year Treasury STRIPS Bond ETF,0.001,201975518.73,Fixed Income,Government,North America,Developed,United States,Passive,26.77,0.0434,03-28-2024
+IBTM,iShares® iBonds® Dec 2032 Term Treasury ETF,0.0007000000000000001,197037675.21,Fixed Income,Government,North America,Developed,United States,Passive,7.12,0.0421,03-28-2024
+LQDW,iShares Investment Grade Corporate Bond BuyWrite Strategy ETF,0.0034000000000000002,173453069.09,Fixed Income,Credit,North America,Developed,United States,Passive,8.27,0.0526,03-28-2024
+IMTB,iShares Core 5-10 Year USD Bond ETF,0.0006,171464800.19,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,5.9,0.0507,03-28-2024
+IBTL,iShares® iBonds® Dec 2031 Term Treasury ETF,0.0007000000000000001,169204711.95,Fixed Income,Government,North America,Developed,United States,Passive,6.55,0.04190000000000001,03-28-2024
+BYLD,iShares Yield Optimized Bond ETF,0.0019,168747758.46,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,4.88,0.059000000000000004,03-28-2024
+IBTO,iShares® iBonds® Dec 2033 Term Treasury ETF,0.0007000000000000001,165072523.2,Fixed Income,Government,North America,Developed,United States,Passive,7.62,0.0421,03-28-2024
+GHYG,iShares US & Intl High Yield Corp Bond ETF,0.004,131726454.13,Fixed Income,High Yield,Global,Developed,Broad,Passive,3.17,0.0726,03-28-2024
+HYXF,iShares ESG Advanced High Yield Corporate Bond ETF,0.0034999999999999996,127620968.84,Fixed Income,High Yield,North America,Developed,United States,Passive,3.54,0.0781,03-28-2024
+CLOA,BlackRock AAA CLO ETF,0.002,113686897.54,Fixed Income,High Yield Bank Loan,North America,Developed,United States,Active,0.07,0.06860000000000001,03-28-2024
+IGBH,iShares Interest Rate Hedged Long-Term Corporate Bond ETF,0.0014000000000000002,104413437.62,Fixed Income,Credit,North America,Developed,United States,Passive,0.03,0.0699,03-28-2024
+IBHG,iShares® iBonds® 2027 Term High Yield and Income ETF,0.0034999999999999996,96446122.67,Fixed Income,High Yield,North America,Developed,United States,Passive,2.2,0.07490000000000001,03-28-2024
+IBMR,iShares® iBonds® Dec 2029 Term Muni Bond ETF,0.0018,94501514.85,Fixed Income,Municipals,North America,Developed,United States,Passive,4.44,0.0268,03-28-2024
+HYMU,BlackRock High Yield Muni Income Bond ETF,0.0034999999999999996,89118071.43,Fixed Income,Municipals,North America,Developed,United States,Active,8.45,0.049800000000000004,03-28-2024
+ISHG,iShares 1-3 Year International Treasury Bond ETF,0.0034999999999999996,80319085.29,Fixed Income,Government,Global,Developed,Broad,Passive,1.86,0.0304,03-28-2024
+IBHH,iShares® iBonds® 2028 Term High Yield and Income ETF,0.0034999999999999996,68628469.8,Fixed Income,High Yield,North America,Developed,United States,Passive,2.85,0.07429999999999999,03-28-2024
+HYGW,iShares High Yield Corporate Bond BuyWrite Strategy ETF,0.0069,64616119.56,Fixed Income,High Yield,North America,Developed,United States,Passive,3.26,0.0759,03-28-2024
+FIBR,iShares U.S. Fixed Income Balanced Risk Systematic ETF,0.0025,64430849.69,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,3.04,0.057300000000000004,03-28-2024
+HYXU,iShares International High Yield Bond ETF,0.004,48376477.73,Fixed Income,High Yield,Global,Developed,Broad,Passive,2.93,0.061,03-28-2024
+LQDI,iShares Inflation Hedged Corporate Bond ETF,0.0018,44345071.7,Fixed Income,Credit,North America,Developed,United States,Passive,8.03,0.0507,03-28-2024
+BEMB,iShares J.P. Morgan Broad USD Emerging Markets Bond ETF,0.0018,41692317.92,Fixed Income,Corporates,Global,Emerging,Broad,Passive,6.05,0.0665,03-28-2024
+BRLN,BlackRock Floating Rate Loan ETF,0.0055000000000000005,36799979.33,Fixed Income,High Yield Bank Loan,North America,Developed,United States,Active,0.52,0.0867,03-28-2024
+IBHI,iShares® iBonds® 2029 Term High Yield and Income ETF,0.0034999999999999996,34872722.51,Fixed Income,High Yield,North America,Developed,United States,Passive,3.73,0.0745,03-28-2024
+LQDB,iShares BBB Rated Corporate Bond ETF,0.0015,34246046.19,Fixed Income,Credit,North America,Developed,United States,Passive,6.57,0.0541,03-28-2024
+CALY,BlackRock Short-Term California Muni Bond ETF,0.002,20074030.52,Fixed Income,Municipals,North America,Developed,United States,Active,1.09,0.0353,03-28-2024
+INMU,BlackRock Intermediate Muni Income Bond ETF,0.003,18970627.9,Fixed Income,Municipals,North America,Developed,United States,Active,4.64,0.0406,03-28-2024
+IBHJ,iShares® iBonds® 2030 Term High Yield and Income ETF,0.0034999999999999996,16917165.24,Fixed Income,High Yield,North America,Developed,United States,Passive,4.02,0.071,03-28-2024
+IBIC,iShares® iBonds® Oct 2026 Term TIPS ETF,0.001,15306715.61,Fixed Income,Inflation,North America,Developed,United States,Passive,2.07,0.0444,03-28-2024
+IBIB,iShares® iBonds® Oct 2025 Term TIPS ETF,0.001,15285218.32,Fixed Income,Inflation,North America,Developed,United States,Passive,1.08,0.047400000000000005,03-28-2024
+IBIJ,iShares® iBonds® Oct 2033 Term TIPS ETF,0.001,14115840.51,Fixed Income,Inflation,North America,Developed,United States,Passive,8.32,0.0415,03-28-2024
+IBIE,iShares® iBonds® Oct 2028 Term TIPS ETF,0.001,14032052.44,Fixed Income,Inflation,North America,Developed,United States,Passive,3.89,0.0431,03-28-2024
+IBID,iShares® iBonds® Oct 2027 Term TIPS ETF,0.001,14030918.58,Fixed Income,Inflation,North America,Developed,United States,Passive,3.02,0.044000000000000004,03-28-2024
+IBIA,iShares® iBonds® Oct 2024 Term TIPS ETF,0.001,12744354.17,Fixed Income,Inflation,North America,Developed,United States,Passive,0.31,0.0507,03-28-2024
+USBF,iShares USD Systematic Bond ETF,0.0018,12597056.34,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,5.85,0.052300000000000006,03-28-2024
+ELQD,iShares ESG Advanced Investment Grade Corporate Bond ETF,0.0018,12256036.63,Fixed Income,Credit,North America,Developed,United States,Passive,8.36,0.0526,03-28-2024
+IBIG,iShares® iBonds® Oct 2030 Term TIPS ETF,0.001,11533771.48,Fixed Income,Inflation,North America,Developed,United States,Passive,5.87,0.0414,03-28-2024
+IBIF,iShares® iBonds® Oct 2029 Term TIPS ETF,0.001,11509359.84,Fixed Income,Inflation,North America,Developed,United States,Passive,4.7,0.042199999999999994,03-28-2024
+IBII,iShares® iBonds® Oct 2032 Term TIPS ETF,0.001,10221694.88,Fixed Income,Inflation,North America,Developed,United States,Passive,7.65,0.041299999999999996,03-28-2024
+IBIH,iShares® iBonds® Oct 2031 Term TIPS ETF,0.001,8977137.74,Fixed Income,Inflation,North America,Developed,United States,Passive,6.82,0.0412,03-28-2024
+AGRH,iShares Interest Rate Hedged U.S. Aggregate Bond ETF,0.0013,5192149.98,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,0.01,0.0608,03-28-2024
+HYGI,iShares Inflation Hedged High Yield Bond ETF,0.0052,2618679.44,Fixed Income,High Yield,North America,Developed,United States,Passive,3.11,0.0748,03-28-2024
+AGIH,iShares Inflation Hedged U.S. Aggregate Bond ETF,0.0013,2451365.03,Fixed Income,Multi Sectors,North America,Developed,United States,Passive,5.78,0.0482,03-28-2024
